@@ -2,10 +2,10 @@
 // SOURCE — Capa de Origen de Fonchi Fontecoba
 const pageTitle = "SOURCE | Sys.Log";
 
-// Extraemos los logs dinámicamente desde la carpeta Markdown
-const rawLogs = await Astro.glob('../logs/*.md');
+// Extraemos los logs usando Vite nativo en lugar de Astro.glob para asegurar la compatibilidad estricta en Vercel
+const rawLogs = Object.values(import.meta.glob('../logs/*.md', { eager: true }));
 // Ordenamos de más nuevo a más viejo por fecha del frontmatter
-const logs = rawLogs.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf() - new Date((a as any).frontmatter?.date).valueOf());
 ---
 
 <!DOCTYPE html>
@@ -48,14 +48,15 @@ const logs = rawLogs.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new
 
         <!-- El Log de operaciones Dinámico compilado desde Notion/Make -->
         <div class="log-grid">
-            {logs.map((log, index) => {
+            {logs.map((log: any, index) => {
                 const entryId = String(logs.length - index).padStart(2, '0');
+                const Content = log.default;
                 return (
                 <article class="node">
-                    <span class="node-id">>> [ENTRY_{entryId}] :: {log.frontmatter.status} // {log.frontmatter.date}</span>
-                    <h2>> {log.frontmatter.title}</h2>
+                    <span class="node-id">>> [ENTRY_{entryId}] :: {log.frontmatter?.status || 'UNKNOWN'} // {log.frontmatter?.date}</span>
+                    <h2>> {log.frontmatter?.title}</h2>
                     <div class="node-content">
-                        <log.Content />
+                        <Content />
                     </div>
                     <span class="eof">[EOF]</span>
                 </article>
