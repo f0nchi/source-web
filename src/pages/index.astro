@@ -1,0 +1,190 @@
+---
+// SOURCE — Capa de Origen de Fonchi Fontecoba
+const pageTitle = "SOURCE | Sys.Log";
+
+// Extraemos los logs dinámicamente desde la carpeta Markdown
+const rawLogs = await Astro.glob('../logs/*.md');
+// Ordenamos de más nuevo a más viejo por fecha del frontmatter
+const logs = rawLogs.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <!-- Agentic Metadata -->
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="SOURCE. Registro de sistema y arquitectura operativa.">
+</head>
+<body>
+    <div class="system-hud">
+        [SYS_TICK: {new Date().toISOString().split('T')[0]}] || [USER: ROOT] || [LAYER: SOURCE]
+    </div>
+
+    <div class="container">
+        <header>
+<pre class="ascii-art">
+   _____  ____  _    _____   _____  ______ 
+  / ____|/ __ \| |  | |  __ \ / ____||  ____|
+ | (___ | |  | | |  | | |__) | |     | |__   
+  \___ \| |  | | |  | |  _  /| |     |  __|  
+  ____) | |__| | |__| | | \ \| |____ | |____ 
+ |_____/ \____/ \____/|_|  \_\\_____||______|
+==============================================</pre>
+            <p class="subtitle">> SYS_LOG // Documentación de Arquitectura de Sistemas.</p>
+        </header>
+
+        <section class="statement">
+            <p class="code-comment">/* 
+ * PARADIGMA: 
+ * La fricción no es un rasgo natural del ecosistema. 
+ * Es información sobre un defecto de arquitectura. 
+ * Construimos para delegar la ejecución mecánica a la máquina, 
+ * liberando así nuestra capacidad pura de pensamiento.
+ */</p>
+        </section>
+
+        <!-- El Log de operaciones Dinámico compilado desde Notion/Make -->
+        <div class="log-grid">
+            {logs.map((log, index) => {
+                const entryId = String(logs.length - index).padStart(2, '0');
+                return (
+                <article class="node">
+                    <span class="node-id">>> [ENTRY_{entryId}] :: {log.frontmatter.status} // {log.frontmatter.date}</span>
+                    <h2>> {log.frontmatter.title}</h2>
+                    <div class="node-content">
+                        <log.Content />
+                    </div>
+                    <span class="eof">[EOF]</span>
+                </article>
+                );
+            })}
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    /* ASCII / Terminal Esthetic Absoluta */
+    :root {
+        --bg-color: #000000;
+        --text-base: #B0B0B0;
+        --accent: #00FF41; /* Verde Fósforo Terminal */
+        --dim: #444444;
+        --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-base);
+        font-family: var(--font-mono);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .system-hud {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 0.75rem;
+        color: var(--accent);
+        border-bottom: 1px dashed var(--dim);
+        padding: 8px 20px;
+        background: rgba(0, 0, 0, 0.95);
+        text-transform: uppercase;
+        z-index: 100;
+        box-sizing: border-box;
+    }
+
+    .container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 100px 20px 60px 20px;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+
+    .ascii-art {
+        color: #FFFFFF;
+        font-size: clamp(0.5rem, 1.5vw, 1rem); /* Escala en móviles */
+        line-height: 1.15;
+        margin: 0 0 1rem 0;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+
+    .subtitle {
+        color: var(--accent);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .statement {
+        margin-bottom: 4rem;
+    }
+
+    .code-comment {
+        color: var(--dim);
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+    }
+
+    .log-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .node {
+        border-top: 1px solid var(--dim);
+        border-bottom: 1px solid var(--dim);
+        padding: 2rem 0;
+    }
+
+    .node-id {
+        font-size: 0.8rem;
+        color: var(--accent);
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .node h2 {
+        font-size: 1.1rem;
+        font-weight: normal;
+        margin: 0 0 1rem 0;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+
+    /* Como Astro importa HTML desde Markdown nativo, formateamos sus etiquetas interiores */
+    :global(.node-content p) {
+        margin: 0 0 1.5rem 0;
+        font-size: 0.95rem;
+    }
+    
+    :global(.node-content ul) {
+        color: #A0A0A0;
+        font-size: 0.90rem;
+        margin-bottom: 1.5rem;
+        list-style-type: square;
+    }
+
+    :global(.node-content strong) {
+        color: #FFFFFF;
+        font-weight: normal;
+        text-decoration: underline;
+        text-decoration-color: var(--dim);
+    }
+
+    .eof {
+        font-size: 0.75rem;
+        color: var(--dim);
+    }
+</style>
