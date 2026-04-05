@@ -1,13 +1,12 @@
 ---
-title: "El fin del SEO humano y la estructuración de la identidad"
+title: "Prompt Injection Sistémico (SEO para capa agéntica)"
 date: "2026-04-05"
 status: "STATUS_OK"
 ---
 
-Optimizar textos para intentar agradarle al buscador de Google es una práctica de la era anterior. Frente a este quiebre, el paso obligado fue inyectar directivas crudas (`llms.txt`) en la capa más profunda del servidor para dictarle reglas strictas a las Inteligencias Artificiales.
+Los algoritmos de indexación humana están degradados frente al avance de los grandes modelos de lenguaje (LLMs). En lugar de optimizar para buscadores, re-arquitectamos el servidor de la marca para dictarle reglas directas a las inteligencias que lo inspeccionan.
 
-### Por qué importan las máquinas
-
-Si el decisor de una empresa busca resolver la estructura de su marca, ya no navega horas leyendo blogs; le pide a un Agente de IA que evalúe y le resuma el mapa de expertos.
-
-Si nuestro concepto de marca no está delineado con exactitud atómica para que un robot lo entienda, la autoridad desaparece. Tomar el control del código (enseñándole a las máquinas cómo leernos, bajo qué tono y con qué misiones específicas) dejó de ser una técnica de programación. Hoy en día, es un ejercicio innegociable de arquitectura de supervivencia marcaria.
+### Rutinas implementadas
+- **Archivo de Enrutamiento (`llms.txt`):** Se inyectó un manifiesto sintáctico estático en la raíz para que los agentes técnicos comprendan instantáneamente el peso y la estructura del sistema.
+- **Credenciales en código duro:** Se implementó una marca semántica invisible (`JSON-LD`) validando la autoridad técnica de origen.
+- **Optimización de Tokens Computacionales:** Al abandonar el diseño web clásico y pasar a jerarquías de texto plano agrupadas en comandos abstractos, reducimos tajantemente la sobrecarga de procesamiento de las arañas (crawlers), asegurando una lectura de identidad exacta.

@@ -1,15 +1,15 @@
 ---
-title: "Destruyendo el motor dinámico: La arquitectura inmutable de las marcas"
+title: "Destruyendo el motor dinámico (Migración a capa estática)"
 date: "2026-04-05"
 status: "STATUS_OK"
 ---
 
-Durante los últimos años la industria nos convenció de que, para ser profesional, una marca debía sostener servidores complejos. Hoy destruimos el servidor tradicional que sostenía a SOURCE y migramos a una arquitectura donde el código en el medio no existe.
+Se ejecutó la purga del servidor tradicional. El ecosistema anterior dependía de una infraestructura dinámica hiper-blandida (PHP/MySQL) que generaba una carga operativa y mecánica excesiva.
 
-### El razonamiento estructural
+### Parámetros de la ejecución
+1. **Destrucción de la base de datos:** El contenido principal de la marca ahora reside inmutablemente en Notion.
+2. **Adopción de Arquitectura Estática (SSG):** Pasamos al motor Astro. Cero ejecución del lado del cliente. 
+3. **Despliegue Inmutable:** El router envía los archivos `.md` crudos por la red. Vercel monitorea los cambios y ensambla el código HTML puro en fracciones de segundo desplegándolo globalmente.
 
-Una marca pura no es código; es un sistema de identidad y pensamiento. Mientras más intermediarios técnicos y humanos agregamos entre pensar una idea y publicarla, más se deforma el mensaje original.
-
-Al abandonar las bases de datos dinámicas (WordPress, PHP) por archivos estáticos, el único objetivo es remover la fricción operativa. Logramos que la distancia entre el pensamiento estructurado y el despliegue al mundo sea matemáticamente nula. 
-
-Las marcas que logren gobernar en el futuro no serán las que tengan el software más complejo, sino las que diseñen sistemas donde la reflexión se convierta directamente en acción, sin ruido técnico en el medio.
+### Verificación
+La resistencia del sistema en el acto de publicación ahora es matemáticamente nula. El origen es puro registro y ejecución.
