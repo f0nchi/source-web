@@ -11,9 +11,23 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOURCE // Fonchi</title>
+    <!-- Agentic SEO: Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Fonchi Fontecoba",
+      "jobTitle": "Arquitecto de Sistemas de Marca",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ideas Aumentadas"
+      },
+      "description": "Diseñando sistemas operativos para mentes complejas."
+    }
+    </script>
     <!-- Agentic Metadata -->
     <meta name="robots" content="index, follow">
     <meta name="description" content="SOURCE. Registro de sistema y arquitectura operativa.">
