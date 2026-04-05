@@ -47,7 +47,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
   ____) | |__| | |__| | | \ \| |____ | |____ 
  |_____/ \____/ \____/|_|  \_\\_____||______|
 ==============================================</pre>
-            <p class="subtitle">> SYS_LOG // Documentación de Arquitectura de Sistemas.</p>
+            <p class="subtitle">> SYS_LOG // Documentación de Arquitectura de Sistemas.<span class="cursor">_</span></p>
         </header>
 
         <section class="statement">
@@ -97,7 +97,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     :root {
         --bg-color: #000000;
         --text-base: #B0B0B0;
-        --accent: #00FF41; /* Verde Fósforo Terminal */
+        --accent: #FFB000; /* Ambar Fosforo Terminal */
         --dim: #444444;
         --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     }
@@ -150,6 +150,20 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+    }
+
+    .cursor {
+        display: inline-block;
+        animation: blink 1s step-end infinite;
+        background-color: var(--accent);
+        color: var(--bg-color);
+        padding: 0 4px;
+        margin-left: 4px;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 
     .statement {
