@@ -63,6 +63,16 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
                 );
             })}
         </div>
+
+        <footer class="system-footer">
+            <span class="eof-log">[ END_OF_LOGS ]</span>
+            <div class="whois-block">
+                <span class="prompt-line">&gt; execute whois_host.sh</span>
+                <p>USER_ID: Fonchi Fontecoba</p>
+                <p>ROLE: Arquitecto de Sistemas de Marca</p>
+                <p>MISSION: Diseñando sistemas operativos para mentes complejas.</p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
@@ -187,5 +197,36 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     .eof {
         font-size: 0.75rem;
         color: var(--dim);
+    }
+
+    .system-footer {
+        margin-top: 6rem;
+        border-top: 1px dashed var(--dim);
+        padding-top: 2rem;
+        color: var(--dim);
+    }
+
+    .eof-log {
+        display: block;
+        margin-bottom: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .whois-block {
+        background-color: rgba(0, 255, 65, 0.03);
+        border: 1px solid rgba(0, 255, 65, 0.2);
+        padding: 1.5rem;
+    }
+
+    .prompt-line {
+        color: var(--accent);
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .whois-block p {
+        margin: 0 0 0.5rem 0;
+        font-size: 0.9rem;
+        color: #A0A0A0;
     }
 </style>
