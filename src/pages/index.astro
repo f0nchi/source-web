@@ -86,9 +86,10 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
                 <p>ROLE: Arquitecto de Sistemas de Marca</p>
                 <p>ACTIVE_NODE: Ideas Aumentadas</p>
                 <p>MISSION: Diseñando sistemas operativos para mentes complejas.</p>
-                <p class="action-line">
-                    <a href="#" id="init-comm-link" class="comm-link">&gt; init_comm_protocol <span class="cursor">_</span></a>
-                </p>
+                <div class="action-menu">
+                    <span class="dim-text">STATUS: EOF // Awaiting user input...</span>
+                    <a href="#" id="init-comm-link" class="comm-link"><span class="menu-key">[Y]</span> INITIATE_MAIL_PROTOCOL <span class="cursor">_</span></a>
+                </div>
             </div>
         </footer>
     </div>
@@ -275,8 +276,24 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         color: #A0A0A0;
     }
 
-    .action-line {
-        margin-top: 2rem !important;
+    .action-menu {
+        margin-top: 2rem;
+        border-top: 1px dashed rgba(255, 176, 0, 0.2); /* Accent dim */
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .dim-text {
+        font-size: 0.8rem;
+        color: var(--dim);
+        font-style: italic;
+    }
+
+    .menu-key {
+        color: #FFFFFF;
+        font-weight: bold;
     }
 
     .comm-link {
