@@ -86,9 +86,25 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
                 <p>ROLE: Arquitecto de Sistemas de Marca</p>
                 <p>ACTIVE_NODE: Ideas Aumentadas</p>
                 <p>MISSION: Diseñando sistemas operativos para mentes complejas.</p>
+                <p class="action-line">
+                    <a href="#" id="init-comm-link" class="comm-link">&gt; init_comm_protocol <span class="cursor">_</span></a>
+                </p>
             </div>
         </footer>
     </div>
+
+    <script is:inline>
+        // Obfuscate the email to avoid basic syntax scraping by spam bots
+        const commLink = document.getElementById('init-comm-link');
+        if (commLink) {
+            commLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const user = 'hola'; // Cambia esto por tu usuario de email
+                const domain = 'fonchi.com.ar'; // Cambia esto por tu dominio de email
+                window.location.href = 'mailto:' + user + '@' + domain + '?subject=System%20Protocol%20Init';
+            });
+        }
+    </script>
 </body>
 </html>
 
@@ -257,5 +273,29 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         margin: 0 0 0.5rem 0;
         font-size: 0.9rem;
         color: #A0A0A0;
+    }
+
+    .action-line {
+        margin-top: 2rem !important;
+    }
+
+    .comm-link {
+        color: var(--accent);
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        padding: 2px 4px;
+        margin-left: -4px;
+    }
+
+    .comm-link:hover {
+        background-color: var(--accent);
+        color: var(--bg-color);
+        outline: none;
+    }
+
+    .comm-link:hover .cursor {
+        background-color: var(--bg-color);
+        color: var(--accent);
     }
 </style>
