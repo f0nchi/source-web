@@ -102,7 +102,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
                 e.preventDefault();
                 const user = 'hola'; // Cambia esto por tu usuario de email
                 const domain = 'fonchi.com.ar'; // Cambia esto por tu dominio de email
-                window.location.href = 'mailto:' + user + '@' + domain + '?subject=System%20Protocol%20Init';
+                window.open('mailto:' + user + '@' + domain + '?subject=System%20Protocol%20Init', '_blank');
             });
         }
     </script>
