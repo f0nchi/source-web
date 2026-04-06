@@ -1,5 +1,7 @@
 ---
 // SOURCE — Capa de Origen de Fonchi Fontecoba
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 const pageTitle = "SOURCE | Sys.Log";
 
 // Extraemos los logs usando Vite nativo en lugar de Astro.glob para asegurar la compatibilidad estricta en Vercel
@@ -31,6 +33,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     <!-- Agentic Metadata -->
     <meta name="robots" content="index, follow">
     <meta name="description" content="SOURCE. Registro de sistema y arquitectura operativa.">
+    <SpeedInsights />
 </head>
 <body>
     <div class="system-hud">
