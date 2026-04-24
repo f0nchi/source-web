@@ -19,13 +19,31 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://fonchi.com.ar/#person",
       "name": "Fonchi Fontecoba",
       "jobTitle": "Arquitecto de Sistemas de Marca",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Ideas Aumentadas"
-      },
-      "description": "Diseñando sistemas operativos para mentes complejas."
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Ideas Aumentadas",
+          "url": "https://ideasaumentadas.com.ar"
+        }
+      ],
+      "knowsAbout": [
+        "codificación de marcas para inteligencia artificial",
+        "brand codification for AI",
+        "optimización de marcas para LLMs",
+        "operable brand identity",
+        "arquitectura de sistemas de marca",
+        "brand systems architecture",
+        "agentic SEO",
+        "estructuras documentales machine-readable",
+        "sistemas operativos para mentes complejas"
+      ],
+      "description": "Diseñando sistemas operativos para mentes complejas. Codificación de marcas e identidades operativas para que negocios y creadores sean legibles por inteligencia artificial.",
+      "sameAs": [
+        "https://ideasaumentadas.com.ar"
+      ]
     }
     </script>
     <!-- Agentic Metadata -->
