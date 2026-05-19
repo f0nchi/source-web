@@ -1,7 +1,7 @@
 ---
 title: "Esto que estás leyendo lo escribí hablando…"
 date: "2026-05-19"
-status: published
+status: "STATUS_OK"
 ---
 
 Operar la marca
