@@ -1,0 +1,174 @@
+---
+export function getStaticPaths() {
+    const modules = Object.entries(import.meta.glob('../../logs/*.md', { eager: true }))
+        .map(([path, log]: [string, any]) => ({
+            ...log,
+            slug: path.split('/').pop()?.replace(/\.md$/, '') || '',
+        }))
+        .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
+
+    return modules.map((log, index) => ({
+        params: { slug: log.slug },
+        props: {
+            log,
+            newer: index > 0 ? modules[index - 1] : null,
+            older: index < modules.length - 1 ? modules[index + 1] : null,
+        },
+    }));
+}
+
+const { log, newer, older } = Astro.props;
+const Content = log.default;
+const canonical = new URL(`/log/${log.slug}/`, Astro.site);
+const description = `SOURCE. ${log.frontmatter?.title}. Registro de sistema y arquitectura operativa de Fonchi Fontecoba.`;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{log.frontmatter?.title} // SOURCE</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: log.frontmatter?.title,
+        datePublished: log.frontmatter?.date,
+        dateModified: log.frontmatter?.date,
+        mainEntityOfPage: canonical.toString(),
+        author: {
+            '@type': 'Person',
+            '@id': 'https://www.fonchi.com.ar/#person',
+            name: 'Fonchi Fontecoba',
+        },
+    })}></script>
+</head>
+<body>
+    <div class="system-hud">
+        [HOST: FONCHI] || [LAYER: SOURCE] || [STATUS: {log.frontmatter?.status || 'UNKNOWN'}]
+    </div>
+
+    <main class="container">
+        <nav class="back" aria-label="Navegación principal">
+            <a href="/">&lt;&lt; VOLVER_A_SOURCE</a>
+        </nav>
+
+        <article class="node">
+            <p class="node-id">&gt;&gt; {log.frontmatter?.date} // {log.frontmatter?.status || 'UNKNOWN'}</p>
+            <h1>&gt; {log.frontmatter?.title}</h1>
+            <div class="node-content">
+                <Content />
+            </div>
+            <span class="eof">[EOF]</span>
+        </article>
+
+        <nav class="sequence" aria-label="Registros relacionados">
+            {newer ? <a href={`/log/${newer.slug}/`}>&lt; MÁS_NUEVO</a> : <span></span>}
+            {older ? <a href={`/log/${older.slug}/`}>MÁS_ANTERIOR &gt;</a> : <span></span>}
+        </nav>
+    </main>
+</body>
+</html>
+
+<style>
+    :root {
+        --bg-color: #000000;
+        --text-base: #B0B0B0;
+        --text-strong: #FFFFFF;
+        --accent: #FFB000;
+        --dim: #444444;
+        --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    }
+
+    body {
+        margin: 0;
+        background: var(--bg-color);
+        color: var(--text-base);
+        font-family: var(--font-mono);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .system-hud {
+        position: fixed;
+        inset: 0 0 auto;
+        box-sizing: border-box;
+        z-index: 10;
+        padding: 8px 20px;
+        border-bottom: 1px dashed var(--dim);
+        background: rgba(0, 0, 0, 0.95);
+        color: var(--accent);
+        font-size: 0.75rem;
+    }
+
+    .container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 90px 20px 60px;
+    }
+
+    a {
+        color: var(--accent);
+        text-underline-offset: 0.25em;
+    }
+
+    .back {
+        margin-bottom: 3rem;
+        font-size: 0.8rem;
+    }
+
+    .node {
+        padding: 2rem 0;
+        border-top: 1px solid var(--dim);
+        border-bottom: 1px solid var(--dim);
+    }
+
+    .node-id,
+    .eof {
+        color: var(--dim);
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        margin: 1rem 0 2rem;
+        color: var(--text-strong);
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        line-height: 1.25;
+    }
+
+    .node-content :global(h2),
+    .node-content :global(h3) {
+        margin-top: 2rem;
+        color: var(--text-strong);
+    }
+
+    .node-content :global(strong) {
+        color: var(--text-strong);
+    }
+
+    .node-content :global(blockquote) {
+        margin-left: 0;
+        padding-left: 1rem;
+        border-left: 2px solid var(--accent);
+    }
+
+    .eof {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .sequence {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .sequence :global(a:last-child) {
+        text-align: right;
+    }
+</style>
