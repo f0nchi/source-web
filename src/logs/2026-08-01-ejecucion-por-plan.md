@@ -4,8 +4,8 @@ date: "2026-08-01"
 status: "STATUS_OK"
 ---
 
-Avanzar de las consultas aisladas hacia la ejecución continua requiere estructurar una bandeja de intenciones claras.
+Avanzar de las consultas aisladas hacia la ejecución continua exige cambiar la forma en que estructuramos el trabajo diario.
 
-Desplegamos un esquema de trabajo por plan donde la persona registra una meta estratégica y el sistema ejecuta las tareas analíticas necesarias en segundo plano, devolviendo recibos transparentes de su trabajo.
-
-La intervención del dueño se mantiene en la definición del rumbo y en la evaluación del resultado entregado. El sistema procesa los pasos intermedios de forma desatendida.
+1. **La observación:** La consulta constante a un modelo convierte a la persona en el cuello de botella de cada microdecisión analítica.
+2. **El movimiento aplicado:** Desplegamos una bandeja de intenciones donde la persona registra una meta estratégica y el sistema ejecuta las tareas analíticas necesarias en segundo plano.
+3. **El resultado observado:** El sistema entrega recibos transparentes de lo actuado. La intervención humana se enfoca en evaluar resultados y corregir el rumbo.

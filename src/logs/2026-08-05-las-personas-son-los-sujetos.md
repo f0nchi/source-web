@@ -4,8 +4,9 @@ date: "2026-08-05"
 status: "STATUS_OK"
 ---
 
-Un error recurrente al hablar de inteligencia artificial consiste en atribuirle agencia propia a los procesos, utilizando frases que colocan a la tecnología como protagonista de las decisiones.
+Un vicio frecuente al hablar de inteligencia artificial consiste en atribuirle agencia propia a los procesos, usando frases que colocan a la tecnología como protagonista de las decisiones.
 
-Reafirmamos una regla en todo nuestro trabajo: las personas constituyen los únicos sujetos de la acción.
+Cuando decimos que un sistema "piensa", "decide" o "quiere", confundimos la herramienta con quien la opera.
 
-La tecnología opera como una palanca y una infraestructura de soporte. El discernimiento, las decisiones de riesgo y la dirección pertenecen a los profesionales que lideran los proyectos.
+> **Regla de trabajo codificada:**  
+> Las personas constituyen los únicos sujetos de la acción. La tecnología opera como palanca e infraestructura; el discernimiento, el riesgo y la dirección pertenecen al profesional al mando.
