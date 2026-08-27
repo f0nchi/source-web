@@ -86,18 +86,18 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
             <h1 class="visually-hidden">SOURCE — Fonchi Fontecoba</h1>
             <div class="brand-conjunto">
                 <svg viewBox="6 8 52 48" class="brand-signo" role="img" aria-label="fonchi">
-                    <rect x="28" y="8" width="30" height="4" fill="var(--senal)"></rect>
-                    <rect x="26" y="12" width="30" height="4" fill="var(--senal)"></rect>
-                    <rect x="24" y="16" width="8" height="4" fill="var(--senal)" opacity="0.92"></rect>
-                    <rect x="22" y="20" width="8" height="4" fill="var(--senal)" opacity="0.84"></rect>
-                    <rect x="20" y="24" width="8" height="4" fill="var(--senal)" opacity="0.76"></rect>
-                    <rect x="18" y="28" width="20" height="4" fill="var(--senal)" opacity="0.68"></rect>
-                    <rect x="16" y="32" width="20" height="4" fill="var(--senal)" opacity="0.60"></rect>
-                    <rect x="14" y="36" width="8" height="4" fill="var(--senal)" opacity="0.52"></rect>
-                    <rect x="12" y="40" width="8" height="4" fill="var(--senal)" opacity="0.44"></rect>
-                    <rect x="10" y="44" width="8" height="4" fill="var(--senal)" opacity="0.36"></rect>
-                    <rect x="8" y="48" width="8" height="4" fill="var(--senal)" opacity="0.28"></rect>
-                    <rect x="6" y="52" width="8" height="4" fill="var(--senal)" opacity="0.20"></rect>
+                    <rect class="banda-signo" style="--i:0; --final-op:1.00;" x="28" y="8" width="30" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:1; --final-op:1.00;" x="26" y="12" width="30" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:2; --final-op:0.92;" x="24" y="16" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:3; --final-op:0.84;" x="22" y="20" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:4; --final-op:0.76;" x="20" y="24" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:5; --final-op:0.68;" x="18" y="28" width="20" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:6; --final-op:0.60;" x="16" y="32" width="20" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:7; --final-op:0.52;" x="14" y="36" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:8; --final-op:0.44;" x="12" y="40" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:9; --final-op:0.36;" x="10" y="44" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:10; --final-op:0.28;" x="8" y="48" width="8" height="4" fill="var(--senal)"></rect>
+                    <rect class="banda-signo" style="--i:11; --final-op:0.20;" x="6" y="52" width="8" height="4" fill="var(--senal)"></rect>
                 </svg>
                 <span class="brand-wordmark">fonchi</span>
             </div>
@@ -251,6 +251,25 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         flex: none;
     }
 
+    /* Animación de entrada de la F Jet Lag (Estela de velocidad de arriba hacia abajo) */
+    .banda-signo {
+        opacity: 0;
+        transform: translateX(20px);
+        animation: estela-llegada 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: calc(var(--i) * 28ms);
+    }
+
+    @keyframes estela-llegada {
+        0% {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        100% {
+            opacity: var(--final-op);
+            transform: translateX(0);
+        }
+    }
+
     .brand-wordmark {
         font-family: var(--font-lectura);
         font-weight: 600;
@@ -258,6 +277,13 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         line-height: 1;
         letter-spacing: var(--tr-display);
         color: var(--blanco-titular);
+        opacity: 0;
+        animation: wordmark-fade 0.5s ease-out 0.35s forwards;
+    }
+
+    @keyframes wordmark-fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
 
     .subtitle {
