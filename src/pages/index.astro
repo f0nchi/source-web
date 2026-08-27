@@ -238,20 +238,27 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         border: 0;
     }
 
-    /* Animación del Logo: "Viene corriendo a alta velocidad y queda clavado" */
     .brand-conjunto {
         display: flex;
         align-items: baseline;
         gap: 24px;
         margin-bottom: 34px;
-        will-change: transform, opacity, filter;
-        animation: logo-disparo 0.38s cubic-bezier(0.05, 0.95, 0.15, 1) forwards;
     }
 
-    @keyframes logo-disparo {
+    /* ÚNICAMENTE la F del Signo entra a alta velocidad y clava en seco */
+    .brand-signo {
+        height: 56px;
+        width: auto;
+        display: block;
+        flex: none;
+        will-change: transform, opacity, filter;
+        animation: signo-disparo 0.38s cubic-bezier(0.05, 0.95, 0.15, 1) forwards;
+    }
+
+    @keyframes signo-disparo {
         0% {
             opacity: 0;
-            transform: translateX(-160px) skewX(-16deg);
+            transform: translateX(-140px) skewX(-16deg);
             filter: blur(8px);
         }
         50% {
@@ -265,13 +272,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         }
     }
 
-    .brand-signo {
-        height: 56px;
-        width: auto;
-        display: block;
-        flex: none;
-    }
-
+    /* La palabra "fonchi" es 100% ESTÁTICA */
     .brand-wordmark {
         font-family: var(--font-lectura);
         font-weight: 600;
