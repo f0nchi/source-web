@@ -15,6 +15,13 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOURCE // Fonchi</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Google Fonts: Spectral & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
     <!-- Agentic SEO: Schema Markup -->
     <script type="application/ld+json">
     {
@@ -49,7 +56,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     </script>
     <!-- Agentic Metadata -->
     <meta name="robots" content="index, follow">
-    <meta name="description" content="SOURCE. Registro de sistema y arquitectura operativa.">
+    <meta name="description" content="SOURCE. Registro público de decisiones de arquitectura de sistemas por Fonchi Fontecoba.">
     <link rel="canonical" href="https://www.fonchi.com.ar/">
 
     <!-- Google Tag Manager -->
@@ -77,36 +84,38 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     <div class="container">
         <header>
             <h1 class="visually-hidden">SOURCE — Fonchi Fontecoba</h1>
-<pre class="ascii-art">
-   _____  ____  _    _____   _____  ______ 
-  / ____|/ __ \| |  | |  __ \ / ____||  ____|
- | (___ | |  | | |  | | |__) | |     | |__   
-  \___ \| |  | | |  | |  _  /| |     |  __|  
-  ____) | |__| | |__| | | \ \| |____ | |____ 
- |_____/ \____/ \____/|_|  \_\\_____||______|
-==============================================</pre>
-            <p class="subtitle">> SYS_LOG // Documentación de Arquitectura de Sistemas.<span class="cursor">_</span></p>
+            <div class="brand-conjunto">
+                <svg viewBox="6 8 52 48" class="brand-signo" role="img" aria-label="fonchi">
+                    <rect x="28" y="8" width="30" height="4" fill="var(--senal)"></rect>
+                    <rect x="26" y="12" width="30" height="4" fill="var(--senal)"></rect>
+                    <rect x="24" y="16" width="8" height="4" fill="var(--senal)" opacity="0.92"></rect>
+                    <rect x="22" y="20" width="8" height="4" fill="var(--senal)" opacity="0.84"></rect>
+                    <rect x="20" y="24" width="8" height="4" fill="var(--senal)" opacity="0.76"></rect>
+                    <rect x="18" y="28" width="20" height="4" fill="var(--senal)" opacity="0.68"></rect>
+                    <rect x="16" y="32" width="20" height="4" fill="var(--senal)" opacity="0.60"></rect>
+                    <rect x="14" y="36" width="8" height="4" fill="var(--senal)" opacity="0.52"></rect>
+                    <rect x="12" y="40" width="8" height="4" fill="var(--senal)" opacity="0.44"></rect>
+                    <rect x="10" y="44" width="8" height="4" fill="var(--senal)" opacity="0.36"></rect>
+                    <rect x="8" y="48" width="8" height="4" fill="var(--senal)" opacity="0.28"></rect>
+                    <rect x="6" y="52" width="8" height="4" fill="var(--senal)" opacity="0.20"></rect>
+                </svg>
+                <span class="brand-wordmark">fonchi</span>
+            </div>
+            <p class="subtitle">SYS_LOG // Documentación de Arquitectura de Sistemas</p>
+            <p class="statement">
+                La resistencia no es un rasgo natural del ecosistema: es información sobre un defecto de arquitectura. Construimos para delegar la ejecución mecánica a la máquina y liberar la capacidad de pensamiento.
+            </p>
         </header>
 
-        <section class="statement">
-            <p class="code-comment">/* 
- * PARADIGMA: 
- * La resistencia no es un rasgo natural del ecosistema. 
- * Es información sobre un defecto de arquitectura. 
- * Construimos para delegar la ejecución mecánica a la máquina, 
- * liberando así nuestra capacidad pura de pensamiento.
- */</p>
-        </section>
-
-        <!-- El Log de operaciones Dinámico compilado desde Notion/Make -->
+        <!-- El Log de operaciones Dinámico -->
         <div class="log-grid">
             {logs.map((log: any, index) => {
                 const entryId = String(logs.length - index).padStart(2, '0');
                 const Content = log.default;
                 return (
                 <article class="node">
-                    <span class="node-id">>> [ENTRY_{entryId}] :: {log.frontmatter?.status || 'UNKNOWN'} // {log.frontmatter?.date}</span>
-                    <h2><a href={`/log/${log.slug}/`}>> {log.frontmatter?.title}</a></h2>
+                    <span class="node-id">&gt;&gt; ENTRY_{entryId} // {log.frontmatter?.status || 'STATUS_OK'} // {log.frontmatter?.date}</span>
+                    <h2><a href={`/log/${log.slug}/`}>{log.frontmatter?.title}</a></h2>
                     <div class="node-content">
                         <Content />
                     </div>
@@ -138,8 +147,8 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         if (commLink) {
             commLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                const user = 'hola'; // Cambia esto por tu usuario de email
-                const domain = 'fonchi.com.ar'; // Cambia esto por tu dominio de email
+                const user = 'hola';
+                const domain = 'fonchi.com.ar';
                 window.open('mailto:' + user + '@' + domain + '?subject=System%20Protocol%20Init', '_blank');
             });
         }
@@ -148,22 +157,44 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 </html>
 
 <style>
-    /* ASCII / Terminal Esthetic Absoluta */
+    /* Design System Fonchi — SOURCE Surface */
     :root {
-        --bg-color: #000000;
-        --text-base: #B0B0B0;
-        --accent: #FFB000; /* Ambar Fosforo Terminal */
-        --dim: #444444;
-        --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        --negro-profundo: #0c0e0d;
+        --negro-registro: #101311;
+        --filete: #1d2320;
+        --gris-tenue: #5a645d;
+        --gris-medio: #959e98;
+        --gris-texto: #e4e8e5;
+        --blanco-titular: #ffffff;
+        --senal: #e5ac3a;
+
+        --font-lectura: 'Spectral', Georgia, 'Times New Roman', serif;
+        --font-registro: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+        --tr-display: -0.03em;
+        --tr-sello: 0.14em;
+        --medida-lectura: 680px;
+    }
+
+    * {
+        box-sizing: border-box;
+        border-radius: 0 !important; /* Regla de oro: cero redondeos */
+    }
+
+    ::selection {
+        background: var(--senal);
+        color: var(--negro-profundo);
     }
 
     body {
         margin: 0;
         padding: 0;
-        background-color: var(--bg-color);
-        color: var(--text-base);
-        font-family: var(--font-mono);
-        line-height: 1.6;
+        background-color: var(--negro-profundo);
+        color: var(--gris-texto);
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
         -webkit-font-smoothing: antialiased;
     }
 
@@ -172,24 +203,26 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         top: 0;
         left: 0;
         width: 100%;
-        font-size: 0.75rem;
-        color: var(--accent);
-        border-bottom: 1px dashed var(--dim);
-        padding: 8px 20px;
-        background: rgba(0, 0, 0, 0.95);
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--senal);
+        border-bottom: 1px solid var(--filete);
+        padding: 10px 24px;
+        background: rgba(12, 14, 13, 0.96);
         text-transform: uppercase;
         z-index: 100;
         box-sizing: border-box;
     }
 
     .container {
-        max-width: 760px;
+        max-width: 860px;
         margin: 0 auto;
-        padding: 100px 20px 60px 20px;
+        padding: 96px 28px 96px 28px;
     }
 
     header {
-        margin-bottom: 4rem;
+        margin-bottom: 56px;
     }
 
     .visually-hidden {
@@ -204,26 +237,53 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         border: 0;
     }
 
-    .ascii-art {
-        color: #FFFFFF;
-        font-size: clamp(0.5rem, 1.5vw, 1rem); /* Escala en móviles */
-        line-height: 1.15;
-        margin: 0 0 1rem 0;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    .brand-conjunto {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+        margin-bottom: 34px;
+    }
+
+    .brand-signo {
+        height: 56px;
+        width: auto;
+        display: block;
+        flex: none;
+    }
+
+    .brand-wordmark {
+        font-family: var(--font-lectura);
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 1;
+        letter-spacing: var(--tr-display);
+        color: var(--blanco-titular);
     }
 
     .subtitle {
-        color: var(--accent);
-        font-size: 0.85rem;
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        color: var(--senal);
+        margin: 0 0 44px 0;
+    }
+
+    .statement {
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 1.55;
+        margin: 0;
+        max-width: 58ch;
+        color: var(--gris-texto);
     }
 
     .cursor {
         display: inline-block;
         animation: blink 1s step-end infinite;
-        background-color: var(--accent);
-        color: var(--bg-color);
+        background-color: var(--senal);
+        color: var(--negro-profundo);
         padding: 0 4px;
         margin-left: 4px;
     }
@@ -233,26 +293,36 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         50% { opacity: 0; }
     }
 
-    .statement {
-        margin-bottom: 4rem;
-    }
-
-    .code-comment {
-        color: var(--dim);
-        font-size: 0.9rem;
-        white-space: pre-wrap;
-    }
-
     .log-grid {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 0;
     }
 
     .node {
-        border-top: 1px solid var(--dim);
-        border-bottom: 1px solid var(--dim);
-        padding: 2rem 0;
+        border-top: 1px solid var(--filete);
+        padding: 38px 0 30px 0;
+    }
+
+    .node-id {
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--senal);
+        display: block;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+    }
+
+    .node h2 {
+        font-family: var(--font-lectura);
+        font-weight: 200;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: var(--tr-display);
+        margin: 0 0 24px 0;
+        color: var(--blanco-titular);
+        text-wrap: pretty;
     }
 
     .node h2 a {
@@ -262,119 +332,140 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 
     .node h2 a:hover,
     .node h2 a:focus-visible {
-        color: var(--accent);
+        color: var(--senal);
         text-decoration: underline;
         text-underline-offset: 0.25em;
     }
 
-    .node-id {
-        font-size: 0.8rem;
-        color: var(--accent);
-        display: block;
-        margin-bottom: 1.5rem;
-    }
-
-    .node h2 {
-        font-size: 1.1rem;
-        font-weight: normal;
-        margin: 0 0 1rem 0;
-        color: #FFFFFF;
-        text-transform: uppercase;
-    }
-
-    /* Como Astro importa HTML desde Markdown nativo, formateamos sus etiquetas interiores */
+    /* Formato de HTML interno desde Markdown */
     :global(.node-content p) {
-        margin: 0 0 1.5rem 0;
-        font-size: 0.95rem;
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 24px 0;
+        color: var(--gris-texto);
+        max-width: var(--medida-lectura);
     }
-    
-    :global(.node-content ul) {
-        color: #A0A0A0;
-        font-size: 0.90rem;
-        margin-bottom: 1.5rem;
-        list-style-type: square;
+
+    :global(.node-content blockquote) {
+        margin: 0 0 24px 0;
+        padding: 16px 20px;
+        background: var(--negro-registro);
+        border-left: 3px solid var(--senal);
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        color: var(--blanco-titular);
+    }
+
+    :global(.node-content ul), :global(.node-content ol) {
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 24px 0;
+        padding-left: 24px;
+        color: var(--gris-texto);
     }
 
     :global(.node-content strong) {
-        color: #FFFFFF;
-        font-weight: normal;
-        text-decoration: underline;
-        text-decoration-color: var(--dim);
+        font-weight: 600;
+        color: var(--blanco-titular);
+    }
+
+    :global(.node-content code) {
+        font-family: var(--font-registro);
+        font-size: 14px;
+        color: var(--senal);
+        background: var(--negro-registro);
+        padding: 2px 6px;
     }
 
     .eof {
-        font-size: 0.75rem;
-        color: var(--dim);
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--gris-tenue);
+        display: block;
+        margin-top: 24px;
     }
 
     .system-footer {
-        margin-top: 6rem;
-        border-top: 1px dashed var(--dim);
-        padding-top: 2rem;
-        color: var(--dim);
+        margin-top: 72px;
+        border-top: 1px solid var(--filete);
+        padding-top: 36px;
+        color: var(--gris-tenue);
     }
 
     .eof-log {
         display: block;
-        margin-bottom: 2rem;
-        font-size: 0.8rem;
+        margin-bottom: 32px;
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--gris-tenue);
     }
 
     .whois-block {
-        background-color: rgba(0, 255, 65, 0.03);
-        border: 1px solid rgba(0, 255, 65, 0.2);
-        padding: 1.5rem;
+        background-color: var(--negro-registro);
+        border: 1px solid var(--filete);
+        padding: 28px;
     }
 
     .prompt-line {
-        color: var(--accent);
+        font-family: var(--font-registro);
+        font-size: 12px;
+        color: var(--senal);
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: 18px;
     }
 
     .whois-block p {
-        margin: 0 0 0.5rem 0;
-        font-size: 0.9rem;
-        color: #A0A0A0;
+        margin: 0 0 8px 0;
+        font-family: var(--font-registro);
+        font-size: 13px;
+        color: var(--gris-medio);
     }
 
     .action-menu {
-        margin-top: 2rem;
-        border-top: 1px dashed rgba(255, 176, 0, 0.2); /* Accent dim */
-        padding-top: 1.5rem;
+        margin-top: 28px;
+        border-top: 1px dashed var(--filete);
+        padding-top: 20px;
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 12px;
     }
 
     .dim-text {
-        font-size: 0.8rem;
-        color: var(--dim);
-        font-style: italic;
+        font-family: var(--font-registro);
+        font-size: 11px;
+        color: var(--gris-tenue);
     }
 
     .menu-key {
-        color: #FFFFFF;
+        color: var(--blanco-titular);
         font-weight: bold;
     }
 
     .comm-link {
-        color: var(--accent);
+        font-family: var(--font-registro);
+        font-size: 13px;
+        color: var(--senal);
         text-decoration: none;
         display: inline-block;
         transition: background-color 0.2s ease, color 0.2s ease;
-        padding: 2px 4px;
-        margin-left: -4px;
+        padding: 4px 8px;
+        margin-left: -8px;
     }
 
     .comm-link:hover {
-        background-color: var(--accent);
-        color: var(--bg-color);
-        outline: none;
+        background-color: var(--senal);
+        color: var(--negro-profundo);
     }
 
     .comm-link:hover .cursor {
-        background-color: var(--bg-color);
-        color: var(--accent);
+        background-color: var(--negro-profundo);
+        color: var(--senal);
     }
 </style>

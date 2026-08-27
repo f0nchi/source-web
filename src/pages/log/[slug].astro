@@ -29,6 +29,13 @@ const description = `SOURCE. ${log.frontmatter?.title}. Registro de sistema y ar
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{log.frontmatter?.title} // SOURCE</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Spectral & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
@@ -48,17 +55,17 @@ const description = `SOURCE. ${log.frontmatter?.title}. Registro de sistema y ar
 </head>
 <body>
     <div class="system-hud">
-        [HOST: FONCHI] || [LAYER: SOURCE] || [STATUS: {log.frontmatter?.status || 'UNKNOWN'}]
+        [HOST: FONCHI] || [LAYER: SOURCE] || [STATUS: {log.frontmatter?.status || 'STATUS_OK'}]
     </div>
 
     <main class="container">
         <nav class="back" aria-label="Navegación principal">
-            <a href="/">&lt;&lt; VOLVER_A_SOURCE</a>
+            <a href="/">&larr; VOLVER_A_SOURCE</a>
         </nav>
 
         <article class="node">
-            <p class="node-id">&gt;&gt; {log.frontmatter?.date} // {log.frontmatter?.status || 'UNKNOWN'}</p>
-            <h1>&gt; {log.frontmatter?.title}</h1>
+            <p class="node-id">&gt;&gt; {log.frontmatter?.date} // {log.frontmatter?.status || 'STATUS_OK'}</p>
+            <h1>{log.frontmatter?.title}</h1>
             <div class="node-content">
                 <Content />
             </div>
@@ -66,29 +73,51 @@ const description = `SOURCE. ${log.frontmatter?.title}. Registro de sistema y ar
         </article>
 
         <nav class="sequence" aria-label="Registros relacionados">
-            {newer ? <a href={`/log/${newer.slug}/`}>&lt; MÁS_NUEVO</a> : <span></span>}
-            {older ? <a href={`/log/${older.slug}/`}>MÁS_ANTERIOR &gt;</a> : <span></span>}
+            {newer ? <a href={`/log/${newer.slug}/`}>&larr; MÁS_NUEVO</a> : <span></span>}
+            {older ? <a href={`/log/${older.slug}/`}>MÁS_ANTERIOR &rarr;</a> : <span></span>}
         </nav>
     </main>
 </body>
 </html>
 
 <style>
+    /* Design System Fonchi — Single Log Page */
     :root {
-        --bg-color: #000000;
-        --text-base: #B0B0B0;
-        --text-strong: #FFFFFF;
-        --accent: #FFB000;
-        --dim: #444444;
-        --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        --negro-profundo: #0c0e0d;
+        --negro-registro: #101311;
+        --filete: #1d2320;
+        --gris-tenue: #5a645d;
+        --gris-medio: #959e98;
+        --gris-texto: #e4e8e5;
+        --blanco-titular: #ffffff;
+        --senal: #e5ac3a;
+
+        --font-lectura: 'Spectral', Georgia, 'Times New Roman', serif;
+        --font-registro: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+        --tr-display: -0.03em;
+        --tr-sello: 0.14em;
+        --medida-lectura: 680px;
+    }
+
+    * {
+        box-sizing: border-box;
+        border-radius: 0 !important; /* Regla de oro: cero redondeos */
+    }
+
+    ::selection {
+        background: var(--senal);
+        color: var(--negro-profundo);
     }
 
     body {
         margin: 0;
-        background: var(--bg-color);
-        color: var(--text-base);
-        font-family: var(--font-mono);
-        line-height: 1.7;
+        background: var(--negro-profundo);
+        color: var(--gris-texto);
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
         -webkit-font-smoothing: antialiased;
     }
 
@@ -97,75 +126,125 @@ const description = `SOURCE. ${log.frontmatter?.title}. Registro de sistema y ar
         inset: 0 0 auto;
         box-sizing: border-box;
         z-index: 10;
-        padding: 8px 20px;
-        border-bottom: 1px dashed var(--dim);
-        background: rgba(0, 0, 0, 0.95);
-        color: var(--accent);
-        font-size: 0.75rem;
+        padding: 10px 24px;
+        border-bottom: 1px solid var(--filete);
+        background: rgba(12, 14, 13, 0.96);
+        color: var(--senal);
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
     }
 
     .container {
-        max-width: 760px;
+        max-width: 860px;
         margin: 0 auto;
-        padding: 90px 20px 60px;
+        padding: 96px 28px 96px 28px;
     }
 
     a {
-        color: var(--accent);
+        color: var(--senal);
+        text-decoration: none;
+    }
+
+    a:hover, a:focus-visible {
+        text-decoration: underline;
         text-underline-offset: 0.25em;
     }
 
     .back {
-        margin-bottom: 3rem;
-        font-size: 0.8rem;
+        margin-bottom: 44px;
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: var(--tr-sello);
     }
 
     .node {
-        padding: 2rem 0;
-        border-top: 1px solid var(--dim);
-        border-bottom: 1px solid var(--dim);
+        padding: 38px 0 30px 0;
+        border-top: 1px solid var(--filete);
+        border-bottom: 1px solid var(--filete);
     }
 
     .node-id,
     .eof {
-        color: var(--dim);
-        font-size: 0.75rem;
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--gris-tenue);
+    }
+
+    .node-id {
+        color: var(--senal);
+        margin-bottom: 22px;
     }
 
     h1 {
-        margin: 1rem 0 2rem;
-        color: var(--text-strong);
-        font-size: clamp(1.4rem, 4vw, 2.2rem);
-        line-height: 1.25;
+        margin: 0 0 32px 0;
+        color: var(--blanco-titular);
+        font-family: var(--font-lectura);
+        font-weight: 200;
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        line-height: 1.06;
+        letter-spacing: var(--tr-display);
+        text-wrap: pretty;
     }
 
-    .node-content :global(h2),
-    .node-content :global(h3) {
-        margin-top: 2rem;
-        color: var(--text-strong);
-    }
-
-    .node-content :global(strong) {
-        color: var(--text-strong);
+    .node-content :global(p) {
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 24px 0;
+        color: var(--gris-texto);
+        max-width: var(--medida-lectura);
     }
 
     .node-content :global(blockquote) {
-        margin-left: 0;
-        padding-left: 1rem;
-        border-left: 2px solid var(--accent);
+        margin: 0 0 24px 0;
+        padding: 16px 20px;
+        background: var(--negro-registro);
+        border-left: 3px solid var(--senal);
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        color: var(--blanco-titular);
+    }
+
+    .node-content :global(ul), .node-content :global(ol) {
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 24px 0;
+        padding-left: 24px;
+        color: var(--gris-texto);
+    }
+
+    .node-content :global(strong) {
+        font-weight: 600;
+        color: var(--blanco-titular);
+    }
+
+    .node-content :global(code) {
+        font-family: var(--font-registro);
+        font-size: 14px;
+        color: var(--senal);
+        background: var(--negro-registro);
+        padding: 2px 6px;
     }
 
     .eof {
         display: block;
-        margin-top: 2rem;
+        margin-top: 24px;
     }
 
     .sequence {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        margin-top: 2rem;
-        font-size: 0.8rem;
+        margin-top: 36px;
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: var(--tr-sello);
     }
 
     .sequence :global(a:last-child) {
