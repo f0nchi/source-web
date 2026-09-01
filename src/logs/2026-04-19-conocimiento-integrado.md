@@ -10,7 +10,7 @@ En su iteración anterior, la base de conocimiento del sistema operaba bajo un m
 
 Para que la marca escale, su inteligencia no puede operar sobre información plana; necesita "textura". 
 
-Para resolver esto, se ejecutó una migración arquitectónica completa reemplazando la lectura fragmentada por un motor de autoconstrucción de conocimiento.
+Para resolver esto, se ejecutó una [migración arquitectónica completa](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento) reemplazando la lectura fragmentada por un motor de autoconstrucción de conocimiento.
 
 ### Parámetros de la ejecución
 

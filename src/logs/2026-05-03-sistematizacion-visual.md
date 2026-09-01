@@ -28,4 +28,4 @@ Para erradicar la inestabilidad compositiva, se desarmó el *pipeline* visual an
 ```
 
 ### Verificación
-La implementación de este esquema logró que la consistencia visual deje de ser una aspiración para convertirse en una realidad estructural. Al reducir la identidad gráfica a fórmulas de código puro, se elimina de raíz la posibilidad del error de composición y se sella una coherencia visual absoluta en todas las salidas del sistema.
+La implementación de este esquema logró que [la consistencia visual](https://www.ideasaumentadas.com.ar/conceptos/consistencia-operativa) deje de ser una aspiración para convertirse en una realidad estructural. Al reducir la identidad gráfica a fórmulas de código puro, se elimina de raíz la posibilidad del error de composición y se sella una coherencia visual absoluta en todas las salidas del sistema.

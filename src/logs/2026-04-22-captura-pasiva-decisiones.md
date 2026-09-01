@@ -16,7 +16,7 @@ Para resolver esta degradación de contexto, se diseñó una nueva capa de regis
 
 1. **Implementación de Hooks de Cierre:** Se programaron rutinas invisibles (*Hooks*) ancladas al entorno de trabajo. Cada vez que el operador finaliza una sesión y cierra la interfaz, el sistema detecta la interrupción y dispara automáticamente el proceso de recolección de todo el registro de la jornada.
 2. **Registro de Textura Bruta:** A diferencia de la documentación formal, esta nueva capa de memoria no resume ni filtra la información. Escribe el archivo conversacional completo, preservando las dudas abiertas y el arco estratégico tal cual sucedió.
-3. **Inyección en el Núcleo:** Los registros pasivos son enviados de forma directa y asíncrona a la arquitectura de conocimiento general, volviéndose recuperables instantáneamente por los agentes en sesiones futuras.
+3. **Inyección en el Núcleo:** Los registros pasivos son enviados de forma directa y asíncrona a la [arquitectura de conocimiento general](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento), volviéndose recuperables instantáneamente por los agentes en sesiones futuras.
 
 ### Verificación
 La introducción de esta capa dual (registro pasivo de textura vs. extracción estructurada de decisiones) liberó al operador humano de la carga de tener que "acordarse de documentar". El diario operativo ahora se escribe solo, garantizando que el sistema herede no solo el resultado final, sino también la génesis completa del pensamiento estratégico.

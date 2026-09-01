@@ -8,6 +8,6 @@ En el ámbito profesional existe la tendencia a ubicarse como un observador neut
 
 La opinión desconectada representa un insumo abundante. El activo escaso reside en la evidencia directa de quien opera un negocio diario utilizando tecnologías contemporáneas.
 
-El eje de nuestra marca se sintetiza en una premisa: el caso sos vos.
+El eje de nuestra marca se sintetiza en una premisa: [el caso sos vos](https://www.ideasaumentadas.com.ar/caso).
 
 La autoridad surge de exponer la construcción del sistema propio, las decisiones tomadas, los fallos de la semana y sus soluciones concretas. Cuando el trabajo real funciona como prueba, la práctica habla por sí misma.

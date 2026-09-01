@@ -19,4 +19,4 @@ Para solucionar este punto ciego, se armó un patrón de registro continuo, basa
 3. **Estandarización de Reporte:** Cada entrada de registro debe declarar sí o sí cinco variables: la fecha exacta, el módulo afectado, qué se modificó, el razonamiento estratégico detrás de la decisión, y quién validó el pase a producción (el humano o el agente).
 
 ### Verificación
-Con el patrón de registro activo, la infraestructura de la marca gana transparencia absoluta. Si el comportamiento de un agente se desvía, el operador ya no tiene que adivinar qué parámetro falló; puede auditar el historial para encontrar exactamente en qué punto de la arqueología del sistema se introdujo el error y revertirlo.
+Con el patrón de registro activo, la infraestructura de la marca gana transparencia absoluta. Si el comportamiento de un agente se desvía, el operador ya no tiene que adivinar qué parámetro falló; puede auditar el historial para encontrar exactamente en qué punto de [la arqueología del sistema](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca) se introdujo el error y revertirlo.

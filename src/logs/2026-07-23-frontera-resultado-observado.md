@@ -10,4 +10,4 @@ Modificamos el criterio de nuestro programa de frontera: una misión concluye en
 
 Al detectar una oportunidad de mejora en la descubribilidad pública, la misión analiza el entorno, construye la solución, la despliega en producción (incorporando etiquetas canónicas o actualizando datos) y mide el impacto generado.
 
-La utilidad del análisis se concreta al verificar los efectos reales producidos tras la intervención.
+La utilidad del análisis se concreta al [verificar los efectos reales producidos](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion) tras la intervención.

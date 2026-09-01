@@ -6,7 +6,7 @@ status: "STATUS_OK"
 
 Mantener la identidad de marca en documentos extensos resulta poco práctico al buscar que una IA colabore sin perder la dirección.
 
-Trasladamos la identidad codificada (principios, tono, restricciones, audiencias y ejemplos de evidencia) hacia el estándar `.contexto/`.
+Trasladamos la identidad codificada (principios, tono, restricciones, audiencias y ejemplos de evidencia) hacia [el estándar `.contexto/`](https://www.ideasaumentadas.com.ar/estandar).
 
 Convertimos las descripciones narrativas en un conjunto modular de archivos livianos y estructurados que cualquier sistema lee en un segundo antes de redactar.
 

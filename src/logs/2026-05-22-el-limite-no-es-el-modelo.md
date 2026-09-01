@@ -10,4 +10,4 @@ Lo que vengo viendo en la práctica de todos los días muestra lo contrario. El 
 
 Un modelo potente operando sin un marco claro de verdad, sin restricciones de identidad y sin memoria de decisiones pasadas termina funcionando a ciegas. La falla radica en el entorno.
 
-Al construir arquitecturas de contexto con documentos vivos, reglas de interpretación y límites explícitos, el modelo que funcionaba ayer rinde al nivel de diez personas. La prioridad real consiste en ordenar la inteligencia del propio trabajo antes de solicitarle al sistema que la opere.
+Al construir arquitecturas de contexto con documentos vivos, reglas de interpretación y límites explícitos, el modelo que funcionaba ayer rinde al nivel de diez personas. La prioridad real consiste en ordenar [la inteligencia del propio trabajo](https://www.ideasaumentadas.com.ar/conceptos/inteligencia-del-trabajo) antes de solicitarle al sistema que la opere.

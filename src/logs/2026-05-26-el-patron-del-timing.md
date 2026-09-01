@@ -8,6 +8,6 @@ Llegar temprano a una idea resulta insuficiente cuando falta la estructura para 
 
 Al revisar mi propia trayectoria observo ese patrón: detectar movimientos futuros, construir un prototipo conceptual y luego dejarlo enfriar ante las urgencias cotidianas.
 
-La diferencia actual radica en que la continuidad ya no depende exclusivamente de mi energía diaria. Al codificar cómo pienso, qué priorizo y qué reglas rigen mi trabajo dentro de un sistema persistente, el conocimiento permanece activo.
+La diferencia actual radica en que la continuidad ya no depende exclusivamente de mi energía diaria. Al [codificar cómo pienso](https://www.ideasaumentadas.com.ar/trama-personal), qué priorizo y qué reglas rigen mi trabajo dentro de un sistema persistente, el conocimiento permanece activo.
 
 El valor verdadero de la inteligencia integrada reside en romper el patrón de la discontinuidad. La brújula se mantiene encendida aun cuando debo atender un frente urgente en otro lado.

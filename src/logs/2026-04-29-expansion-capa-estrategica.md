@@ -8,7 +8,7 @@ SYS_LOG // Evolución de territorio
 
 El análisis de rendimiento sostenido demostró un patrón claro en el ecosistema: el cuello de botella operativo de las marcas dejó de ser la inteligencia artificial en sí misma. El límite de expansión ya no pasa por la falta de buenos modelos de lenguaje, sino por la ausencia de una infraestructura humana y documental capaz de orquestarlos con coherencia. 
 
-El modelo operativo actual de esta marca no abarcaba ese problema. Estaba enfocado casi en exclusividad en la codificación de identidad, dejando un punto ciego gigante en la capa de ejecución de sistemas.
+El modelo operativo actual de esta marca no abarcaba ese problema. Estaba enfocado casi en exclusividad en [la codificación de identidad](https://www.ideasaumentadas.com.ar/conceptos/codificacion-de-marca), dejando un punto ciego gigante en la capa de ejecución de sistemas.
 
 Para cubrir este frente, se ejecutó una expansión territorial asumiendo formalmente la "Arquitectura de Sistemas" como un dominio de autoridad propio.
 

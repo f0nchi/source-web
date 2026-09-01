@@ -15,7 +15,7 @@ Para resolver este fallo de alineación, se ejecutó una intervención directa e
 
 1. **Declaración de Ley Constitucional:** Se codificó una nueva restricción global inquebrantable. El sistema tiene terminantemente prohibido utilizar encuadres negativos. Ya no nos definimos por lo que no somos, por lo que no hacemos, ni por lo que le sucede al resto del mercado. Todo avance se escribe desde lo positivo y hacia adelante.
 2. **Propagación en Cascada:** La nueva directiva fue inyectada y distribuida transversalmente a través de toda la matriz de identidad y en los nodos que controlan la producción operativa.
-3. **Aislamiento de Contexto:** Se le estableció al sistema una distinción operativa fina. Las reglas de sistema internas pueden seguir usando la negación por necesidad técnica (ej. "tenés prohibido ejecutar X"), pero esa negatividad no tiene permiso para escalar hacia el *output* final.
+3. **Aislamiento de Contexto:** Se le estableció al sistema una distinción operativa fina. Las [reglas de sistema internas](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) pueden seguir usando la negación por necesidad técnica (ej. "tenés prohibido ejecutar X"), pero esa negatividad no tiene permiso para escalar hacia el *output* final.
 
 ```txt
 // KERNEL OVERRIDE

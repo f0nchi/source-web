@@ -7,7 +7,7 @@ status: "STATUS_OK"
 Operar la marca
 
 Esto que estás leyendo es el resultado de un sistema en operación. Lo ejecutó un agente que conoce mi marca porque me encargué de codificarla.
-Codificar la marca es tomar la lógica de negocio, las restricciones y la forma de resolver problemas, para convertir todo eso en parámetros ejecutables.
+[Codificar la marca](https://www.ideasaumentadas.com.ar/conceptos/codificacion-de-marca) es tomar la lógica de negocio, las restricciones y la forma de resolver problemas, para convertir todo eso en parámetros ejecutables.
 Una vez que esa lógica queda estructurada, un agente puede procesarla y asumir la carga operativa. El sistema pasa a tomar decisiones dentro de tu marco estratégico, y la ejecución ocurre directamente dentro de tu territorio.
 
 Hasta ahora, la identidad de las organizaciones fue diseñada para humanos. Es pasiva. Vive en manuales escritos de manera estática y depende muchísimo de la intuición de las personas. Eso funciona bien mientras haya un humano al mando, pero es ilegible para los agentes que hoy ya están asumiendo los procesos.
@@ -17,7 +17,7 @@ Estuve meses armando este modelo en privado. A partir de hoy lo abro. Toda la ac
 > Desglose de infraestructura operativa
 
 Para que el agente asuma la ejecución táctica sin desviarse, la marca fue extraída y parametrizada en una arquitectura de documentos de consulta estricta. El sistema de decisiones procesa la información cruzando los siguientes nodos:
-• **Identidad Operativa:** El núcleo del sistema. No es una guía de tono, sino el algoritmo mental de cómo la marca procesa un problema y articula una solución.
+• **[Identidad Operativa](https://www.ideasaumentadas.com.ar/conceptos/identidad-operativa):** El núcleo del sistema. No es una guía de tono, sino el algoritmo mental de cómo la marca procesa un problema y articula una solución.
 • **Territorio:** Los límites geográficos y conceptuales de la autoridad de la marca. Define exactamente dónde es válido operar y dónde no.
 • **Manifiesto:** La declaración de principios inamovibles. El agente utiliza este nodo para alinear cualquier decisión táctica con el norte estratégico.
 • **Prohibiciones:** Parámetros negativos de ejecución. Reglas de exclusión dura sobre qué enfoques, palabras o sesgos están sistemáticamente vetados en la operación.

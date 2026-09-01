@@ -8,6 +8,6 @@ Delegar la generación completa en una herramienta genera un riesgo silencioso: 
 
 La alternativa que mejor nos funciona es la práctica del curado conjunto.
 
-En lugar de solicitar al sistema que invente posturas desde cero, trabajamos en una interacción estrecha. El sistema propone hipótesis basadas en nuestro historial real, la revisión humana señala imprecisiones o excesos, y esa corrección se codifica como aprendizaje permanente.
+En lugar de solicitar al sistema que invente posturas desde cero, trabajamos en una interacción estrecha. El sistema propone hipótesis basadas en nuestro historial real, la revisión humana señala imprecisiones o excesos, y [esa corrección se codifica como aprendizaje permanente](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca).
 
 La herramienta funciona como un espejo de alta definición: ayuda a visibilizar el propio pensamiento, elimina el ruido del borrador inicial y reserva para la persona la decisión final.
