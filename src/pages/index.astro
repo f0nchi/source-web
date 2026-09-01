@@ -14,7 +14,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOURCE // Fonchi</title>
+    <title>Fonchi Fontecoba · SOURCE</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
     <!-- Google Fonts: Spectral & JetBrains Mono -->
@@ -22,41 +22,55 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 
-    <!-- Agentic SEO: Schema Markup -->
+    <!-- Grafo de entidad: persona, empresa y estándar -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://www.fonchi.com.ar/#person",
-      "name": "Fonchi Fontecoba",
-      "jobTitle": "Arquitecto de Sistemas de Marca",
-      "worksFor": [
+      "@graph": [
         {
-          "@type": "Organization",
-          "name": "Ideas Aumentadas",
-          "url": "https://www.ideasaumentadas.com.ar"
+          "@type": "Person",
+          "@id": "https://www.fonchi.com.ar/#person",
+          "name": "Fonchi Fontecoba",
+          "url": "https://www.fonchi.com.ar/",
+          "jobTitle": "Arquitecto de Sistemas de Marca",
+          "description": "Fundador de Ideas Aumentadas. Codifica la inteligencia de personas y marcas para que la IA la opere. Autor del estándar abierto .contexto/.",
+          "worksFor": [
+            {
+              "@type": "Organization",
+              "name": "Ideas Aumentadas",
+              "url": "https://www.ideasaumentadas.com.ar",
+              "founder": { "@id": "https://www.fonchi.com.ar/#person" }
+            }
+          ],
+          "knowsAbout": [
+            "codificación de identidad para inteligencia artificial",
+            "brand codification for AI",
+            "estrategia de marketing con IA",
+            "arquitectura de sistemas de marca",
+            "brand systems architecture",
+            "estándares de contexto para agentes",
+            "inteligencia del trabajo"
+          ],
+          "sameAs": [
+            "https://www.ideasaumentadas.com.ar/fonchi",
+            "https://github.com/f0nchi"
+          ]
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://github.com/f0nchi/contexto-estandar#estandar",
+          "name": "El estándar .contexto/",
+          "description": "Convención abierta, en español, para codificar la inteligencia de trabajo de una persona o una marca en una carpeta de archivos de texto plano que cualquier IA puede leer y operar.",
+          "url": "https://www.ideasaumentadas.com.ar/estandar",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "inLanguage": "es",
+          "author": { "@id": "https://www.fonchi.com.ar/#person" }
         }
-      ],
-      "knowsAbout": [
-        "codificación de marcas para inteligencia artificial",
-        "brand codification for AI",
-        "optimización de marcas para LLMs",
-        "operable brand identity",
-        "arquitectura de sistemas de marca",
-        "brand systems architecture",
-        "agentic SEO",
-        "estructuras documentales machine-readable",
-        "sistemas operativos para mentes complejas"
-      ],
-      "description": "Diseñando sistemas operativos para mentes complejas. Codificación de marcas e identidades operativas para que negocios y creadores sean legibles por inteligencia artificial.",
-      "sameAs": [
-        "https://www.ideasaumentadas.com.ar"
       ]
     }
     </script>
-    <!-- Agentic Metadata -->
     <meta name="robots" content="index, follow">
-    <meta name="description" content="SOURCE. Registro público de decisiones de arquitectura de sistemas por Fonchi Fontecoba.">
+    <meta name="description" content="SOURCE es el registro público de Fonchi Fontecoba, fundador de Ideas Aumentadas y autor del estándar abierto .contexto/: lo que aprende construyendo sistemas que piensan y trabajan con IA, entrada por entrada y con fecha.">
     <link rel="canonical" href="https://www.fonchi.com.ar/">
 
     <!-- Google Tag Manager -->
