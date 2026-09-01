@@ -4,10 +4,10 @@ date: "2026-08-24"
 status: "STATUS_OK"
 ---
 
-La evolución de una empresa nacida con inteligencia artificial se retroalimenta permanentemente con la voz y el aprendizaje de su fundador.
+Una empresa que nace con inteligencia artificial adentro se alimenta todo el tiempo de la voz de su fundador. Y al revés.
 
-> **Bucle de retroalimentación en dos sentidos:**
-> • **Del autor al negocio:** Las reflexiones y tesis del fundador nutren el posicionamiento, la oferta y las campañas de [la empresa](https://www.ideasaumentadas.com.ar/caso).
-> • **Del negocio al autor:** Los datos reales de la operación, las pruebas con usuarios y la métrica de uso le aportan evidencia concreta al pensamiento del autor.
+> **El bucle, en los dos sentidos:**
+> • **Del autor al negocio:** lo que el fundador piensa y escribe nutre el posicionamiento, la oferta y las campañas de [la empresa](https://www.ideasaumentadas.com.ar/caso).
+> • **Del negocio al autor:** los datos reales de la operación y las pruebas con usuarios le devuelven evidencia concreta a ese pensamiento.
 
-La construcción avanza como un ecosistema donde la práctica real sostiene a la teoría.
+La práctica real sostiene a la teoría, y la teoría le marca el rumbo a la práctica.

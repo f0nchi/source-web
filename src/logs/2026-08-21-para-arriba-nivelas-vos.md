@@ -4,9 +4,9 @@ date: "2026-08-21"
 status: "STATUS_OK"
 ---
 
-La inteligencia artificial democratiza el acceso a la producción rápida de borradores, imágenes y textos. Ese fenómeno genera una nivelación general en los contenidos promedio del mercado.
+La IA nivela el piso: hoy cualquiera saca un borrador decente, una imagen correcta, un texto que zafa. El promedio subió, y es el mismo promedio para todos.
 
-Frente a esa marea de homogeneidad, el criterio humano establece la diferencia.
+Para arriba no nivela nadie más que vos. Lo que te separa es tu juicio: el gusto, la pregunta que nadie hizo, la decisión de no aceptar lo obvio.
 
-> **Regla de nivelación:**  
-> La tecnología establece el piso de ejecución; la visión estratégica, el gusto y la capacidad de cuestionar lo obvio determinan la altura del resultado.
+> **Regla de nivelación:**
+> La tecnología pone el piso de ejecución. La altura la ponés vos.

@@ -4,9 +4,9 @@ date: "2026-08-09"
 status: "STATUS_OK"
 ---
 
-La necesidad de codificar contexto se manifiesta en dos niveles según quién busca operar con inteligencia artificial.
+Codificar contexto tiene dos escalas, según quién va a trabajar con la IA.
 
-* **[Trama de Marca](https://www.ideasaumentadas.com.ar/trama) (Nivel Organizacional):** Pensada para empresas y equipos que necesitan alinear estrategia, tono, restricciones y oferta. Garantiza que todos los integrantes y procesos operen sobre la misma verdad.
-* **[Trama Personal](https://www.ideasaumentadas.com.ar/trama-personal) (Nivel Profesional):** Pensada para autores y profesionales independientes que buscan estructurar su mirada, sus reglas de trabajo y sus proyectos en una arquitectura liviana.
+* **[Trama de Marca](https://www.ideasaumentadas.com.ar/trama):** para empresas y equipos que necesitan que todos, personas y procesos, trabajen sobre la misma verdad: estrategia, tono, límites y oferta.
+* **[Trama Personal](https://www.ideasaumentadas.com.ar/trama-personal):** para profesionales que trabajan solos y quieren su mirada, sus reglas y sus proyectos en una estructura liviana.
 
-Separar ambas escalas permite abordar cada necesidad con la profundidad adecuada sin sobredimensionar la estructura.
+Separarlas permite darle a cada una la profundidad justa, sin armar de más.

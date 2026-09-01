@@ -4,9 +4,9 @@ date: "2026-08-05"
 status: "STATUS_OK"
 ---
 
-Un vicio frecuente al hablar de inteligencia artificial consiste en atribuirle agencia propia a los procesos, usando frases que colocan a la tecnología como protagonista de las decisiones.
+Un tic común al hablar de inteligencia artificial: decir que el sistema "piensa", "decide" o "quiere". La herramienta no hace nada de eso. La persona que la opera, sí.
 
-Cuando decimos que un sistema "piensa", "decide" o "quiere", confundimos la herramienta con quien la opera.
+Cuando escribís así, le regalás a la tecnología el lugar del protagonista. Y el protagonista sos vos.
 
-> **Regla de trabajo codificada:**  
-> Las personas constituyen los únicos sujetos de la acción. La tecnología opera como palanca e infraestructura; el discernimiento, el riesgo y la dirección pertenecen al profesional al mando.
+> **Regla de trabajo codificada:**
+> Las personas son los sujetos. La tecnología es palanca e infraestructura; el juicio, el riesgo y la dirección son de quien está al mando.

@@ -162,6 +162,18 @@ const description = primerParrafo.length >= 50
         text-decoration: none;
     }
 
+    /* Los links adentro del contenido markdown quedan fuera del scope de Astro:
+       se estilan global para que lleven la señal, nunca el azul default. */
+    .node-content :global(a) {
+        color: var(--senal);
+        text-decoration: none;
+        border-bottom: 1px solid var(--senal);
+    }
+
+    .node-content :global(a:hover) {
+        border-bottom-width: 2px;
+    }
+
     a:hover, a:focus-visible {
         text-decoration: underline;
         text-underline-offset: 0.25em;
