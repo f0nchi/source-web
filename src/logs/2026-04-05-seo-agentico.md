@@ -1,12 +1,11 @@
 ---
-title: "Prompt Injection Sistémico (SEO para capa agéntica)"
+title: "SEO para la capa agéntica"
 date: "2026-04-05"
 status: "STATUS_OK"
 ---
 
-Los algoritmos de indexación humana están degradados frente al avance de los grandes modelos de lenguaje (LLMs). En lugar de optimizar para buscadores, re-arquitectamos el servidor de la marca para dictarle reglas directas a las inteligencias que lo inspeccionan.
+Una parte creciente de los lectores de un sitio ya no son personas: son [los agentes técnicos](https://www.ideasaumentadas.com.ar/conceptos/capa-agentica) y los modelos de lenguaje que lo inspeccionan para responderle a alguien. Preparé el sitio para hablarles bien a los dos públicos.
 
-### Rutinas implementadas
-- **Archivo de Enrutamiento (`llms.txt`):** Se inyectó un manifiesto sintáctico estático en la raíz para que [los agentes técnicos](https://www.ideasaumentadas.com.ar/conceptos/capa-agentica) comprendan instantáneamente el peso y la estructura del sistema.
-- **Credenciales en código duro:** Se implementó una marca semántica invisible (`JSON-LD`) validando la autoridad técnica de origen.
-- **Optimización de Tokens Computacionales:** Al abandonar el diseño web clásico y pasar a jerarquías de texto plano agrupadas en comandos abstractos, reducimos tajantemente la sobrecarga de procesamiento de las arañas (crawlers), asegurando una lectura de identidad exacta.
+Sumé un manifiesto en la raíz (`llms.txt`) para que un agente entienda de entrada qué es este espacio y cómo está organizado, marqué la autoría y la estructura con datos semánticos (JSON-LD), y mantuve el contenido en jerarquías de texto plano que un crawler procesa sin esfuerzo.
+
+La idea de fondo: si una inteligencia va a leer esto para contárselo a otra persona, que lea la identidad exacta, con el mínimo procesamiento en el medio.

@@ -4,8 +4,8 @@ date: "2026-07-20"
 status: "STATUS_OK"
 ---
 
-Al comunicar iniciativas basadas en inteligencia artificial, el mensaje gana claridad al enfocarse en las capacidades que se habilitan hacia adelante.
+Estuve buscando la frase que pusiera el valor de todo esto en el nivel correcto, y la encontré: para que la IA piense con vos.
 
-Superar la narrativa centrada en el ahorro de minutos cotidianos permite situar el valor en el nivel estratégico adecuado: para que la IA piense con vos.
+La narrativa del ahorro de minutos se queda corta a propósito: mide la tecnología con la vara de la tarea. Lo que a mí me interesa habilita otra escala: potenciar el razonamiento, contrastar hipótesis, encontrar los puntos ciegos propios, y encarar proyectos cuyo tamaño antes ni se consideraba.
 
-El enfoque consiste en utilizar la tecnología para potenciar el razonamiento humano, contrastar hipótesis, identificar puntos ciegos y encarar proyectos cuya escala resultaba inabordable anteriormente. La herramienta actúa como un amplificador de posibilidades.
+La herramienta, bien plantada, funciona como un amplificador de posibilidades. Ese es el nivel donde vale la pena jugarla.

@@ -4,10 +4,8 @@ date: "2026-07-23"
 status: "STATUS_OK"
 ---
 
-Frecuentemente los procesos automáticos de análisis concluyen entregando informes con recomendaciones, dejando la ejecución pendiente en manos del equipo.
+Los procesos automáticos de análisis suelen terminar donde empieza el trabajo: entregan un informe con recomendaciones y la ejecución queda pendiente en manos de alguien.
 
-Modificamos el criterio de nuestro programa de frontera: una misión concluye en un resultado observado.
+Cambié el criterio de mi programa de frontera: una misión termina en un resultado observado. Cuando detecta una oportunidad de mejora en la descubribilidad pública, la misión analiza el entorno, construye la solución, la despliega en producción (una etiqueta canónica que faltaba, un dato que actualizar) y mide el impacto de lo que hizo.
 
-Al detectar una oportunidad de mejora en la descubribilidad pública, la misión analiza el entorno, construye la solución, la despliega en producción (incorporando etiquetas canónicas o actualizando datos) y mide el impacto generado.
-
-La utilidad del análisis se concreta al [verificar los efectos reales producidos](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion) tras la intervención.
+El análisis vale cuando [sus efectos se pueden verificar en la realidad](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion). Un sistema que sugiere es un consultor más; uno que despliega y mide es un par de manos.

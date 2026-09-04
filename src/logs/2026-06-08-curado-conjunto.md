@@ -1,13 +1,11 @@
 ---
-title: "Curado conjunto vs. generación autónoma"
+title: "Curado conjunto"
 date: "2026-06-08"
 status: "STATUS_OK"
 ---
 
-Delegar la generación completa en una herramienta genera un riesgo silencioso: terminar aprobando decisiones que suenan bien pero carecen de criterio propio.
+Delegarle la generación completa a una herramienta tiene un riesgo silencioso: terminás aprobando cosas que suenan bien y no salieron de ningún juicio propio.
 
-La alternativa que mejor nos funciona es la práctica del curado conjunto.
+Lo que mejor me funciona es el curado conjunto. En vez de pedirle al sistema que invente posturas desde cero, trabajamos pegados: el sistema propone hipótesis basadas en mi historial real, yo señalo las imprecisiones y los excesos, y [cada corrección se codifica como aprendizaje permanente](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca), así la próxima propuesta arranca más cerca.
 
-En lugar de solicitar al sistema que invente posturas desde cero, trabajamos en una interacción estrecha. El sistema propone hipótesis basadas en nuestro historial real, la revisión humana señala imprecisiones o excesos, y [esa corrección se codifica como aprendizaje permanente](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca).
-
-La herramienta funciona como un espejo de alta definición: ayuda a visibilizar el propio pensamiento, elimina el ruido del borrador inicial y reserva para la persona la decisión final.
+Usada así, la herramienta funciona como un espejo de alta definición: me ayuda a ver mi propio pensamiento, me saca de encima el ruido del borrador inicial, y me deja a mí exactamente lo que es mío, la decisión final.

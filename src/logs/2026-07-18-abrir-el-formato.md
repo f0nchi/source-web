@@ -4,10 +4,8 @@ date: "2026-07-18"
 status: "STATUS_OK"
 ---
 
-Al construir una estructura para organizar el conocimiento de marca de forma procesable por IA, surge la inquietud sobre compartir o reservar el formato.
+Cuando construís una estructura para organizar el conocimiento de marca de forma que una IA lo procese, tarde o temprano aparece la pregunta: ¿esto se comparte o se guarda?
 
-Optamos por publicar abiertamente [el estándar `.contexto/`](https://www.ideasaumentadas.com.ar/estandar).
+Decidí publicar abiertamente [el estándar `.contexto/`](https://www.ideasaumentadas.com.ar/estandar): la arquitectura de carpetas, las plantillas y las especificaciones, con licencia abierta, para toda la comunidad hispanohablante.
 
-Liberamos la arquitectura de carpetas, plantillas y especificaciones bajo licencia abierta para su uso en la comunidad hispanohablante.
-
-El formato constituye el contenedor. La capacidad distintiva reside en [la metodología de extracción](https://www.ideasaumentadas.com.ar/metodo), en la curaduría humana y en la facultad de analizar un negocio sin recurrir a lugares comunes. Abrir el formato establece la categoría; aplicar el método resuelve las necesidades operativas.
+El formato es el contenedor. Lo distintivo vive en [el método de extracción](https://www.ideasaumentadas.com.ar/metodo), en la curaduría humana, en la capacidad de leer un negocio sin caer en lugares comunes. Abrir el formato funda la categoría; aplicar el método es lo que resuelve. Puedo regalar el papel pentagramado tranquilo: la música es otra cosa.

@@ -1,15 +1,11 @@
 ---
-title: "Transparencia progresiva para la toma de decisiones"
+title: "Transparencia progresiva para decidir"
 date: "2026-07-15"
 status: "STATUS_OK"
 ---
 
-En sistemas con múltiples procesos automatizados, la acumulación de métricas secundarias y alertas menores suele generar sobrecarga de información.
+Un sistema con varios procesos automatizados corriendo genera métricas secundarias y alertas menores a un ritmo que ninguna persona debería absorber entero. Y mi atención es el recurso que todo lo demás existe para cuidar.
 
-Rediseñamos la interfaz principal aplicando el principio de divulgación progresiva:
+Rediseñé la interfaz principal con divulgación progresiva, en tres profundidades: la tarjeta me resume en una línea qué pasó, qué se aprendió y si algo me necesita; la lectura despliega el diagnóstico y las propuestas completas cuando quiero contexto; y la traza guarda las posiciones, las decisiones y el detalle técnico para cuando toca auditar.
 
-1. La tarjeta resume en una línea lo sucedido, el aprendizaje obtenido y los requerimientos de acción.
-2. La lectura permite profundizar en diagnósticos y propuestas completas cuando se requiere contexto.
-3. La traza expone las posiciones guardadas, las decisiones tomadas y el detalle técnico para tareas de auditoría.
-
-El sistema sintetiza la complejidad técnica por defecto. La atención del dueño constituye el activo principal y la tecnología opera para preservarla.
+El sistema sintetiza la complejidad por defecto y me deja elegir hasta dónde bajar. Yo miro una línea; la máquina se acuerda de todo lo demás.

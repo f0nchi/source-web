@@ -4,10 +4,8 @@ date: "2026-05-30"
 status: "STATUS_OK"
 ---
 
-Durante mucho tiempo se pensó la identidad de una empresa o marca personal como un manual estático: un PDF con colores, un tono de voz en tres adjetivos abstractos y un logo.
+Durante mucho tiempo la identidad de una empresa o de una marca personal se pensó como un manual: un PDF con colores, un tono de voz en tres adjetivos, un logo. Servía porque del otro lado había un humano leyéndolo cada tanto y rellenando los huecos con intuición.
 
-Ese esquema servía cuando la comunicación dependía de un humano leyendo manuales ocasionales. En un entorno donde procesos de IA leen, redactan, analizan y responden diariamente, los manuales estáticos quedan obsoletos.
+Hoy del otro lado hay procesos de IA que leen, redactan, analizan y responden todos los días, y para ellos ese manual es ilegible. Una marca contemporánea necesita una arquitectura ejecutable: [estructuras que una máquina puede leer](https://www.ideasaumentadas.com.ar/conceptos/marca-legible-por-ia), con reglas de decisión concretas, límites explícitos, ejemplos que enseñan sin volverse plantilla, y una jerarquía clara de qué manda sobre qué.
 
-Una marca contemporánea requiere una arquitectura ejecutable. Exige codificarse en [estructuras legibles por máquina](https://www.ideasaumentadas.com.ar/conceptos/marca-legible-por-ia), con reglas de decisión binarias, prohibiciones explícitas, ejemplos con desactivadores de literalidad y jerarquías de verdad.
-
-Cuando una marca pierde su dirección al ser procesada por un sistema, la falla revela un diseño basado en intenciones pasivas en lugar de un sistema de decisión.
+Cuando una marca pierde su dirección al pasar por un sistema, lo que quedó expuesto es el diseño: había intenciones donde tenía que haber decisiones.

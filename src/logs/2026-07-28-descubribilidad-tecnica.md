@@ -4,11 +4,8 @@ date: "2026-07-28"
 status: "STATUS_OK"
 ---
 
-Un sitio web que no resulta [legible para agentes de búsqueda y sistemas de lenguaje](https://www.ideasaumentadas.com.ar/conceptos/marca-legible-por-ia) pierde la mitad de su sentido. Realizamos un saneamiento completo de la capa técnica de nuestro sitio para garantizar su descubribilidad.
+Un sitio que [los agentes de búsqueda y los modelos de lenguaje no pueden leer bien](https://www.ideasaumentadas.com.ar/conceptos/marca-legible-por-ia) pierde la mitad de su sentido: existe para las personas que ya lo conocen y es invisible para las que lo andan buscando.
 
-> **Desglose de descubribilidad técnica**
-> • **URLs Canónicas Unificadas:** Cada publicación cuenta con una dirección única y definitiva para evitar fragmentación de autoridad.
-> • **Datos Estructurados (JSON-LD):** Implementación de esquemas Article y Person para que los motores interpreten autoría y jerarquía sin ambigüedades.
-> • **Mapa de Sitio Dinámico:** Generación automática de sitemap y robots.txt indexando únicamente la verdad vigente.
+Saneé la capa técnica completa de este sitio. Cada publicación tiene ahora su URL canónica única, para que la autoridad se acumule en un solo lugar en vez de fragmentarse. Los datos estructurados (JSON-LD, con esquemas Article y Person) le dicen a cualquier motor quién escribe y cómo se organiza esto, sin ambigüedad. Y el sitemap y el robots.txt se generan solos, indexando únicamente lo vigente.
 
-Optimizar la descubribilidad garantiza que cualquier sistema externo procese el contenido con precisión.
+Con esa capa en orden, cualquier sistema externo que llegue procesa el contenido con precisión, que es la condición para todo lo demás.

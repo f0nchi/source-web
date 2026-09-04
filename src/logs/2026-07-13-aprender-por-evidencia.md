@@ -4,10 +4,8 @@ date: "2026-07-13"
 status: "STATUS_OK"
 ---
 
-Sumar notas, resúmenes o registros aislados a un sistema no incrementa su inteligencia. Incorporar información sin filtro en un modelo suele introducir ruido y degradar la precisión.
+Sumarle notas, resúmenes y registros a un sistema no lo vuelve más inteligente. La información sin filtro mete ruido, y el ruido degrada la precisión de todo lo que se apoya en ella.
 
-Establecimos un enfoque basado en el aprendizaje por evidencia.
+Establecí un enfoque de aprendizaje por evidencia. Para que algo entre al sistema tiene que recorrer el camino completo: identificar la fricción en la práctica, proponer una mejora concreta, probarla en un experimento acotado, compararla contra la línea de base, y recién entonces integrarla con [un recibo de verificación](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion).
 
-Una incorporación al sistema requiere un procedimiento riguroso: identificar la fricción en la práctica, proponer una mejora concreta, realizar un experimento acotado, comparar frente a la línea de base y recién entonces integrar el estándar con [un recibo de reutilización verificado](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion).
-
-El valor de un sistema se demuestra en las mejoras verificadas y sostenidas a lo largo del tiempo.
+La vara quedó puesta ahí: el valor de un sistema se demuestra en las mejoras verificadas que sostiene en el tiempo, no en el volumen de cosas que guardó.

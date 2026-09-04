@@ -4,10 +4,8 @@ date: "2026-05-22"
 status: "STATUS_OK"
 ---
 
-Hay una ilusión muy extendida en este momento: pensar que si una inteligencia artificial no resuelve bien un problema complejo, la solución pasa por esperar a que salga una versión más grande de la herramienta.
+Hay una ilusión muy extendida en este momento: pensar que si una inteligencia artificial no resuelve bien un problema complejo, la solución es esperar la próxima versión de la herramienta.
 
-Lo que vengo viendo en la práctica de todos los días muestra lo contrario. El cuello de botella raras veces habita en la capacidad del modelo de lenguaje; habita en la infraestructura de contexto estructurada a su alrededor.
+Lo que veo en la práctica de todos los días dice otra cosa. El cuello de botella rara vez está en la capacidad del modelo; está en la infraestructura de contexto que lo rodea. Un modelo potente operando sin un marco claro de verdad, sin identidad y sin memoria de las decisiones pasadas trabaja a ciegas, por más grande que sea.
 
-Un modelo potente operando sin un marco claro de verdad, sin restricciones de identidad y sin memoria de decisiones pasadas termina funcionando a ciegas. La falla radica en el entorno.
-
-Al construir arquitecturas de contexto con documentos vivos, reglas de interpretación y límites explícitos, el modelo que funcionaba ayer rinde al nivel de diez personas. La prioridad real consiste en ordenar [la inteligencia del propio trabajo](https://www.ideasaumentadas.com.ar/conceptos/inteligencia-del-trabajo) antes de solicitarle al sistema que la opere.
+Cuando armás esa arquitectura, documentos vivos, reglas de interpretación, límites explícitos, el mismo modelo que ayer te decepcionaba rinde al nivel de diez personas. Por eso la prioridad real es ordenar [la inteligencia del propio trabajo](https://www.ideasaumentadas.com.ar/conceptos/inteligencia-del-trabajo) antes de pedirle al sistema que la opere.

@@ -4,10 +4,8 @@ date: "2026-06-28"
 status: "STATUS_OK"
 ---
 
-Durante tiempo se asumió que dictar verbalmente a una herramienta constituía la forma más pura de capturar la voz propia. Al auditar registros extensos descubrimos una distorsión constante: el plugin de voz y el modelo tienden a alterar la expresión original.
+Durante un tiempo asumí que dictarle a una herramienta era la forma más pura de capturar mi propia voz. Auditando registros largos encontré una distorsión constante: el plugin de voz y el modelo alteran la expresión original. Deforman términos técnicos, rellenan pausas con muletillas que no son mías, convierten reflexiones abiertas en cierres prefabricados.
 
-Deforman términos técnicos, rellenan pausas con muletillas automatizadas o convierten reflexiones abiertas en cierres prefabricados. Ese procesamiento resta nitidez al lenguaje real.
+Hice una cosecha limpia para rescatar la voz oral de verdad: filtrar el ruido de la transcripción, sacar los agregados del modelo, y aislar la sintaxis auténtica.
 
-Para rescatar la voz oral ejecutamos una cosecha limpia: filtramos el ruido de la transcripción, eliminamos los agregados del modelo y aislamos la sintaxis auténtica.
-
-La voz propia habita en el patrón de conexión de las ideas, en la definición de los límites y en la elección de ejemplos concretos que evitan ambigüedades.
+Lo que aprendí en el proceso es dónde vive la voz de una persona: en el patrón con que conecta las ideas, en cómo define sus límites, en los ejemplos concretos que elige. Eso es lo que vale la pena codificar; el resto es superficie.

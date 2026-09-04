@@ -4,10 +4,8 @@ date: "2026-06-03"
 status: "STATUS_OK"
 ---
 
-En la etapa inicial con herramientas digitales suele predominar la consulta constante: pedir confirmación para cada movimiento analítico o borrador. Esa dinámica convierte a la persona en el cuello de botella de todas las microdecisiones.
+En la etapa inicial con estas herramientas, uno tiende a la consulta constante: confirmar cada movimiento, aprobar cada borrador. Se siente prudente, y en la práctica te convierte en el cuello de botella de todas las microdecisiones de tu propio sistema.
 
-Hace unas semanas aplicamos una doctrina directa en nuestro trabajo: informar sin esperar.
+Hace unas semanas cambié la doctrina de trabajo: informar sin esperar. Le di al sistema un marco de permisos claro y un perímetro seguro, y adentro de ese perímetro ejecuta de corrido: trabaja, verifica su resultado, y me entrega un recibo claro de lo actuado.
 
-Al otorgar a un proceso un marco de permisos claro y un perímetro seguro, la ejecución fluye sin detenerse a pedir confirmación en cada paso. El sistema corre, trabaja dentro de sus límites, verifica su resultado y entrega un recibo claro de lo actuado.
-
-La intervención humana se desplaza hacia la dirección estratégica. La función del dueño consiste en evaluar el resultado final y corregir la trayectoria si el sistema requiere ajuste.
+Mi intervención se corrió de lugar. En vez de aprobar pasos, evalúo resultados y corrijo trayectoria. Es la diferencia entre manejar con el freno de mano puesto y manejar mirando el camino.

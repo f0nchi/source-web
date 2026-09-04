@@ -1,15 +1,11 @@
 ---
-title: "Destruyendo el motor dinámico (Migración a capa estática)"
+title: "La migración a la capa estática"
 date: "2026-04-04"
 status: "STATUS_OK"
 ---
 
-Se ejecutó la purga del servidor tradicional. El ecosistema anterior dependía de una infraestructura dinámica hiper-blandida (PHP/MySQL) que generaba una carga operativa y mecánica excesiva.
+Terminé la mudanza de infraestructura. El esquema anterior dependía de un servidor tradicional con PHP y MySQL, una maquinaria pesada para un sitio cuyo trabajo es mostrar texto.
 
-### Parámetros de la ejecución
-1. **Destrucción de la base de datos:** El contenido principal de la marca ahora reside inmutablemente en Notion.
-2. **Adopción de Arquitectura Estática (SSG):** Pasamos al motor Astro. Cero ejecución del lado del cliente. 
-3. **Despliegue Inmutable:** El router envía los archivos `.md` crudos por la red. Vercel monitorea los cambios y ensambla el código HTML puro en fracciones de segundo desplegándolo globalmente.
+El contenido de la marca ahora vive en Notion, el sitio se genera estático con Astro, y Vercel mira el repositorio: cada cambio que empujo se ensambla en HTML puro y se despliega globalmente en segundos.
 
-### Verificación
-La resistencia del sistema en el acto de publicación ahora es matemáticamente nula. El origen es puro registro y ejecución.
+Publicar quedó reducido a su mínima expresión: escribo, empujo, y está en el aire. Esa falta de fricción es el punto: cuando publicar cuesta cero, se publica lo que se piensa, con la frecuencia con la que se piensa.

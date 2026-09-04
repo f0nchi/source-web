@@ -1,27 +1,11 @@
 ---
-title: "Inyección de Reglas Constitucionales (Filtros de Encuadre)"
+title: "El encuadre positivo entra como regla"
 date: "2026-04-08"
 status: "STATUS_OK"
 ---
-SYS_LOG // Calibración de arquitectura narrativa
 
-El sistema operativo de la marca mostraba una tendencia estructural a la definición por oposición. Al delegarle la generación de narrativas, los agentes optaban frecuentemente por contrastes negativos ("no es un simple prompt", "sin requerir supervisión humana", "mientras otros fallan"). 
+Detecté un patrón en lo que el sistema generaba: cuando le delegaba una narrativa, tendía a definir por oposición ("no es un simple prompt", "mientras otros fallan"). Tiene lógica computacional, la negación es el camino corto hacia la diferenciación, pero cuando esa lógica llega a lo publicado, la marca suena reaccionaria, y esa marca es la mía.
 
-Desde un punto de vista computacional, la negación es el camino de menor resistencia para establecer diferenciación. Sin embargo, cuando esa lógica técnica transpira a la capa de publicación, termina traicionando la identidad de la marca, haciéndola sonar reaccionaria.
+Codifiqué una regla global: todo lo que sale se escribe desde lo que las cosas son y hacia adelante. La propagué por toda la matriz de identidad y por los nodos que producen contenido, con una distinción fina: [las reglas internas del sistema](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) pueden usar la prohibición como herramienta técnica, pero esa forma queda adentro.
 
-Para resolver este fallo de alineación, se ejecutó una intervención directa en la raíz del sistema.
-
-### Parámetros de la ejecución
-
-1. **Declaración de Ley Constitucional:** Se codificó una nueva restricción global inquebrantable. El sistema tiene terminantemente prohibido utilizar encuadres negativos. Ya no nos definimos por lo que no somos, por lo que no hacemos, ni por lo que le sucede al resto del mercado. Todo avance se escribe desde lo positivo y hacia adelante.
-2. **Propagación en Cascada:** La nueva directiva fue inyectada y distribuida transversalmente a través de toda la matriz de identidad y en los nodos que controlan la producción operativa.
-3. **Aislamiento de Contexto:** Se le estableció al sistema una distinción operativa fina. Las [reglas de sistema internas](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) pueden seguir usando la negación por necesidad técnica (ej. "tenés prohibido ejecutar X"), pero esa negatividad no tiene permiso para escalar hacia el *output* final.
-
-```txt
-// KERNEL OVERRIDE
-REGLA ACTIVA: Operación exclusiva desde encuadre positivo.
-ESTADO: Propagación completada. Verificación requerida en cada ciclo.
-```
-
-### Verificación
-El resultado es un sistema que ya no necesita mirar al costado para saber qué decir. La inteligencia operativa ahora avanza apoyada puramente en la construcción de su propio territorio, habiendo eliminado de raíz la dependencia de los contrastes gastados.
+El resultado es un sistema que sabe qué decir sin mirar al costado: avanza construyendo su propio territorio.

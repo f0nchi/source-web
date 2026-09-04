@@ -4,10 +4,8 @@ date: "2026-07-09"
 status: "STATUS_OK"
 ---
 
-Depender de un proveedor específico de inteligencia artificial genera vulnerabilidad. Ante cambios en las APIs, variaciones de costos o modificaciones en el comportamiento de los modelos, la operación completa sufre las consecuencias.
+Atarse a un proveedor de inteligencia artificial es una vulnerabilidad: cambia una API, cambian los costos, cambia el comportamiento de un modelo, y la operación entera acusa el golpe.
 
-Desarrollamos Owner OS como un contrato de gobierno portable. Este esquema separa el conocimiento y las reglas del negocio del motor de razonamiento utilizado en cada momento.
+Desarrollé Owner OS como un contrato de gobierno portable: el conocimiento y las reglas del negocio viven separados del motor de razonamiento de turno. Los modelos (Claude, GPT o DeepSeek) funcionan como procesadores intercambiables; la inteligencia acumulada, los permisos, la memoria y el canon son del sistema propio.
 
-Los modelos (Claude, GPT o DeepSeek) funcionan como procesadores intercambiables. La inteligencia acumulada, los permisos, la memoria y el canon pertenecen al sistema propio.
-
-Cambiar de modelo se realiza sin perder historia ni reiniciar procesos. El sistema conserva el centro y el procesador aporta la capacidad de cálculo requerida.
+Cambiar de modelo se volvió una decisión liviana: el sistema conserva el centro y su historia, y el procesador aporta el cálculo que ese momento necesita. La casa es mía; los motores se alquilan.
