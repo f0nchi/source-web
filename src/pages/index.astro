@@ -7,6 +7,7 @@ const rawLogs = Object.entries(import.meta.glob('../logs/*.md', { eager: true })
     }));
 // Ordenamos de más nuevo a más viejo por fecha del frontmatter
 const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf() - new Date((a as any).frontmatter?.date).valueOf());
+import VolverArriba from '../components/VolverArriba.astro';
 ---
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fonchi Fontecoba · SOURCE</title>
+    <title>Fonchi</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
     <!-- Google Fonts: Spectral & JetBrains Mono -->
@@ -97,8 +98,8 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 
     <div class="container">
         <header>
-            <h1 class="visually-hidden">SOURCE — Fonchi Fontecoba</h1>
-            <div class="brand-conjunto">
+            <h1 class="visually-hidden">Fonchi Fontecoba</h1>
+            <a href="/" class="brand-conjunto" aria-label="Ir al inicio">
                 <svg viewBox="6 8 52 48" class="brand-signo" role="img" aria-label="fonchi">
                     <rect class="banda-signo" style="--i:0; --final-op:1.00;" x="28" y="8" width="30" height="4" fill="var(--senal)"></rect>
                     <rect class="banda-signo" style="--i:1; --final-op:1.00;" x="26" y="12" width="30" height="4" fill="var(--senal)"></rect>
@@ -114,11 +115,8 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
                     <rect class="banda-signo" style="--i:11; --final-op:0.20;" x="6" y="52" width="8" height="4" fill="var(--senal)"></rect>
                 </svg>
                 <span class="brand-wordmark">fonchi</span>
-            </div>
+            </a>
             <p class="subtitle">SYS_LOG // Documentación de Arquitectura de Sistemas</p>
-            <p class="statement">
-                La resistencia no es un rasgo natural del ecosistema: es información sobre un defecto de arquitectura. Construimos para delegar la ejecución mecánica a la máquina y liberar la capacidad de pensamiento.
-            </p>
         </header>
 
         <!-- Ensayos: la capa con firma -->
@@ -166,6 +164,8 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
             </div>
         </footer>
     </div>
+
+    <VolverArriba />
 
     <script is:inline>
         // Obfuscate the email to avoid basic syntax scraping by spam bots
@@ -265,10 +265,15 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
     }
 
     .brand-conjunto {
-        display: flex;
+        display: inline-flex;
         align-items: baseline;
         gap: 24px;
         margin-bottom: 34px;
+        text-decoration: none;
+    }
+
+    .brand-conjunto:hover .brand-wordmark {
+        color: var(--senal);
     }
 
     .brand-signo {
@@ -314,17 +319,7 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--senal);
-        margin: 0 0 44px 0;
-    }
-
-    .statement {
-        font-family: var(--font-lectura);
-        font-weight: 300;
-        font-size: 21px;
-        line-height: 1.55;
         margin: 0;
-        max-width: 58ch;
-        color: var(--gris-texto);
     }
 
     .cursor {
@@ -415,6 +410,16 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
         margin: 0 0 24px 0;
         padding-left: 24px;
         color: var(--gris-texto);
+    }
+
+    :global(.node-content a) {
+        color: var(--senal);
+        text-decoration: none;
+        border-bottom: 1px solid var(--senal);
+    }
+
+    :global(.node-content a:hover) {
+        border-bottom-width: 2px;
     }
 
     :global(.node-content strong) {
