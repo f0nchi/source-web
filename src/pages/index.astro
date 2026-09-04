@@ -121,6 +121,18 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
             </p>
         </header>
 
+        <!-- Ensayos: la capa con firma -->
+        <div class="ensayos-block">
+            <span class="node-id">&gt;&gt; ENSAYOS // LA_CAPA_CON_FIRMA</span>
+            {Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
+                .map(([path, e]: [string, any]) => ({ ...e, slug: path.split('/').pop()?.replace(/\.md$/, '') || '' }))
+                .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf())
+                .map((e: any) => (
+                <p class="ensayo-item"><a href={`/ensayos/${e.slug}/`}>{e.frontmatter?.title}</a> <span class="ensayo-fecha">{e.frontmatter?.date}</span></p>
+            ))}
+            <p class="ensayo-item"><a href="/ensayos/" class="ver-todos">VER_TODOS &rarr;</a></p>
+        </div>
+
         <!-- El Log de operaciones Dinámico -->
         <div class="log-grid">
             {logs.map((log: any, index) => {
@@ -502,6 +514,35 @@ const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf()
 
     .comm-link:hover .cursor {
         background-color: var(--negro-profundo);
+        color: var(--senal);
+    }
+
+    .ensayos-block {
+        background: var(--negro-registro);
+        border: 1px solid var(--senal);
+        padding: 22px 26px;
+        margin-bottom: 34px;
+    }
+
+    .ensayo-item { margin: 10px 0 0; font-size: 19px; }
+
+    .ensayo-item a {
+        color: var(--blanco-titular);
+        text-decoration: none;
+    }
+
+    .ensayo-item a:hover { color: var(--senal); }
+
+    .ensayo-fecha {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--gris-tenue);
+        margin-left: 10px;
+    }
+
+    .ensayo-item .ver-todos {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
         color: var(--senal);
     }
 </style>

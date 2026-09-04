@@ -8,6 +8,14 @@ const logs = Object.entries(import.meta.glob('../logs/*.md', { eager: true }))
   .filter((log) => log.slug && /^\d{4}-\d{2}-\d{2}$/.test(log.date))
   .sort((a, b) => b.date.localeCompare(a.date));
 
+const ensayos = Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
+  .map(([path, e]: [string, any]) => ({
+    slug: path.split('/').pop()?.replace(/\.md$/, '') || '',
+    date: String(e.frontmatter?.date || ''),
+  }))
+  .filter((e) => e.slug && /^\d{4}-\d{2}-\d{2}$/.test(e.date))
+  .sort((a, b) => b.date.localeCompare(a.date));
+
 function escapeXml(value: string) {
   return value
     .replaceAll('&', '&amp;')
@@ -31,6 +39,8 @@ export function GET() {
   const entries = [
     urlEntry('/', latestDate),
     ...logs.map((log) => urlEntry(`/log/${log.slug}/`, log.date)),
+    urlEntry('/ensayos/', ensayos[0]?.date || latestDate),
+    ...ensayos.map((e) => urlEntry(`/ensayos/${e.slug}/`, e.date)),
   ];
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',

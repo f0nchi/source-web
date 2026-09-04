@@ -1,0 +1,140 @@
+---
+const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: true }))
+    .map(([path, ensayo]: [string, any]) => ({
+        ...ensayo,
+        slug: path.split('/').pop()?.replace(/\.md$/, '') || '',
+    }))
+    .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensayos · Fonchi Fontecoba</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <meta name="description" content="Los ensayos de Fonchi Fontecoba: la lectura de lo que se abre cuando las personas trabajan a través de la IA, escrita desde adentro de la construcción." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.fonchi.com.ar/ensayos/" />
+</head>
+<body>
+    <div class="system-hud">
+        [HOST: FONCHI] || [LAYER: ENSAYO] || [FIRMA: FONCHI_FONTECOBA]
+    </div>
+
+    <main class="container">
+        <nav class="back" aria-label="Navegación principal">
+            <a href="/">&larr; VOLVER_A_SOURCE</a>
+        </nav>
+
+        <header class="cabecera">
+            <h1>Ensayos</h1>
+            <p>
+                La lectura de lo que se abre cuando las personas trabajan a
+                través de la IA, escrita desde adentro de la construcción y con
+                firma. El registro técnico del día a día vive en
+                <a href="/">SOURCE</a>.
+            </p>
+        </header>
+
+        <div class="lista">
+            {ensayos.map((e: any) => (
+                <article class="item">
+                    <p class="fecha">{e.frontmatter?.date}</p>
+                    <h2><a href={`/ensayos/${e.slug}/`}>{e.frontmatter?.title}</a></h2>
+                </article>
+            ))}
+        </div>
+    </main>
+</body>
+</html>
+
+<style>
+    :root {
+        --negro-profundo: #0c0e0d;
+        --negro-registro: #101311;
+        --filete: #1d2320;
+        --gris-tenue: #5a645d;
+        --gris-medio: #8b948e;
+        --gris-texto: #c4c9c5;
+        --blanco-titular: #f7f5ec;
+        --senal: #e5ac3a;
+    }
+
+    body {
+        background: var(--negro-profundo);
+        color: var(--gris-texto);
+        font-family: 'Spectral', serif;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+    .system-hud {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: var(--gris-tenue);
+        padding: 14px 20px;
+        border-bottom: 1px solid var(--filete);
+        letter-spacing: 0.04em;
+    }
+
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+    }
+
+    .back a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--gris-medio);
+        text-decoration: none;
+    }
+
+    .back a:hover { color: var(--senal); }
+
+    .cabecera h1 {
+        font-family: 'Spectral', serif;
+        font-weight: 200;
+        font-size: 48px;
+        color: var(--blanco-titular);
+        margin: 28px 0 12px;
+    }
+
+    .cabecera p { font-size: 17px; color: var(--gris-medio); max-width: 560px; }
+
+    .cabecera a {
+        color: var(--senal);
+        text-decoration: none;
+        border-bottom: 1px solid var(--senal);
+    }
+
+    .lista { margin-top: 36px; }
+
+    .item {
+        background: var(--negro-registro);
+        border: 1px solid var(--filete);
+        padding: 24px 28px;
+        margin-bottom: 14px;
+    }
+
+    .fecha {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--senal);
+        margin: 0 0 6px;
+    }
+
+    .item h2 { margin: 0; font-weight: 300; font-size: 26px; }
+
+    .item h2 a {
+        color: var(--blanco-titular);
+        text-decoration: none;
+    }
+
+    .item h2 a:hover { color: var(--senal); }
+</style>

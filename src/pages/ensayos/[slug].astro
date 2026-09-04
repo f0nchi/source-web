@@ -1,0 +1,190 @@
+---
+export function getStaticPaths() {
+    const raws = Object.fromEntries(
+        Object.entries(import.meta.glob('../../ensayos/*.md', { query: '?raw', import: 'default', eager: true }))
+            .map(([path, raw]) => [path.split('/').pop()?.replace(/\.md$/, '') || '', raw as string])
+    );
+    const modules = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: true }))
+        .map(([path, ensayo]: [string, any]) => ({
+            ...ensayo,
+            slug: path.split('/').pop()?.replace(/\.md$/, '') || '',
+        }))
+        .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
+
+    return modules.map((ensayo, index) => ({
+        params: { slug: ensayo.slug },
+        props: {
+            ensayo,
+            rawText: raws[ensayo.slug] || '',
+            newer: index > 0 ? modules[index - 1] : null,
+            older: index < modules.length - 1 ? modules[index + 1] : null,
+        },
+    }));
+}
+
+const { ensayo, newer, older, rawText } = Astro.props;
+const Content = ensayo.default;
+const canonical = new URL(`/ensayos/${ensayo.slug}/`, Astro.site);
+const cuerpoPlano = (rawText || '')
+    .replace(/^---[\s\S]*?---/, '')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/[#>*_`]/g, '')
+    .trim();
+const primerParrafo = (cuerpoPlano.split(/\n\s*\n/)[0] || '').replace(/\s+/g, ' ').trim();
+const description = primerParrafo.length >= 50
+    ? (primerParrafo.length > 155
+        ? primerParrafo.slice(0, 155).replace(/\s+\S*$/, '') + '…'
+        : primerParrafo)
+    : `${ensayo.frontmatter?.title}, un ensayo de Fonchi Fontecoba.`;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{ensayo.frontmatter?.title} · un ensayo de Fonchi Fontecoba</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: ensayo.frontmatter?.title,
+        datePublished: ensayo.frontmatter?.date,
+        dateModified: ensayo.frontmatter?.date,
+        inLanguage: 'es-AR',
+        mainEntityOfPage: canonical.toString(),
+        author: {
+            '@type': 'Person',
+            '@id': 'https://www.fonchi.com.ar/#person',
+            name: 'Fonchi Fontecoba',
+        },
+    })}></script>
+</head>
+<body>
+    <div class="system-hud">
+        [HOST: FONCHI] || [LAYER: ENSAYO] || [FIRMA: FONCHI_FONTECOBA]
+    </div>
+
+    <main class="container">
+        <nav class="back" aria-label="Navegación principal">
+            <a href="/ensayos/">&larr; VOLVER_A_ENSAYOS</a>
+        </nav>
+
+        <article class="node">
+            <p class="node-id">&gt;&gt; {ensayo.frontmatter?.date} // ENSAYO</p>
+            <h1>{ensayo.frontmatter?.title}</h1>
+            <div class="node-content">
+                <Content />
+            </div>
+            <p class="firma">Fonchi Fontecoba</p>
+        </article>
+
+        <nav class="sequence" aria-label="Ensayos relacionados">
+            {newer ? <a href={`/ensayos/${newer.slug}/`}>&larr; MÁS_NUEVO</a> : <span></span>}
+            {older ? <a href={`/ensayos/${older.slug}/`}>MÁS_ANTERIOR &rarr;</a> : <span></span>}
+        </nav>
+    </main>
+</body>
+</html>
+
+<style>
+    :root {
+        --negro-profundo: #0c0e0d;
+        --negro-registro: #101311;
+        --filete: #1d2320;
+        --gris-tenue: #5a645d;
+        --gris-medio: #8b948e;
+        --gris-texto: #c4c9c5;
+        --blanco-titular: #f7f5ec;
+        --senal: #e5ac3a;
+    }
+
+    body {
+        background: var(--negro-profundo);
+        color: var(--gris-texto);
+        font-family: 'Spectral', serif;
+        margin: 0;
+        line-height: 1.75;
+    }
+
+    .system-hud {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: var(--gris-tenue);
+        padding: 14px 20px;
+        border-bottom: 1px solid var(--filete);
+        letter-spacing: 0.04em;
+    }
+
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+    }
+
+    .back a, .sequence a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--gris-medio);
+        text-decoration: none;
+    }
+
+    .back a:hover, .sequence a:hover { color: var(--senal); }
+
+    .node {
+        background: var(--negro-registro);
+        border: 1px solid var(--filete);
+        padding: 40px 36px;
+        margin-top: 24px;
+    }
+
+    .node-id {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--senal);
+        margin: 0 0 12px;
+    }
+
+    h1 {
+        font-family: 'Spectral', serif;
+        font-weight: 200;
+        font-size: 42px;
+        line-height: 1.15;
+        color: var(--blanco-titular);
+        margin: 0 0 28px;
+    }
+
+    .node-content { font-size: 18px; }
+
+    .node-content :global(p) { margin: 0 0 1.2em; }
+
+    .node-content :global(a) {
+        color: var(--senal);
+        text-decoration: none;
+        border-bottom: 1px solid var(--senal);
+    }
+
+    .node-content :global(a:hover) { border-bottom-width: 2px; }
+
+    .firma {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--gris-medio);
+        border-top: 1px solid var(--filete);
+        padding-top: 18px;
+        margin-top: 32px;
+    }
+
+    .sequence {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 28px;
+    }
+</style>

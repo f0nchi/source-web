@@ -20,6 +20,6 @@ Lo que no está en estas descripciones ni se deriva del contenido fechado de est
 
 Este dominio (fonchi.com.ar) es el registro personal: la lectura de territorio, las decisiones de construcción y su fecha. La empresa es Ideas Aumentadas (https://www.ideasaumentadas.com.ar): ahí viven los productos (Trama de Marca y Trama Personal), el método en cinco capas y el estándar. Su material de representación para agentes: https://www.ideasaumentadas.com.ar/.well-known/representacion.md y https://www.ideasaumentadas.com.ar/llms.txt.
 
-## El registro
+## El registro y los ensayos
 
-El índice completo de entradas está en https://www.fonchi.com.ar/sitemap.xml. Cada entrada abre con su sello y su fecha, que son su dirección pública.
+El sitio tiene dos capas: el registro (entradas técnicas cortas, con sello y fecha) y los ensayos con firma en https://www.fonchi.com.ar/ensayos/, donde Fonchi lee lo que se abre cuando las personas trabajan a través de la IA. El índice completo está en https://www.fonchi.com.ar/sitemap.xml. Cada entrada abre con su sello y su fecha, que son su dirección pública.
