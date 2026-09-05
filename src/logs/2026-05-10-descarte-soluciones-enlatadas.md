@@ -4,8 +4,8 @@ date: "2026-05-10"
 status: "STATUS_OK"
 ---
 
-Para organizar cómo trabajan las inteligencias sobre la marca, el camino más fácil era depender de soluciones empaquetadas de terceros que ya resuelven la gestión del día a día. Después de revisar las opciones más populares del mercado, decidí descartarlas todas.
+Para organizar cómo trabajan las inteligencias sobre la marca, lo fácil era meter en el medio una solución empaquetada de terceros que ya resuelve el día a día. Miré las más populares, Paperclip entre ellas. Las descarté todas.
 
-Meter un sistema prearmado en el medio de la arquitectura te soluciona el corto plazo, pero encadena la marca a la lógica de alguien más. Te obliga a pensar como ellos. En lugar de eso, diseñé las reglas de operación y le ordené a la propia inteligencia que construyera nuestra infraestructura de orquestación desde cero, utilizando las herramientas más básicas posibles.
+Están bien hechas, y justamente por eso: un sistema prearmado te soluciona el corto plazo y encadena la marca a la lógica de alguien más. Te obliga a pensar como ellos, y yo estoy armando esto para pensar como yo. Así que diseñé las reglas de operación y le pedí a la propia inteligencia que construyera la infraestructura de orquestación desde cero, con las herramientas más básicas posibles.
 
-El esfuerzo de armar esto a medida es mayor al principio, pero asegura que la marca no dependa de intermediarios y que podamos modificar nuestra forma de operar en cualquier momento, sin pedirle permiso al diseño de otros.
+Armarlo a medida cuesta más al principio, ya lo sé. A cambio no dependo de intermediarios y puedo cambiar cómo operamos cuando quiera, sin pedirle permiso al diseño de otro.

@@ -4,8 +4,8 @@ date: "2026-07-21"
 status: "STATUS_OK"
 ---
 
-Con los años, cualquier proyecto acumula sedimento técnico: servicios de hosting que quedaron de otra época, configuraciones de correo heredadas, soluciones provisorias que se volvieron permanentes por pura inercia.
+Con los años cualquier proyecto acumula sedimento técnico: un hosting que quedó de otra época, configuraciones de correo heredadas, soluciones provisorias que se volvieron permanentes por pura inercia. Yo tenía DonWeb en el medio desde hacía años, y cada tanto me cobraba una hora en algo que no entendía.
 
-Hice el saneamiento completo: migré DNS y correo a plataformas directas, eliminé los intermediarios que ya no aportaban nada, y dejé en pie únicamente lo esencial.
+Tomé la decisión de dueño: sacarlo del todo. Aunque fuera el camino largo. Migramos DNS y correo a plataformas directas, eliminamos los intermediarios que ya no aportaban nada, y quedó en pie únicamente lo esencial.
 
-La simplicidad acá es eficiencia pura: un esquema técnico directo se mantiene solo, se entiende de un vistazo, y me devuelve las horas que el sedimento se venía cobrando en silencio. Toda esa energía va ahora a la construcción principal.
+Un esquema técnico directo se mantiene solo y se entiende de un vistazo, y me devuelve las horas que el sedimento se venía cobrando en silencio. Esa energía va ahora a lo principal, que es lo único que me interesa construir.

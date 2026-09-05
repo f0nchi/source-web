@@ -4,8 +4,8 @@ date: "2026-04-26"
 status: "STATUS_OK"
 ---
 
-El sistema documental venía sobreescribiendo: cada actualización de una instrucción hacía desaparecer la versión anterior. La base quedaba limpia, y al leer una regla vigente era imposible saber por qué había cambiado ni qué problema se estaba resolviendo cuando se escribió. Le faltaba arqueología a las decisiones.
+El sistema documental venía sobreescribiendo: cada actualización de una instrucción hacía desaparecer la versión anterior. La base quedaba limpia, y al leer una regla vigente era imposible saber por qué había cambiado ni qué problema se estaba resolviendo cuando se escribió, o sea que a las decisiones les faltaba arqueología.
 
-Armé un patrón de registro continuo, tomado de cómo se documenta el código en los proyectos serios de IA. Toda modificación estructural del canon ahora exige su entrada de registro, en changelogs independientes por frente que funcionan como libro contable: lo nuevo se apila arriba y el historial queda. Cada entrada declara la fecha, el módulo afectado, qué cambió, el razonamiento detrás, y quién validó el pase.
+Lo que adopté lo trajo el radar en su primera corrida, de cómo documenta Karpathy sus proyectos: toda modificación estructural del canon exige su entrada de registro, en changelogs independientes por frente que funcionan como un libro contable. Lo nuevo se apila arriba y el historial queda. Cada entrada dice la fecha, qué cambió, por qué, y quién validó el pase.
 
-Con esto, si el comportamiento de un agente se desvía, puedo auditar [la arqueología del sistema](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca), encontrar el punto exacto donde entró el error, y revertirlo.
+Si el comportamiento de un agente se desvía, ahora puedo ir a [la arqueología](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca), encontrar el punto exacto donde entró el error y volver atrás. Todavía falta la otra mitad del modelo, una pasada periódica que busque contradicciones y páginas viejas. Eso queda para otra sesión.

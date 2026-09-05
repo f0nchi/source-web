@@ -4,8 +4,8 @@ date: "2026-04-05"
 status: "STATUS_OK"
 ---
 
-Una parte creciente de los lectores de un sitio ya no son personas: son [los agentes técnicos](https://www.ideasaumentadas.com.ar/conceptos/capa-agentica) y los modelos de lenguaje que lo inspeccionan para responderle a alguien. Preparé el sitio para hablarles bien a los dos públicos.
+Hoy un sitio también lo leen [los agentes](https://www.ideasaumentadas.com.ar/conceptos/capa-agentica) y los modelos que lo recorren para contestarle a alguien, y cada vez más. Entonces lo preparé para que les hable bien a los dos públicos, a la gente y a las máquinas.
 
-Sumé un manifiesto en la raíz (`llms.txt`) para que un agente entienda de entrada qué es este espacio y cómo está organizado, marqué la autoría y la estructura con datos semánticos (JSON-LD), y mantuve el contenido en jerarquías de texto plano que un crawler procesa sin esfuerzo.
+Sumé un `llms.txt` en la raíz, que es una especie de carta de presentación para que un agente entienda de entrada qué es esto y cómo está ordenado, marqué la autoría y la estructura con JSON-LD, y dejé el contenido en jerarquías de texto plano que un crawler procesa sin esfuerzo. La idea de fondo es simple: si una inteligencia va a leer esto para contárselo a otra persona, prefiero que lea exactamente quién soy.
 
-La idea de fondo: si una inteligencia va a leer esto para contárselo a otra persona, que lea la identidad exacta, con el mínimo procesamiento en el medio.
+Con el menor procesamiento posible en el medio.
