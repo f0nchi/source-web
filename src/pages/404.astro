@@ -1,0 +1,35 @@
+---
+import Nav from '../components/Nav.astro';
+---
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 // SOURCE</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --negro-profundo: #0c0e0d; --gris-medio: #959e98; --gris-texto: #e4e8e5; --senal: #e5ac3a; }
+        body { margin: 0; background: var(--negro-profundo); color: var(--gris-texto); font-family: 'Spectral', Georgia, serif; }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+        .sello { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--gris-medio); text-transform: uppercase; }
+        h1 { font-weight: 300; font-size: 34px; line-height: 1.2; margin: 18px 0 14px; color: #fff; }
+        p { font-size: 19px; line-height: 1.55; color: var(--gris-medio); }
+        a { color: var(--senal); }
+        .eof { display: block; margin-top: 40px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--gris-medio); }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <Nav />
+        <span class="sello">&gt;&gt; ENTRY_404 // STATUS_NOT_FOUND</span>
+        <h1>Esta dirección no existe en el registro.</h1>
+        <p>Puede que la entrada haya cambiado de lugar o que el enlace viniera con un error. Lo que buscás casi seguro está en el <a href="/">registro</a> o en los <a href="/ensayos/">ensayos</a>, y si no, <a href="/#contacto">escribime</a>.</p>
+        <span class="eof">[EOF]</span>
+    </div>
+</body>
+</html>
