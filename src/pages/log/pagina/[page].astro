@@ -1,0 +1,315 @@
+---
+import Nav from '../../../components/Nav.astro';
+
+export function getStaticPaths({ paginate }: { paginate: any }) {
+    const rawLogs = Object.entries(import.meta.glob('../../../logs/*.md', { eager: true }))
+        .map(([path, log]: [string, any]) => ({
+            ...log,
+            slug: path.split('/').pop()?.replace(/\.md$/, '') || '',
+        }));
+    // Ordenamos de más nuevo a más viejo por fecha del frontmatter, igual que la home.
+    const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf() - new Date((a as any).frontmatter?.date).valueOf());
+
+    // paginate() genera también la página 1: la descartamos porque esa vive en la home.
+    return paginate(logs, { pageSize: 10 }).filter((entry: any) => entry.params.page !== '1');
+}
+
+const { page } = Astro.props as { page: any };
+const canonical = new URL(`/log/pagina/${page.currentPage}/`, Astro.site);
+const title = `Registro, página ${page.currentPage} · Fonchi`;
+const description = `El registro público de Fonchi Fontecoba, página ${page.currentPage} de ${page.lastPage}: entradas anteriores del SYS_LOG de Ideas Aumentadas.`;
+
+// Página anterior (más nuevas): si es la página 2, el destino real es la home, no /log/pagina/1/.
+const hrefMasNuevas = page.currentPage === 2 ? '/' : page.url.prev;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Spectral & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+</head>
+<body>
+    <div class="system-hud">
+        [HOST: FONCHI] || [LAYER: SOURCE] || [PAGINA: {page.currentPage}/{page.lastPage}]
+    </div>
+
+    <main class="container">
+        <Nav />
+
+        <p class="node-id">&gt;&gt; REGISTRO // ENTRADAS_ANTERIORES // PAGINA {page.currentPage}/{page.lastPage}</p>
+
+        <div class="log-grid">
+            {page.data.map((log: any, index: number) => {
+                const entryId = String(page.total - (page.start + index)).padStart(2, '0');
+                const Content = log.default;
+                return (
+                <article class="node">
+                    <span class="node-id">&gt;&gt; ENTRY_{entryId} // {log.frontmatter?.status || 'STATUS_OK'} // {log.frontmatter?.date}</span>
+                    <h2><a href={`/log/${log.slug}/`}>{log.frontmatter?.title}</a></h2>
+                    <div class="node-content">
+                        <Content />
+                    </div>
+                    <span class="eof">[EOF]</span>
+                </article>
+                );
+            })}
+        </div>
+
+        <nav class="paginador" aria-label="Paginación del registro">
+            {hrefMasNuevas ? <a href={hrefMasNuevas}>&larr; MÁS_NUEVAS</a> : <span></span>}
+            <span class="paginador-contador">PAGINA {page.currentPage}/{page.lastPage}</span>
+            {page.url.next ? <a href={page.url.next}>MÁS_ANTERIORES &rarr;</a> : <span></span>}
+        </nav>
+
+        <footer class="system-footer">
+            <span class="eof-log">[ END_OF_PAGE ]</span>
+            <p class="volver-home"><a href="/">&larr; VOLVER_A_SOURCE</a></p>
+        </footer>
+    </main>
+</body>
+</html>
+
+<style>
+    /* Design System Fonchi — Paginación del registro (mismo sistema que la home) */
+    :root {
+        --negro-profundo: #0c0e0d;
+        --negro-registro: #101311;
+        --filete: #1d2320;
+        --gris-tenue: #5a645d;
+        --gris-medio: #959e98;
+        --gris-texto: #e4e8e5;
+        --blanco-titular: #ffffff;
+        --senal: #e5ac3a;
+
+        --font-lectura: 'Spectral', Georgia, 'Times New Roman', serif;
+        --font-registro: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+        --tr-display: -0.03em;
+        --tr-sello: 0.14em;
+        --medida-lectura: 680px;
+    }
+
+    * {
+        box-sizing: border-box;
+        border-radius: 0 !important;
+    }
+
+    ::selection {
+        background: var(--senal);
+        color: var(--negro-profundo);
+    }
+
+    body {
+        margin: 0;
+        background: var(--negro-profundo);
+        color: var(--gris-texto);
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .system-hud {
+        position: fixed;
+        inset: 0 0 auto;
+        box-sizing: border-box;
+        z-index: 10;
+        padding: 10px 24px;
+        border-bottom: 1px solid var(--filete);
+        background: rgba(12, 14, 13, 0.96);
+        color: var(--senal);
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        text-transform: uppercase;
+    }
+
+    .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 96px 28px 96px 28px;
+    }
+
+    .node-id {
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--senal);
+        display: block;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+    }
+
+    .log-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 24px;
+    }
+
+    .node {
+        border-top: 1px solid var(--filete);
+        padding: 38px 0 30px 0;
+    }
+
+    .node h2 {
+        font-family: var(--font-lectura);
+        font-weight: 200;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: var(--tr-display);
+        margin: 0 0 24px 0;
+        color: var(--blanco-titular);
+        text-wrap: pretty;
+    }
+
+    .node h2 a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .node h2 a:hover,
+    .node h2 a:focus-visible {
+        color: var(--senal);
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+
+    .node-content :global(p) {
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 24px 0;
+        color: var(--gris-texto);
+        max-width: var(--medida-lectura);
+    }
+
+    .node-content :global(blockquote) {
+        margin: 0 0 24px 0;
+        padding: 16px 20px;
+        background: var(--negro-registro);
+        border-left: 3px solid var(--senal);
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        color: var(--blanco-titular);
+    }
+
+    .node-content :global(ul), .node-content :global(ol) {
+        font-family: var(--font-lectura);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
+        margin: 0 0 24px 0;
+        padding-left: 24px;
+        color: var(--gris-texto);
+    }
+
+    .node-content :global(a) {
+        color: var(--senal);
+        text-decoration: none;
+        border-bottom: 1px solid var(--senal);
+    }
+
+    .node-content :global(a:hover) {
+        border-bottom-width: 2px;
+    }
+
+    .node-content :global(strong) {
+        font-weight: 600;
+        color: var(--blanco-titular);
+    }
+
+    .node-content :global(code) {
+        font-family: var(--font-registro);
+        font-size: 14px;
+        color: var(--senal);
+        background: var(--negro-registro);
+        padding: 2px 6px;
+    }
+
+    .eof {
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--gris-tenue);
+        display: block;
+        margin-top: 24px;
+    }
+
+    .paginador {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 36px;
+        padding-top: 30px;
+        border-top: 1px solid var(--filete);
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: var(--tr-sello);
+        text-transform: uppercase;
+    }
+
+    .paginador a {
+        color: var(--senal);
+        text-decoration: none;
+    }
+
+    .paginador a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+
+    .paginador-contador {
+        color: var(--gris-tenue);
+    }
+
+    .system-footer {
+        margin-top: 56px;
+        border-top: 1px solid var(--filete);
+        padding-top: 36px;
+        color: var(--gris-tenue);
+    }
+
+    .eof-log {
+        display: block;
+        margin-bottom: 20px;
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        color: var(--gris-tenue);
+    }
+
+    .volver-home {
+        margin: 0;
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: var(--tr-sello);
+    }
+
+    .volver-home a {
+        color: var(--senal);
+        text-decoration: none;
+    }
+
+    .volver-home a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+</style>

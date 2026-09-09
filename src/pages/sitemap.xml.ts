@@ -34,11 +34,24 @@ function urlEntry(path: string, lastmod: string) {
   ].join('\n');
 }
 
+const TAMANO_PAGINA = 10;
+
+function paginasDeRegistro(): string[] {
+  const lastPage = Math.max(1, Math.ceil(logs.length / TAMANO_PAGINA));
+  const entries: string[] = [];
+  for (let p = 2; p <= lastPage; p++) {
+    const primeraEntradaDeLaPagina = logs[(p - 1) * TAMANO_PAGINA];
+    entries.push(urlEntry(`/log/pagina/${p}/`, primeraEntradaDeLaPagina?.date || logs[0]?.date || ''));
+  }
+  return entries;
+}
+
 export function GET() {
   const latestDate = logs[0]?.date || new Date().toISOString().slice(0, 10);
   const entries = [
     urlEntry('/', latestDate),
     ...logs.map((log) => urlEntry(`/log/${log.slug}/`, log.date)),
+    ...paginasDeRegistro(),
     urlEntry('/ensayos/', ensayos[0]?.date || latestDate),
     ...ensayos.map((e) => urlEntry(`/ensayos/${e.slug}/`, e.date)),
   ];

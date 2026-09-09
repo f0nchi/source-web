@@ -7,7 +7,14 @@ const rawLogs = Object.entries(import.meta.glob('../logs/*.md', { eager: true })
     }));
 // Ordenamos de más nuevo a más viejo por fecha del frontmatter
 const logs = rawLogs.sort((a, b: any) => new Date(b.frontmatter?.date).valueOf() - new Date((a as any).frontmatter?.date).valueOf());
+// La home muestra solo las últimas 10 entradas completas; el resto vive en /log/pagina/N/
+const TAMANO_PAGINA = 10;
+const logsHome = logs.slice(0, TAMANO_PAGINA);
+const hayMasEntradas = logs.length > TAMANO_PAGINA;
+const rangoInicio = TAMANO_PAGINA + 1;
+const rangoFin = Math.min(TAMANO_PAGINA * 2, logs.length);
 import VolverArriba from '../components/VolverArriba.astro';
+import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
 ---
 
 <!DOCTYPE html>
@@ -97,6 +104,7 @@ import VolverArriba from '../components/VolverArriba.astro';
     </script>
 
     <div class="container">
+        <Nav />
         <header>
             <h1 class="visually-hidden">Fonchi Fontecoba</h1>
             <a href="/" class="brand-conjunto" aria-label="Ir al inicio">
@@ -121,7 +129,7 @@ import VolverArriba from '../components/VolverArriba.astro';
 
         <!-- Ensayos: la capa con firma -->
         <div class="ensayos-block">
-            <span class="node-id">&gt;&gt; ENSAYOS // LA_CAPA_CON_FIRMA</span>
+            <span class="node-id">&gt;&gt; {SECCION_FIRMADA} // LA_CAPA_CON_FIRMA</span>
             {Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
                 .map(([path, e]: [string, any]) => ({ ...e, slug: path.split('/').pop()?.replace(/\.md$/, '') || '' }))
                 .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf())
@@ -131,9 +139,9 @@ import VolverArriba from '../components/VolverArriba.astro';
             <p class="ensayo-item"><a href="/ensayos/" class="ver-todos">VER_TODOS &rarr;</a></p>
         </div>
 
-        <!-- El Log de operaciones Dinámico -->
+        <!-- El Log de operaciones Dinámico: últimas 10 entradas, numeración global -->
         <div class="log-grid">
-            {logs.map((log: any, index) => {
+            {logsHome.map((log: any, index) => {
                 const entryId = String(logs.length - index).padStart(2, '0');
                 const Content = log.default;
                 return (
@@ -149,9 +157,15 @@ import VolverArriba from '../components/VolverArriba.astro';
             })}
         </div>
 
+        {hayMasEntradas && (
+            <p class="paginacion-link">
+                <a href="/log/pagina/2/">&gt;&gt; ENTRADAS_ANTERIORES ({rangoInicio}-{rangoFin}) &rarr;</a>
+            </p>
+        )}
+
         <footer class="system-footer">
             <span class="eof-log">[ END_OF_LOGS ]</span>
-            <div class="whois-block">
+            <div class="whois-block" id="contacto">
                 <span class="prompt-line">&gt; execute whois_host.sh</span>
                 <p>USER_ID: Fonchi Fontecoba</p>
                 <p>ROLE: Arquitecto de Sistemas de Marca</p>
@@ -159,7 +173,28 @@ import VolverArriba from '../components/VolverArriba.astro';
                 <p>MISSION: Diseñando sistemas operativos para mentes complejas.</p>
                 <div class="action-menu">
                     <span class="dim-text">STATUS: EOF // Awaiting user input...</span>
-                    <a href="#" id="init-comm-link" class="comm-link"><span class="menu-key">[Y]</span> INITIATE_MAIL_PROTOCOL <span class="cursor">_</span></a>
+                    <a href="#contacto" id="init-comm-link" class="comm-link" aria-expanded="false" aria-controls="contacto-form"><span class="menu-key">[Y]</span> INITIATE_MAIL_PROTOCOL <span class="cursor">_</span></a>
+                    <p class="contacto-copy">Escribime. Llega a mi correo y respondo yo.</p>
+                    <form id="contacto-form" class="contacto-form" novalidate hidden aria-label="Formulario de contacto">
+                        <div class="contacto-campo">
+                            <label for="contacto-nombre">NOMBRE</label>
+                            <input type="text" id="contacto-nombre" name="nombre" autocomplete="name" required />
+                        </div>
+                        <div class="contacto-campo">
+                            <label for="contacto-mail">MAIL</label>
+                            <input type="email" id="contacto-mail" name="mail" autocomplete="email" required />
+                        </div>
+                        <div class="contacto-campo">
+                            <label for="contacto-mensaje">MENSAJE</label>
+                            <textarea id="contacto-mensaje" name="mensaje" rows="4" required></textarea>
+                        </div>
+                        <div class="contacto-trampa" aria-hidden="true">
+                            <label for="contacto-empresa">Dejar vacío</label>
+                            <input type="text" id="contacto-empresa" name="empresa" tabindex="-1" autocomplete="off" />
+                        </div>
+                        <button type="submit" class="comm-link contacto-submit">[ENVIAR] &rarr;</button>
+                        <p class="contacto-status" id="contacto-status" aria-live="polite"></p>
+                    </form>
                 </div>
             </div>
         </footer>
@@ -168,16 +203,82 @@ import VolverArriba from '../components/VolverArriba.astro';
     <VolverArriba />
 
     <script is:inline>
-        // Obfuscate the email to avoid basic syntax scraping by spam bots
-        const commLink = document.getElementById('init-comm-link');
-        if (commLink) {
-            commLink.addEventListener('click', function(e) {
+        (function () {
+            var commLink = document.getElementById('init-comm-link');
+            var form = document.getElementById('contacto-form');
+            if (!commLink || !form) return;
+
+            function abrirForm() {
+                form.hidden = false;
+                commLink.setAttribute('aria-expanded', 'true');
+            }
+
+            function cerrarForm() {
+                form.hidden = true;
+                commLink.setAttribute('aria-expanded', 'false');
+            }
+
+            commLink.addEventListener('click', function (e) {
                 e.preventDefault();
-                const user = 'hola';
-                const domain = 'fonchi.com.ar';
-                window.open('mailto:' + user + '@' + domain + '?subject=System%20Protocol%20Init', '_blank');
+                if (form.hidden) {
+                    abrirForm();
+                    var primerCampo = document.getElementById('contacto-nombre');
+                    if (primerCampo) primerCampo.focus();
+                } else {
+                    cerrarForm();
+                }
             });
-        }
+
+            if (window.location.hash === '#contacto') {
+                abrirForm();
+            }
+
+            var status = document.getElementById('contacto-status');
+            var boton = form.querySelector('.contacto-submit');
+
+            function mostrarFallback() {
+                status.innerHTML = '[!] No pude enviar. Escribime a <a href="mailto:hola@fonchi.com.ar">hola@fonchi.com.ar</a>';
+                status.className = 'contacto-status err';
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var datos = {
+                    nombre: form.nombre.value,
+                    mail: form.mail.value,
+                    mensaje: form.mensaje.value,
+                    empresa: form.empresa.value,
+                };
+                status.textContent = 'ENVIANDO_';
+                status.className = 'contacto-status';
+                boton.disabled = true;
+
+                fetch('/api/contacto', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datos),
+                })
+                    .then(function (r) {
+                        return r.json().catch(function () { return {}; }).then(function (data) {
+                            return { ok: r.ok, data: data };
+                        });
+                    })
+                    .then(function (result) {
+                        boton.disabled = false;
+                        if (result.ok) {
+                            status.textContent = '[OK] RECIBIDO. TE RESPONDO YO.';
+                            status.className = 'contacto-status ok';
+                            form.reset();
+                        } else {
+                            mostrarFallback();
+                        }
+                    })
+                    .catch(function () {
+                        boton.disabled = false;
+                        mostrarFallback();
+                    });
+            });
+        })();
     </script>
 </body>
 </html>
@@ -549,5 +650,108 @@ import VolverArriba from '../components/VolverArriba.astro';
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         color: var(--senal);
+    }
+
+    .paginacion-link {
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .paginacion-link a {
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: var(--tr-sello);
+        text-transform: uppercase;
+        color: var(--senal);
+        text-decoration: none;
+    }
+
+    .paginacion-link a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+
+    .contacto-copy {
+        font-family: var(--font-lectura);
+        font-size: 14px;
+        color: var(--gris-medio);
+        margin: 0;
+    }
+
+    .contacto-form {
+        margin-top: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        max-width: 420px;
+    }
+
+    .contacto-campo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-campo label {
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        text-transform: uppercase;
+        color: var(--senal);
+        margin-bottom: 6px;
+    }
+
+    .contacto-campo input,
+    .contacto-campo textarea {
+        background: var(--negro-profundo);
+        border: 1px solid var(--filete);
+        color: var(--gris-texto);
+        font-family: var(--font-registro);
+        font-size: 13px;
+        padding: 10px 12px;
+        width: 100%;
+    }
+
+    .contacto-campo input:focus,
+    .contacto-campo textarea:focus {
+        outline: none;
+        border-color: var(--senal);
+    }
+
+    .contacto-campo textarea {
+        resize: vertical;
+        min-height: 90px;
+    }
+
+    .contacto-trampa {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .contacto-submit {
+        align-self: flex-start;
+        border: 1px solid var(--senal);
+        cursor: pointer;
+        font: inherit;
+    }
+
+    .contacto-status {
+        font-family: var(--font-registro);
+        font-size: 12px;
+        color: var(--gris-medio);
+        margin: 0;
+        min-height: 1.4em;
+    }
+
+    .contacto-status.ok,
+    .contacto-status.err {
+        color: var(--senal);
+    }
+
+    .contacto-status :global(a) {
+        color: var(--senal);
+        border-bottom: 1px solid var(--senal);
     }
 </style>

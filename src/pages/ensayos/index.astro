@@ -1,9 +1,23 @@
 ---
+import Nav from '../../components/Nav.astro';
+
+// Texto crudo por slug: la bajada de cada ensayo es su primer párrafo real, nunca un resumen inventado.
+const rawEnsayos = Object.fromEntries(
+    Object.entries(import.meta.glob('../../ensayos/*.md', { query: '?raw', import: 'default', eager: true }))
+        .map(([path, raw]) => [path.split('/').pop()?.replace(/\.md$/, '') || '', raw as string])
+);
+
 const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: true }))
-    .map(([path, ensayo]: [string, any]) => ({
-        ...ensayo,
-        slug: path.split('/').pop()?.replace(/\.md$/, '') || '',
-    }))
+    .map(([path, ensayo]: [string, any]) => {
+        const slug = path.split('/').pop()?.replace(/\.md$/, '') || '';
+        const cuerpoPlano = (rawEnsayos[slug] || '')
+            .replace(/^---[\s\S]*?---/, '')
+            .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+            .replace(/[#>*_`]/g, '')
+            .trim();
+        const bajada = (cuerpoPlano.split(/\n\s*\n/)[0] || '').replace(/\s+/g, ' ').trim();
+        return { ...ensayo, slug, bajada };
+    })
     .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
 ---
 
@@ -27,9 +41,7 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
     </div>
 
     <main class="container">
-        <nav class="back" aria-label="Navegación principal">
-            <a href="/">&larr; VOLVER_A_SOURCE</a>
-        </nav>
+        <Nav />
 
         <header class="cabecera">
             <h1>Ensayos</h1>
@@ -46,6 +58,7 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
                 <article class="item">
                     <p class="fecha">{e.frontmatter?.date}</p>
                     <h2><a href={`/ensayos/${e.slug}/`}>{e.frontmatter?.title}</a></h2>
+                    <p class="bajada">{e.bajada}</p>
                 </article>
             ))}
         </div>
@@ -88,15 +101,6 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
         padding: 40px 20px 80px;
     }
 
-    .back a {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        color: var(--gris-medio);
-        text-decoration: none;
-    }
-
-    .back a:hover { color: var(--senal); }
-
     .cabecera h1 {
         font-family: 'Spectral', serif;
         font-weight: 200;
@@ -137,4 +141,12 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
     }
 
     .item h2 a:hover { color: var(--senal); }
+
+    .bajada {
+        margin: 12px 0 0;
+        font-size: 16px;
+        color: var(--gris-texto);
+        font-weight: 300;
+        max-width: 560px;
+    }
 </style>

@@ -1,5 +1,6 @@
 ---
 import VolverArriba from '../../components/VolverArriba.astro';
+import Nav, { SECCION_FIRMADA } from '../../components/Nav.astro';
 export function getStaticPaths() {
     const raws = Object.fromEntries(
         Object.entries(import.meta.glob('../../ensayos/*.md', { query: '?raw', import: 'default', eager: true }))
@@ -81,9 +82,7 @@ const description = acumulado.length >= 50
     </div>
 
     <main class="container">
-        <nav class="back" aria-label="Navegación principal">
-            <a href="/ensayos/">&larr; VOLVER_A_ENSAYOS</a>
-        </nav>
+        <Nav />
 
         <article class="node">
             <p class="node-id">&gt;&gt; {ensayo.frontmatter?.date} // ENSAYO</p>
@@ -95,8 +94,9 @@ const description = acumulado.length >= 50
         </article>
 
         <nav class="sequence" aria-label="Ensayos relacionados">
-            {newer ? <a href={`/ensayos/${newer.slug}/`}>&larr; MÁS_NUEVO</a> : <span></span>}
-            {older ? <a href={`/ensayos/${older.slug}/`}>MÁS_ANTERIOR &rarr;</a> : <span></span>}
+            {older ? <a href={`/ensayos/${older.slug}/`}>&larr; ENSAYO_ANTERIOR</a> : <span></span>}
+            <a href="/ensayos/" class="ver-listado">{SECCION_FIRMADA}</a>
+            {newer ? <a href={`/ensayos/${newer.slug}/`}>ENSAYO_SIGUIENTE &rarr;</a> : <span></span>}
         </nav>
     </main>
 
@@ -139,14 +139,14 @@ const description = acumulado.length >= 50
         padding: 40px 20px 80px;
     }
 
-    .back a, .sequence a {
+    .sequence a {
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         color: var(--gris-medio);
         text-decoration: none;
     }
 
-    .back a:hover, .sequence a:hover { color: var(--senal); }
+    .sequence a:hover { color: var(--senal); }
 
     .node {
         background: var(--negro-registro);
@@ -195,6 +195,13 @@ const description = acumulado.length >= 50
     .sequence {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
         margin-top: 28px;
+    }
+
+    .sequence .ver-listado {
+        color: var(--senal);
     }
 </style>

@@ -1,5 +1,6 @@
 ---
 import VolverArriba from '../../components/VolverArriba.astro';
+import Nav from '../../components/Nav.astro';
 export function getStaticPaths() {
     // Texto crudo por slug: la meta description de cada entrada sale de su primer párrafo real.
     const raws = Object.fromEntries(
@@ -76,9 +77,7 @@ const description = primerParrafo.length >= 50
     </div>
 
     <main class="container">
-        <nav class="back" aria-label="Navegación principal">
-            <a href="/">&larr; VOLVER_A_SOURCE</a>
-        </nav>
+        <Nav />
 
         <article class="node">
             <p class="node-id">&gt;&gt; {log.frontmatter?.date} // {log.frontmatter?.status || 'STATUS_OK'}</p>
@@ -180,13 +179,6 @@ const description = primerParrafo.length >= 50
     a:hover, a:focus-visible {
         text-decoration: underline;
         text-underline-offset: 0.25em;
-    }
-
-    .back {
-        margin-bottom: 44px;
-        font-family: var(--font-registro);
-        font-size: 12px;
-        letter-spacing: var(--tr-sello);
     }
 
     .node {

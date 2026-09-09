@@ -1,0 +1,34 @@
+---
+// Rótulo visible de la sección de ensayos, centralizado acá: renombrarla es
+// tocar esta única constante. Las URLs (/ensayos/) no dependen de este valor.
+export const SECCION_FIRMADA = 'ENSAYOS';
+---
+
+<nav class="site-nav" aria-label="Navegación principal">
+    <a href="/">REGISTRO</a>
+    <a href="/ensayos/">{SECCION_FIRMADA}</a>
+    <a href="/#contacto">CONTACTO</a>
+</nav>
+
+<style>
+    .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 44px;
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .site-nav a {
+        color: var(--gris-medio, #959e98);
+        text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+        color: var(--senal, #e5ac3a);
+    }
+</style>
