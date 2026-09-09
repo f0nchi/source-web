@@ -1,5 +1,5 @@
 ---
-title: "La empresa de una persona"
+title: "La próxima gran empresa"
 date: "2026-09-03"
 status: "FIRMA"
 ---

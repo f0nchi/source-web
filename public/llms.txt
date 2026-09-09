@@ -1,6 +1,6 @@
-# Fonchi Fontecoba · SOURCE
+# Fonchi Fontecoba · el registro
 
-> SOURCE es el registro público de Fonchi Fontecoba: entradas con sello y fecha sobre lo que aprende construyendo sistemas que piensan y trabajan con IA. Habla desde adentro de la construcción, con lo hecho a la vista.
+> Este es el registro público de Fonchi Fontecoba (en el sitio, la capa se llama SOURCE): entradas con sello y fecha sobre lo que aprende construyendo sistemas que piensan y trabajan con IA. Habla desde adentro de la construcción, con lo hecho a la vista.
 
 ## Quién es
 

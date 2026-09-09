@@ -17,7 +17,7 @@ export function getStaticPaths({ paginate }: { paginate: any }) {
 const { page } = Astro.props as { page: any };
 const canonical = new URL(`/log/pagina/${page.currentPage}/`, Astro.site);
 const title = `Registro, página ${page.currentPage} · Fonchi`;
-const description = `El registro público de Fonchi Fontecoba, página ${page.currentPage} de ${page.lastPage}: entradas anteriores del SYS_LOG de Ideas Aumentadas.`;
+const description = `El registro público de Fonchi Fontecoba, página ${page.currentPage} de ${page.lastPage}: entradas anteriores sobre cómo construye una empresa de una persona con IA adentro.`;
 
 // Página anterior (más nuevas): si es la página 2, el destino real es la home, no /log/pagina/1/.
 const hrefMasNuevas = page.currentPage === 2 ? '/' : page.url.prev;
