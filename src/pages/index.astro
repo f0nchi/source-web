@@ -133,12 +133,12 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
                 </svg>
                 <span class="brand-wordmark">fonchi</span>
             </a>
-            <p class="subtitle">SYS_LOG // Documentación de Arquitectura de Sistemas</p>
+            <p class="subtitle">SYS_LOG // LO_QUE_HICE, CON FECHA</p>
         </header>
 
         <!-- Ensayos: la capa con firma -->
         <div class="ensayos-block">
-            <span class="node-id">&gt;&gt; {SECCION_FIRMADA} // LA_CAPA_CON_FIRMA</span>
+            <span class="node-id">&gt;&gt; {SECCION_FIRMADA} // LO_QUE_PIENSO</span>
             {Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
                 .map(([path, e]: [string, any]) => ({ ...e, slug: path.split('/').pop()?.replace(/\.md$/, '') || '' }))
                 .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf())
