@@ -45,21 +45,38 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
           "worksFor": [
             {
               "@type": "Organization",
+              "@id": "https://www.ideasaumentadas.com.ar/#organization",
               "name": "Ideas Aumentadas",
               "url": "https://www.ideasaumentadas.com.ar",
               "founder": { "@id": "https://www.fonchi.com.ar/#person" }
+            },
+            {
+              "@type": "Role",
+              "roleName": "Gerente de Marketing",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Orkos",
+                "url": "https://orkos.tech"
+              }
             }
           ],
+          "homeLocation": { "@type": "Place", "name": "Buenos Aires, Argentina" },
+          "knowsLanguage": ["es", "en"],
           "knowsAbout": [
             "codificación de identidad para inteligencia artificial",
             "brand codification for AI",
             "estrategia de marketing con IA",
             "arquitectura de sistemas de marca",
             "brand systems architecture",
+            "sistemas operativos de marca",
+            "ingeniería de marketing con agentes de IA",
+            "marketing engineering",
+            "SEO para búsqueda con inteligencia artificial",
             "estándares de contexto para agentes",
             "inteligencia del trabajo"
           ],
           "sameAs": [
+            "https://www.linkedin.com/in/fonchi/",
             "https://www.ideasaumentadas.com.ar/fonchi",
             "https://github.com/f0nchi"
           ]
