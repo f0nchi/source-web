@@ -1,0 +1,44 @@
+---
+import Medicion from '../components/Medicion.astro';
+import Nav from '../components/Nav.astro';
+---
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacidad · Fonchi Fontecoba</title>
+    <meta name="description" content="Qué se mide cuando entrás a fonchi.com.ar y qué pasa con lo que me mandás por el formulario de contacto." />
+    <link rel="canonical" href="https://www.fonchi.com.ar/privacidad/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Spectral:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --negro-profundo: #0c0e0d; --gris-medio: #959e98; --gris-texto: #e4e8e5; --senal: #e5ac3a; }
+        body { margin: 0; background: var(--negro-profundo); color: var(--gris-texto); font-family: 'Spectral', Georgia, serif; }
+        .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+        .sello { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--gris-medio); text-transform: uppercase; }
+        h1 { font-weight: 300; font-size: 34px; line-height: 1.2; margin: 18px 0 14px; color: #fff; }
+        p { font-size: 19px; line-height: 1.55; color: var(--gris-medio); }
+        a { color: var(--senal); }
+        p + p { margin-top: 0; }
+        .eof { display: block; margin-top: 40px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--gris-medio); }
+    </style>
+    <Medicion />
+</head>
+<body>
+    <div class="wrap">
+        <Nav />
+        <span class="sello">&gt;&gt; PRIVACIDAD</span>
+        <h1>Qué se mide cuando entrás.</h1>
+        <p>Te cuento qué pasa cuando entrás acá, así lo sabés antes de seguir leyendo.</p>
+        <p>Uso Google Analytics para saber qué páginas se visitan y cuánto tiempo se queda la gente en cada una, con un identificador anónimo guardado en una cookie. Y uso Microsoft Clarity, que reconstruye dónde hacés clic y hasta dónde bajás leyendo, así veo qué entradas y qué ensayos se leen enteros y en qué párrafo alguien se va. Ninguna de las dos recibe tu nombre ni tu mail, y lo que escribís en el formulario de contacto se tapa en tu navegador antes de salir.</p>
+        <p>Lo que me mandás por el <a href="/#contacto">formulario</a> me llega al correo con tu mail, y lo uso para responderte. No queda guardado en el sitio ni entra a ninguna lista.</p>
+        <p>Si preferís que no te cuenten, un bloqueador o la señal de privacidad de tu navegador alcanzan, y el sitio funciona igual. Y si querés que borre algo tuyo, escribime a <a href="mailto:hola@fonchi.com.ar">hola@fonchi.com.ar</a>.</p>
+        <span class="eof">[EOF]</span>
+    </div>
+</body>
+</html>

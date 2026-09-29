@@ -198,7 +198,7 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
                 <div class="action-menu">
                     <span class="dim-text">STATUS: EOF // Awaiting user input...</span>
                     <a href="#contacto" id="init-comm-link" class="comm-link" aria-expanded="false" aria-controls="contacto-form"><span class="menu-key">[Y]</span> INITIATE_MAIL_PROTOCOL <span class="cursor">_</span></a>
-                    <p class="contacto-copy">Escribime. Llega a mi correo y respondo yo.</p>
+                    <p class="contacto-copy">Escribime. Llega a mi correo y respondo yo. <a href="/privacidad/">Qué pasa con tus datos</a>.</p>
                     <form id="contacto-form" class="contacto-form" novalidate hidden aria-label="Formulario de contacto">
                         <div class="contacto-campo">
                             <label for="contacto-nombre">NOMBRE</label>
@@ -232,6 +232,14 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
             var form = document.getElementById('contacto-form');
             if (!commLink || !form) return;
 
+            // Los dos momentos del contacto van a Analytics y a Clarity, para
+            // filtrar las grabaciones de quien abrió el formulario y de quien
+            // escribió. Fuera del dominio publicado no cargan y no pasa nada.
+            function medir(evento) {
+                try { if (typeof window.gtag === 'function') window.gtag('event', evento); } catch (e) {}
+                try { if (typeof window.clarity === 'function') window.clarity('event', evento); } catch (e) {}
+            }
+
             function abrirForm() {
                 form.hidden = false;
                 commLink.setAttribute('aria-expanded', 'true');
@@ -246,6 +254,7 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
                 e.preventDefault();
                 if (form.hidden) {
                     abrirForm();
+                    medir('contacto_abierto');
                     var primerCampo = document.getElementById('contacto-nombre');
                     if (primerCampo) primerCampo.focus();
                 } else {
@@ -293,6 +302,7 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
                             status.textContent = '[OK] RECIBIDO. TE RESPONDO YO.';
                             status.className = 'contacto-status ok';
                             form.reset();
+                            medir('contacto_enviado');
                         } else {
                             mostrarFallback();
                         }
@@ -700,6 +710,17 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
         font-size: 14px;
         color: var(--gris-medio);
         margin: 0;
+    }
+
+    .contacto-copy a {
+        color: var(--gris-medio);
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+
+    .contacto-copy a:hover,
+    .contacto-copy a:focus-visible {
+        color: var(--senal);
     }
 
     .contacto-form {
