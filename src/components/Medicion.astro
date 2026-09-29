@@ -1,15 +1,20 @@
 ---
 // Medición del sitio, en el head de cada página.
 // Analytics directo (G-8EXCRYPWN7) y Clarity (ypnj4s3njs), que graba sesiones y
-// arma mapas de calor. Clarity carga solo en el dominio publicado (el dominio sin
+// arma mapas de calor. Los dos cargan solo en el dominio publicado (el dominio sin
 // www redirige ahí): localhost y los previews de Vercel no llegan al panel.
 ---
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8EXCRYPWN7"></script>
 <script is:inline>
+    if (location.hostname === "www.fonchi.com.ar") {
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-8EXCRYPWN7";
+    document.head.appendChild(s);
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    window.gtag = function(){dataLayer.push(arguments);};
     gtag('js', new Date());
     gtag('config', 'G-8EXCRYPWN7');
+    }
 </script>
 <script is:inline type="text/javascript">
     if (location.hostname === "www.fonchi.com.ar") {
