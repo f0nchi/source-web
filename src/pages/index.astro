@@ -1,5 +1,5 @@
 ---
-import Clarity from '../components/Clarity.astro';
+import Medicion from '../components/Medicion.astro';
 // Extraemos los logs usando Vite nativo en lugar de Astro.glob para asegurar la compatibilidad estricta en Vercel
 const rawLogs = Object.entries(import.meta.glob('../logs/*.md', { eager: true }))
     .map(([path, log]: [string, any]) => ({
@@ -116,21 +116,9 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
     <meta name="twitter:title" content="Fonchi Fontecoba · el registro" />
     <meta name="twitter:description" content="El registro público de Fonchi Fontecoba, fundador de Ideas Aumentadas y autor del estándar abierto .contexto/: lo que aprende construyendo sistemas que trabajan a través de la IA, entrada por entrada." />
 
-    <!-- Google Tag Manager -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MT4686P6');</script>
-    <!-- End Google Tag Manager -->
-    <Clarity />
+    <Medicion />
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT4686P6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class="system-hud">
         [SYS_TICK: <span id="sys-tick"></span>] || [HOST: FONCHI] || [LAYER: SOURCE]
     </div>
