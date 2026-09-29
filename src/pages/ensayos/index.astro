@@ -1,4 +1,5 @@
 ---
+import Clarity from '../../components/Clarity.astro';
 import Nav from '../../components/Nav.astro';
 
 // Texto crudo por slug: la bajada de cada ensayo es su primer párrafo real, nunca un resumen inventado.
@@ -50,6 +51,7 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
     <meta name="twitter:image" content="https://www.fonchi.com.ar/og-registro.png" />
     <meta name="twitter:title" content="Ensayos · Fonchi Fontecoba" />
     <meta name="twitter:description" content="Los ensayos con firma de Fonchi Fontecoba: lo que se abre cuando las personas trabajan a través de la IA." />
+    <Clarity />
 </head>
 <body>
     <div class="system-hud">

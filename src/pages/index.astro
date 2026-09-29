@@ -1,4 +1,5 @@
 ---
+import Clarity from '../components/Clarity.astro';
 // Extraemos los logs usando Vite nativo en lugar de Astro.glob para asegurar la compatibilidad estricta en Vercel
 const rawLogs = Object.entries(import.meta.glob('../logs/*.md', { eager: true }))
     .map(([path, log]: [string, any]) => ({
@@ -122,6 +123,7 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MT4686P6');</script>
     <!-- End Google Tag Manager -->
+    <Clarity />
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->

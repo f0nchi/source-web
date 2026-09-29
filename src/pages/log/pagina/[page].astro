@@ -1,4 +1,5 @@
 ---
+import Clarity from '../../../components/Clarity.astro';
 import Nav from '../../../components/Nav.astro';
 
 export function getStaticPaths({ paginate }: { paginate: any }) {
@@ -55,6 +56,7 @@ const hrefMasNuevas = page.currentPage === 2 ? '/' : page.url.prev;
     <meta name="twitter:image" content="https://www.fonchi.com.ar/og-registro.png" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <Clarity />
 </head>
 <body>
     <div class="system-hud">
