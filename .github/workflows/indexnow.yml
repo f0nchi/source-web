@@ -1,0 +1,29 @@
+# Avisa a Bing (y a los buscadores que usan IndexNow) cada vez que Vercel
+# termina un deploy de producción, con todas las URLs del sitemap. Copilot
+# busca en el índice de Bing: sin esto, el sitio espera a que Bing lo
+# descubra solo. La clave es pública por diseño: vive en /335b4273c0e815f4beff4c043796687e.txt.
+name: IndexNow
+
+on: deployment_status
+
+jobs:
+  avisar:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar las URLs del sitemap a IndexNow
+        env:
+          HOST: www.fonchi.com.ar
+          KEY: 335b4273c0e815f4beff4c043796687e
+        run: |
+          set -euo pipefail
+          curl -fsS "https://$HOST/sitemap.xml" \
+            | grep -o '<loc>[^<]*</loc>' | sed 's#<loc>##; s#</loc>##' > urls.txt
+          echo "URLs: $(wc -l < urls.txt)"
+          jq -n --arg host "$HOST" --arg key "$KEY" \
+            --arg loc "https://$HOST/$KEY.txt" --rawfile urls urls.txt \
+            '{host: $host, key: $key, keyLocation: $loc, urlList: ($urls | split("\n") | map(select(length > 0)))}' > body.json
+          code=$(curl -sS -o resp.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @body.json)
+          echo "IndexNow respondió $code"; cat resp.txt || true
+          case "$code" in 200|202) ;; *) exit 1 ;; esac
