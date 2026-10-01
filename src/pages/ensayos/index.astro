@@ -18,7 +18,8 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
             .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
             .replace(/[#>*_`]/g, '')
             .trim();
-        const bajada = (cuerpoPlano.split(/\n\s*\n/)[0] || '').replace(/\s+/g, ' ').trim();
+        // Los dos primeros párrafos: el primero suele ser la línea con que Fonchi arranca.
+        const bajada = cuerpoPlano.split(/\n\s*\n/).slice(0, 2).map((p) => p.replace(/\s+/g, ' ').trim()).filter(Boolean);
         return { ...ensayo, slug, bajada };
     })
     .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
@@ -72,11 +73,12 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
         </header>
 
         <div class="lista">
-            {ensayos.map((e: any) => (
+            {ensayos.map((e: any, i: number) => (
                 <article class="item">
-                    <p class="fecha">{e.frontmatter?.date}</p>
+                    <p class="fecha">&gt;&gt; ENSAYO_{String(ensayos.length - i).padStart(2, '0')} // {e.frontmatter?.date}</p>
                     <h2><a href={`/ensayos/${e.slug}/`}>{e.frontmatter?.title}</a></h2>
-                    <p class="bajada">{e.bajada}</p>
+                    {e.bajada.map((p: string) => <p class="bajada">{p}</p>)}
+                    <p class="seguir"><a href={`/ensayos/${e.slug}/`}>SEGUIR_LEYENDO &rarr;</a></p>
                 </article>
             ))}
         </div>
@@ -86,86 +88,111 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
 </html>
 
 <style>
+    /* Misma piel que el registro: mismo ancho, mismos filetes, mismos tamaños. */
     :root {
         --negro-profundo: #0c0e0d;
         --negro-registro: #101311;
         --filete: #1d2320;
         --gris-tenue: #5a645d;
-        --gris-medio: #8b948e;
-        --gris-texto: #c4c9c5;
-        --blanco-titular: #f7f5ec;
+        --gris-medio: #959e98;
+        --gris-texto: #e4e8e5;
+        --blanco-titular: #ffffff;
         --senal: #e5ac3a;
     }
+
+    * { box-sizing: border-box; }
 
     body {
         background: var(--negro-profundo);
         color: var(--gris-texto);
-        font-family: 'Spectral', serif;
+        font-family: 'Spectral', Georgia, serif;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.68;
         margin: 0;
-        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
     }
 
     .system-hud {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         font-family: 'JetBrains Mono', monospace;
         font-size: 11px;
-        color: var(--gris-tenue);
-        padding: 14px 20px;
+        letter-spacing: 0.14em;
+        color: var(--senal);
         border-bottom: 1px solid var(--filete);
-        letter-spacing: 0.04em;
+        padding: 10px 24px;
+        background: rgba(12, 14, 13, 0.96);
+        text-transform: uppercase;
+        z-index: 100;
     }
 
     .container {
-        max-width: 720px;
+        max-width: 860px;
         margin: 0 auto;
-        padding: 40px 20px 80px;
+        padding: 96px 28px 96px 28px;
     }
 
     .cabecera h1 {
-        font-family: 'Spectral', serif;
-        font-weight: 200;
-        font-size: 48px;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 1;
+        letter-spacing: -0.03em;
         color: var(--blanco-titular);
-        margin: 28px 0 12px;
+        margin: 0 0 22px;
     }
 
-    .cabecera p { font-size: 17px; color: var(--gris-medio); max-width: 560px; }
+    .cabecera p { margin: 0; color: var(--gris-medio); max-width: 680px; }
 
-    .cabecera a {
+    .cabecera a,
+    .seguir a {
         color: var(--senal);
         text-decoration: none;
-        border-bottom: 1px solid var(--senal);
     }
 
-    .lista { margin-top: 36px; }
+    .cabecera a { border-bottom: 1px solid var(--senal); }
+
+    .lista { margin-top: 56px; }
 
     .item {
-        background: var(--negro-registro);
-        border: 1px solid var(--filete);
-        padding: 24px 28px;
-        margin-bottom: 14px;
+        border-top: 1px solid var(--filete);
+        padding: 38px 0 30px 0;
     }
 
-    .fecha {
+    .fecha,
+    .seguir {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
         color: var(--senal);
-        margin: 0 0 6px;
     }
 
-    .item h2 { margin: 0; font-weight: 300; font-size: 26px; }
+    .fecha { margin: 0 0 22px; }
+
+    .item h2 {
+        margin: 0 0 24px;
+        font-weight: 200;
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        text-wrap: pretty;
+    }
 
     .item h2 a {
         color: var(--blanco-titular);
         text-decoration: none;
     }
 
-    .item h2 a:hover { color: var(--senal); }
+    .item h2 a:hover,
+    .seguir a:hover { color: var(--senal); text-decoration: underline; text-underline-offset: 0.25em; }
 
     .bajada {
-        margin: 12px 0 0;
-        font-size: 16px;
-        color: var(--gris-texto);
-        font-weight: 300;
-        max-width: 560px;
+        margin: 0 0 24px;
+        max-width: 680px;
     }
+
+    .seguir { margin: 0; font-size: 12px; }
 </style>
