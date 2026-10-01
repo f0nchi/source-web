@@ -1,5 +1,5 @@
 ---
-title: "La IA empezó a leer páginas enteras de lo que sé"
+title: "Le di a la IA páginas enteras en vez de pedazos"
 date: "2026-04-19"
 status: "STATUS_OK"
 id: "SRC-0007"

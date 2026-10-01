@@ -1,5 +1,5 @@
 ---
-title: "Le pedí a la IA que escriba desde lo que las cosas son"
+title: "Le pedí a la IA que deje de definir por la negativa"
 date: "2026-04-08"
 status: "STATUS_OK"
 id: "SRC-0004"

@@ -1,5 +1,5 @@
 ---
-title: "Una misión termina cuando algo se usó"
+title: "Menos informes, más cosas hechas"
 date: "2026-07-23"
 status: "STATUS_OK"
 id: "SRC-0034"

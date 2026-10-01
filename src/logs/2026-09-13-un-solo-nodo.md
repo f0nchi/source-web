@@ -1,5 +1,5 @@
 ---
-title: "Un solo nodo para quien pregunta quién soy"
+title: "Rehice mi perfil de LinkedIn"
 date: "2026-09-13"
 status: "STATUS_OK"
 id: "SRC-0055"

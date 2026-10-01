@@ -1,5 +1,5 @@
 ---
-title: "Los documentos de marca enuncian"
+title: "Limpié los documentos de mis marcas"
 date: "2026-09-18"
 status: "STATUS_OK"
 id: "SRC-0056"

@@ -1,5 +1,5 @@
 ---
-title: "Lo que pienso alimenta a la empresa, y al revés"
+title: "Junté mi plan de publicaciones con el de la empresa"
 date: "2026-08-24"
 status: "STATUS_OK"
 id: "SRC-0046"

@@ -2,7 +2,7 @@
 title: "Qué contesta Copilot cuando le preguntan quién soy"
 date: "2026-09-30"
 status: "STATUS_OK"
-id: "SRC-0062"
+id: "SRC-0063"
 ---
 
 Cuando alguien le pregunta a Copilot quién es Fonchi Fontecoba, el cuarenta por ciento de la respuesta sale de la home de este sitio. Lo sé porque desde esta semana tengo Clarity, una herramienta de Microsoft, mirando el sitio, y una de las cosas que muestra es cómo cita Copilot a cada marca al lado de las que hablan del mismo tema.

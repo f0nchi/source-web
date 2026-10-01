@@ -1,5 +1,5 @@
 ---
-title: "Lo que entra al sistema, entra probado"
+title: "Antes de sumar algo, lo pruebo"
 date: "2026-07-13"
 status: "STATUS_OK"
 id: "SRC-0029"

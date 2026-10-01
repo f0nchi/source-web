@@ -1,5 +1,5 @@
 ---
-title: "Ordené lo que sé sin cambiar lo que digo"
+title: "Archivé lo viejo"
 date: "2026-06-14"
 status: "STATUS_OK"
 id: "SRC-0021"

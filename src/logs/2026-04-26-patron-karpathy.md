@@ -1,5 +1,5 @@
 ---
-title: "Cada cambio de reglas deja su entrada"
+title: "Empecé a anotar cada cambio"
 date: "2026-04-26"
 status: "STATUS_OK"
 id: "SRC-0009"

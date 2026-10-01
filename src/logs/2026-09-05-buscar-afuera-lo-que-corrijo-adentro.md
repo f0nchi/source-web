@@ -1,5 +1,5 @@
 ---
-title: "La rutina que busca afuera ahora parte de mis correcciones"
+title: "Lo que más corrijo, ahora lo busco afuera"
 date: "2026-09-05"
 status: "STATUS_OK"
 id: "SRC-0052"

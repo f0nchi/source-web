@@ -1,5 +1,5 @@
 ---
-title: "Una línea para mí, el detalle cuando lo pido"
+title: "Un resumen de una línea"
 date: "2026-07-15"
 status: "STATUS_OK"
 id: "SRC-0030"

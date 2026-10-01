@@ -1,5 +1,5 @@
 ---
-title: "De qué hablo cuando cuento lo que hago"
+title: "Cómo quiero contar lo que hago"
 date: "2026-08-13"
 status: "STATUS_OK"
 id: "SRC-0043"
