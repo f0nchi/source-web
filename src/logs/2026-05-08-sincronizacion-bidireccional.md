@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0012"
 ---
 
-Yo gestiono lo que sé en Notion, que es lo que puedo leer, y las IA leen su contexto de una base de datos cruda, pensada para ellas. Eran dos lugares, y había que empujar a mano de uno al otro.
+Yo leo y ordeno lo que sé en Notion. Las IA leen de una base de datos hecha para ellas. Eran dos lugares, y había que pasar las cosas a mano de uno al otro.
 
-Armamos una sincronización en los dos sentidos con una jerarquía que no se discute: lo que yo leo es la verdad, y ante cualquier diferencia, gana. Unos scripts copian ese contenido hacia la base de las IA, que así leen rápido sin que yo gestione tablas, y cuando una IA arma un reporte o procesa algo nuevo, lo empuja hacia mi lado y aparece en Notion sin que nadie se lo pida.
+Los conectamos en los dos sentidos, con una regla: lo que yo leo es lo que vale, y si hay una diferencia, gana Notion. Lo que escribo se copia solo a la base de las IA, y cuando una IA arma un informe, me aparece en Notion.
 
-Quedamos mirando el mismo mapa, cada uno en el formato que le conviene.
+Ahora leemos lo mismo, cada uno en su formato.

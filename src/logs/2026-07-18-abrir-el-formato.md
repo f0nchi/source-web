@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0031"
 ---
 
-Cuando construís una estructura para que una IA procese el conocimiento de una marca, tarde o temprano aparece la pregunta: ¿esto se comparte o se guarda? Me la hicieron. Mi primera respuesta fue que no sabía cómo se hace eso de publicar un estándar, pero que lo hiciéramos.
+Cuando armás una forma de que una IA entienda una marca, en algún momento aparece la pregunta: ¿esto se comparte o se guarda? A mí me la hicieron. Contesté que no sabía cómo se publica un estándar, pero que lo hiciéramos.
 
-Publicamos [el estándar `.contexto/`](https://www.ideasaumentadas.com.ar/estandar): la arquitectura de carpetas, las plantillas y las especificaciones, con licencia abierta, para toda la comunidad que trabaja en español.
+Publicamos [el estándar `.contexto/`](https://www.ideasaumentadas.com.ar/estandar): las carpetas, las plantillas y las instrucciones, gratis y con licencia abierta, para todos los que trabajan en español.
 
-El formato es el contenedor. Lo distintivo vive en [el método de extracción](https://www.ideasaumentadas.com.ar/metodo) y en la capacidad de leer un negocio sin caer en lugares comunes, así que puedo regalar el papel pentagramado tranquilo, porque la música es otra cosa.
+El formato es el envase. Lo que yo vendo es [el método](https://www.ideasaumentadas.com.ar/metodo) para llenarlo bien, que es saber leer un negocio. Puedo regalar el papel pentagramado tranquilo, porque la música es otra cosa.

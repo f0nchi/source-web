@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0030"
 ---
 
-Con varios procesos automáticos corriendo, las métricas secundarias y las alertas menores aparecen a un ritmo que ninguna persona debería absorber entero. Y mi atención es justamente lo que todo lo demás existe para cuidar.
+Tengo varios procesos automáticos andando, y entre todos producen más avisos y más números de los que una persona puede leer. Y lo que más quiero cuidar es mi atención.
 
-Puse un piso: además de recibir una decisión, necesito entender de un vistazo qué pasó y si me necesita. La pantalla principal quedó en tres profundidades. La tarjeta me resume en una línea qué pasó, qué se aprendió y si algo me toca a mí; la lectura despliega el diagnóstico y las propuestas cuando quiero contexto; y la traza guarda las decisiones y el detalle técnico para cuando toca auditar.
+Pedí que cada cosa me llegue en tres niveles. Primero una línea: qué pasó, qué se aprendió y si necesita algo de mí. Si quiero saber más, abro y leo la explicación. Y si un día hay que revisar a fondo, está guardado todo el detalle.
 
-Yo miro una línea, y si un día necesito bajar, bajo.
+Yo leo la línea, y si necesito más, bajo.

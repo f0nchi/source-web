@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0024"
 ---
 
-Durante un tiempo di por hecho que dictarle a una herramienta era la forma más directa de capturar cómo hablo. Revisando registros largos encontré otra cosa: la app de dictado y el modelo cambian lo que dije. Deforman términos técnicos, rellenan pausas con muletillas ajenas y convierten reflexiones abiertas en cierres prefabricados.
+Yo dicto casi todo, y creía que dictar era la forma más fiel de guardar cómo hablo. Revisando transcripciones largas vi otra cosa: la app y el modelo cambian lo que dije. Deforman palabras técnicas, agregan muletillas que no uso y cierran frases que yo había dejado abiertas.
 
-Hicimos una cosecha limpia: filtrar el ruido de la transcripción, sacar lo que agregó el modelo, y quedarnos con lo que sí es mío.
+Limpiamos todo eso y nos quedamos con lo que sí es mío.
 
-Y lo mío resultó estar en cómo conecto las ideas, en cómo pongo mis límites y en los ejemplos concretos que elijo. Eso es lo que vale la pena dejar escrito para que una IA trabaje conmigo.
+Lo mío resultó ser cómo conecto una idea con otra, cómo pongo un límite y qué ejemplos elijo. Eso es lo que vale la pena dejarle escrito a una IA.

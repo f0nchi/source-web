@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0011"
 ---
 
-Yo quiero que la identidad visual se opere como se opera el código, con el mismo determinismo, porque si cada pieza depende de la mano o del modelo de turno, cada pieza es una negociación: textos sobreimpresos, titulares fuera de lugar, composiciones que cambian solas.
+Quiero que las imágenes de mi marca salgan siempre iguales, como sale el código: mismos colores, mismo lugar para cada cosa. Cuando dependían de una herramienta de diseño o de un modelo, cada pieza salía distinta, con textos encimados y titulares corridos.
 
-Entonces desarmamos el circuito anterior y lo reconstruimos como un esquema geométrico. La composición la hace un script de Python con Pillow, con coordenadas y colores exactos; el trabajo se reparte entre dos agentes, uno para la dirección de arte y otro para el texto; y la plantilla tiene áreas reservadas, por ejemplo los 200 píxeles de abajo donde vive el titular, para que la ilustración jamás lo pise.
+Las rehicimos para que las arme un programa, con medidas y colores exactos. Un agente decide la imagen y otro escribe el texto, y hay zonas reservadas: los 200 píxeles de abajo son del titular y la ilustración no los puede pisar.
 
-[La consistencia visual](https://www.ideasaumentadas.com.ar/conceptos/consistencia-operativa) quedó escrita en fórmulas. Lo que sigue es probarla con una campaña entera.
+[Cómo se ve la marca](https://www.ideasaumentadas.com.ar/conceptos/consistencia-operativa) quedó escrito en números. Ahora falta probarlo con una campaña entera.

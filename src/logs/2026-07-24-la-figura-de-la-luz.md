@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0035"
 ---
 
-Alguien vio el isotipo de la marca y leyó un megáfono. Le agradezco la lectura, porque me obligó a precisar la idea: el concepto va por otro lado que el volumen. Lo que quise siempre fue una amplificación, sí, pero de una luz, de una idea.
+Alguien vio el isotipo de Ideas Aumentadas y leyó un megáfono. Se lo agradezco, porque me obligó a explicar la idea. Lo que quise mostrar es una amplificación, sí, pero de una luz, de una idea, más que del volumen.
 
-La figura integra una **i**, el punto y el trazo de la idea, con una **A**, el cono que se expande: la luz que se enciende y proyecta su alcance, primero la chispa y después la expansión.
+La figura junta una **i**, que es el punto y el trazo de la idea, con una **A**, que es el cono que se expande: la luz que se prende y llega más lejos.
 
-Cuando alguien lee otra cosa en un símbolo mío, en lugar de molestarme me sirve, porque me muestra qué parte del sentido todavía necesita que yo la cuente. Esta la cuento acá.
+Cuando alguien ve otra cosa en un símbolo mío, me sirve, porque me muestra qué parte todavía tengo que contar. Esta la cuento acá.

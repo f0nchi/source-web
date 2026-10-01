@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0021"
 ---
 
-En software, refactorizar es ordenar el código por dentro sin cambiar lo que hace por fuera. Con lo que uno sabe pasa lo mismo, y como no vengo del código, me llevó un tiempo verlo.
+Con los meses se me juntaron documentos de abril, decisiones de mayo que ya cambié y notas que dicen lo contrario de lo que pienso hoy. Si le doy todo eso a una IA, lee tres versiones distintas de lo que es verdad y trabaja con las tres.
 
-Con los meses se acumulan documentos que eran válidos en abril, decisiones de mayo ya superadas, notas que contradicen la prioridad de hoy. Si le entregás todo eso a una IA, lee tres versiones distintas del presente y trabaja con las tres.
+Así que limpié. [Lo que vale hoy](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca) queda a la vista, y lo viejo se guarda aparte, marcado como viejo, para que nadie lo use por error.
 
-Entonces depuré. [Lo vigente](https://www.ideasaumentadas.com.ar/conceptos/jurisprudencia-de-marca) gobierna, y las versiones viejas se archivan de forma explícita para que nadie trabaje con ellas por accidente. Me quedó una vara para medir cualquier arquitectura, la mía incluida: cuánto tarda alguien, persona o máquina, en entender qué es verdad hoy sin que el pasado se le cruce.
+Me quedó una forma de medir cualquier sistema, el mío incluido: cuánto tarda alguien en entender qué es verdad hoy.

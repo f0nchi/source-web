@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0007"
 ---
 
-Lo que sé de mis proyectos estaba guardado, pero cuando una IA necesitaba contexto para trabajar conmigo, el buscador le devolvía pedazos sueltos de texto. Los datos eran correctos y les faltaba textura: podía confirmar qué se había decidido sin entender el razonamiento ni la tensión que hubo detrás, y esa tensión es la parte que a mí me importa.
+Todo lo que sé de mis proyectos estaba guardado, pero cuando la IA necesitaba algo para trabajar conmigo, le llegaban pedazos sueltos. Sabía qué se había decidido y no sabía por qué, y el porqué es la parte que a mí me importa.
 
-Hicimos [una migración completa de la arquitectura](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento). Ahora queda guardado el registro exacto de cada conversación de trabajo, y una capa que corre en segundo plano lee ese archivo crudo y arma páginas que cruzan lo aprendido entre proyectos. Cuando la IA se sienta a trabajar, carga esas páginas.
+Cambiamos [cómo se guarda todo](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento). Ahora queda cada conversación de trabajo completa, y un proceso las lee y arma páginas que juntan lo aprendido en todos los proyectos. Cuando la IA se sienta a trabajar, lee esas páginas.
 
-Lo que busco con este cambio es que entienda el porqué de cada regla, además de la regla.
+Lo que busco es que entienda el porqué de cada regla, además de la regla.

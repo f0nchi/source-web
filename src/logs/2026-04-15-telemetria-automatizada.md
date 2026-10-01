@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0006"
 ---
 
-Hasta hoy, para saber cómo le había ido a una publicación tenía que entrar a cada plataforma a mirar. Lo que salía y cómo le iba vivían en lugares distintos.
+Para saber cómo le había ido a una publicación tenía que entrar a cada plataforma y mirar.
 
-Empecé a juntarlos. Ahora, después de publicar, un circuito automático va a buscar los datos de alcance e interacción y los escribe en la misma base donde nació el contenido, al lado de la pieza. Con Instagram ya funciona. Con LinkedIn una parte la cargo yo a mano, porque no la entrega para perfiles personales.
+Ahora, después de publicar, un proceso automático va a buscar cuánta gente la vio y cuánta reaccionó, y lo anota al lado de la pieza, en la misma planilla donde la escribí. Con Instagram ya funciona. Con LinkedIn una parte la cargo yo a mano, porque LinkedIn no entrega esos datos para perfiles personales.
 
-Lo que quiero es que al lado de cada decisión quede cómo le fue, para que lo que viene se piense con eso a la vista.
+Así, cuando pienso lo próximo, tengo a la vista cómo le fue a lo anterior.

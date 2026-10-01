@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0029"
 ---
 
-Sumarle notas, resúmenes y registros a un sistema lo llena, y eso solo no lo vuelve más inteligente. Lo aprendí acumulando: la información sin filtro mete ruido, y el ruido le baja la precisión a todo lo que se apoya en ella.
+Guardar más notas y más resúmenes no hace más inteligente a un sistema. Lo aprendí guardando de todo: lo que entra sin filtro mete ruido, y con ruido todo lo demás funciona peor.
 
-Entonces fijamos un camino para que algo entre: ver la fricción en la práctica, proponer una mejora concreta, probarla en un experimento acotado, compararla contra cómo estaba antes, y recién entonces sumarla con [un recibo de verificación](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion).
+Así que ahora, para que algo entre, tiene que pasar por un camino: ver el problema trabajando, proponer una mejora, probarla en chico, compararla con cómo estaba antes, y recién después sumarla, [con la prueba anotada](https://www.ideasaumentadas.com.ar/conceptos/suite-de-verificacion).
 
-La vara quedó puesta en las mejoras verificadas que se sostienen en el tiempo, más que en el volumen de lo guardado. Me sirve también a mí, que tiendo a guardar todo.
+Lo que cuenta son las mejoras que se probaron y siguen funcionando. Me sirve también a mí, que tiendo a guardar todo.

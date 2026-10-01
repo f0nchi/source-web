@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0005"
 ---
 
-Hasta ahora lo que escribía salía en un solo formato, y eso me obligaba a elegir: o achicaba la profundidad para que el texto funcionara en redes, o resignaba alcance para mantener el registro crudo de acá.
+Hasta ahora escribía una sola versión de cada cosa y tenía que elegir: o la simplificaba para que funcionara en LinkedIn, o la dejaba más técnica para este sitio y llegaba a menos gente.
 
-Dejé de elegir. Ahora escribo la idea una vez y de esa idea salen dos versiones en paralelo, una para LinkedIn y otra para este sitio, y cada una viaja sola a su lugar. El copiar y pegar entre plataformas desapareció, y lo visual se resuelve por canal: acá texto plano, allá su pieza gráfica.
+Ahora escribo la idea una vez y salen dos versiones, una para LinkedIn y otra para acá, y cada una se publica sola en su lugar. Se terminó el copiar y pegar entre plataformas. Acá va texto solo, y allá va con su imagen.
 
-Lo que gano es pensar el problema de fondo una sola vez, y que después cada público reciba la versión que le sirve.
+Pienso el tema una sola vez, y cada público lo recibe como le sirve.

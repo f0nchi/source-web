@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0046"
 ---
 
-Esta semana alineé mi plan de publicaciones con las ideas centrales de los productos y las campañas de Ideas Aumentadas. Lo veo en carne propia: una empresa que nace con inteligencia artificial adentro se alimenta todo el tiempo de lo que piensa su fundador, y al revés.
+Esta semana junté mi plan de publicaciones con las ideas de los productos y las campañas de Ideas Aumentadas.
 
-Va en los dos sentidos. Lo que pienso y escribo nutre el posicionamiento, la oferta y las campañas de [la empresa](https://www.ideasaumentadas.com.ar/caso). Y los datos reales de la operación y las pruebas con usuarios me devuelven evidencia concreta sobre eso que pienso, incluida la que me hace cambiar de idea.
+Lo que pienso y escribo le sirve a [la empresa](https://www.ideasaumentadas.com.ar/caso) para decir quién es y qué ofrece. Y lo que pasa en la empresa, con los números reales y con la gente que prueba el producto, me dice si lo que pienso está bien, incluso cuando me obliga a cambiar de idea.
 
-Cuando una de las dos se adelanta demasiado a la otra, se nota enseguida en lo que publico.
+Si una de las dos se adelanta mucho, se nota enseguida en lo que publico.

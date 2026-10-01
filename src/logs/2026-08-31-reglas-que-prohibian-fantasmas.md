@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0048"
 ---
 
-Revisamos todas las reglas de este sistema con una pregunta simple: ¿cuándo pasó? Cada prohibición escrita tenía que mostrar su caso de origen, el hecho real que la justificó.
+Revisamos todas las reglas de mi sistema con una sola pregunta: ¿cuándo pasó? Cada prohibición tenía que mostrar el caso real que la justificaba.
 
-Varias no lo tenían. Prohibían cosas que nunca habían pasado, límites preventivos escritos por las dudas, y cuando las rastreé encontré de dónde venían: de una inseguridad mía vieja, de no creérmela del todo, que el sistema fue tomando como cautela. Un sistema que se codifica a sí mismo también hereda los miedos de su dueño.
+Varias no tenían ninguno. Prohibían cosas que nunca habían pasado, puestas por las dudas. Cuando busqué de dónde venían, venían de mí: de una inseguridad vieja, de no creérmela del todo, que el sistema fue copiando como si fuera prudencia.
 
-Se retiraron todas. Las que tenían caso y fecha quedaron intactas, y quedó una regla nueva: una prohibición entra solo con su caso y su fecha, y si no hay caso, se escribe la dirección en positivo o no se escribe nada.
+Las sacamos todas. Las que tenían su caso quedaron. Y desde ahora una prohibición entra solo con su caso y su fecha. Si no hay caso, se escribe lo que sí hay que hacer.

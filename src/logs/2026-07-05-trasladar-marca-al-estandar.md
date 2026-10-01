@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0026"
 ---
 
-Yo tenía la identidad de mi marca en más de cuarenta páginas, y cuarenta páginas son demasiadas para cargar antes de cada tarea, para una persona y para una IA.
+Tenía la identidad de mi marca escrita en más de cuarenta páginas. Nadie lee cuarenta páginas antes de cada tarea, y tampoco conviene dárselas a una IA.
 
-Las pasé a [una carpeta `.contexto/`](https://www.ideasaumentadas.com.ar/estandar): principios, tono, límites, audiencias y ejemplos con su evidencia, en archivos livianos que cualquier IA lee en un segundo antes de ponerse a trabajar. El nombre lo elegimos porque es la palabra que todo el mundo ya escucha, "la IA necesita tu contexto", sin que nadie le dé el cómo.
+Las pasé a [una carpeta `.contexto/`](https://www.ideasaumentadas.com.ar/estandar), con archivos cortos: qué defiendo, cómo hablo, qué límites tengo, a quién le hablo, y ejemplos. Cualquier IA la lee en un segundo antes de ponerse a trabajar. El nombre lo elegimos porque todo el mundo ya escucha que "la IA necesita tu contexto", y nadie dice cómo dárselo.
 
-Desde entonces la consistencia dejó de depender de mi estado de ánimo o de copiar instrucciones a mano, y cualquier modelo entiende de entrada desde dónde hablo.
+Desde entonces ya no depende de mi humor ni de copiar instrucciones a mano. Cualquier modelo sabe de entrada con quién está trabajando.

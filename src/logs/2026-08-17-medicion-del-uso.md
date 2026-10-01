@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0044"
 ---
 
-Hasta acá la herramienta la habíamos usado nosotros, que sabemos dónde están los botones. La prueba que importa llega cuando una persona la usa por primera vez sin nadie al lado explicándole nada.
+Hasta ahora la herramienta la habíamos usado nosotros, que sabemos dónde está cada botón. La prueba de verdad es cuando alguien la usa por primera vez, sin nadie al lado.
 
-Invité a los primeros usuarios externos a probar [el entorno de generación de contexto](https://www.ideasaumentadas.com.ar/trama), con la medición armada en tres capas: lo que queda registrado en la base de datos, los eventos anónimos de analítica, y un registro propio que anota lo que pasó de verdad en cada paso.
+Invité a las primeras personas de afuera a probar [Trama](https://www.ideasaumentadas.com.ar/trama), y dejé preparado cómo medirlo de tres maneras, para ver qué hace cada una en cada paso.
 
-Ver dónde una persona se frena vale más que cualquier suposición mía sobre dónde debería frenarse. Las tres capas cuentan la misma historia desde ángulos distintos, y en el cruce espero encontrar lo que ningún plan había previsto.
+Ver dónde se frena una persona vale más que cualquier cosa que yo suponga. Seguro aparece algo que no tenía previsto.

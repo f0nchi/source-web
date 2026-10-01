@@ -5,10 +5,10 @@ status: "STATUS_OK"
 id: "SRC-0015"
 ---
 
-Esto que estás leyendo lo escribió una IA que conoce mi marca porque yo me encargué de codificarla. Te lo digo de entrada porque es el punto de todo lo que sigue.
+Esto que estás leyendo lo escribió una IA que conoce mi marca, porque yo me ocupé de escribírsela. Te lo digo de entrada porque de eso se trata todo lo que sigue.
 
-[Codificar la marca](https://www.ideasaumentadas.com.ar/conceptos/codificacion-de-marca) es tomar cómo pienso el negocio, qué límites tengo y cómo resuelvo un problema, y dejarlo escrito de una manera que una IA pueda usar. Con eso escrito, la IA trabaja adentro de mi marco, y cuando algo no me cierra lo corrijo y la corrección queda para la próxima.
+[Codificar la marca](https://www.ideasaumentadas.com.ar/conceptos/codificacion-de-marca) es dejar escrito cómo pienso el negocio, qué límites tengo y cómo resuelvo un problema, de una manera que una IA pueda usar. Con eso, la IA trabaja como trabajaría yo, y cuando algo no me cierra lo corrijo y la corrección queda.
 
-Hasta ahora la identidad de las organizaciones se diseñó para personas. Vive en manuales y depende muchísimo de la intuición de quien los lee, y eso funciona mientras haya alguien al mando de cada pieza. Para los agentes que ya están tomando procesos, ese manual es ilegible.
+Hasta ahora la identidad de una empresa se escribía para personas. Estaba en un manual, y cada uno completaba lo que faltaba con intuición. Los agentes de IA que ya están haciendo parte del trabajo no pueden leer ese manual.
 
-Estuve meses armando este modelo en privado, y a partir de hoy lo muestro: lo que salga de esta cuenta sale de este sistema funcionando, y voy a ir contando qué pasa cuando una marca deja de ser un documento y pasa a ser algo que trabaja. Por si te interesa la cocina, la marca está en un puñado de documentos que la IA consulta antes de escribir: cómo pienso y cómo armo una solución ([la identidad operativa](https://www.ideasaumentadas.com.ar/conceptos/identidad-operativa)), dónde tengo autoridad para hablar y dónde termina, qué principios mandan y qué se aprendió cada vez anterior. Arranca cada sesión con la memoria puesta, en vez de conocerme de nuevo cada vez. Ya sé que suena a mucho. Es lo que estoy haciendo.
+Estuve meses armando esto en privado y desde hoy lo muestro. Lo que salga de esta cuenta sale de ese sistema, y voy a ir contando qué pasa. Por si te interesa cómo es por dentro: son unos pocos documentos que la IA lee antes de escribir. Dicen cómo pienso y cómo armo una solución ([la identidad operativa](https://www.ideasaumentadas.com.ar/conceptos/identidad-operativa)), de qué temas puedo hablar y de cuáles no, y qué se aprendió las veces anteriores. Así arranca cada sesión sabiendo quién soy. Ya sé que suena a mucho. Es lo que estoy haciendo.

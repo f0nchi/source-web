@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0014"
 ---
 
-Tener toda la información de la marca mezclada en un mismo lugar me parecía un error, y cuando lo dije en voz alta la razón era más simple que cualquier arquitectura. Me gusta tenerla separada porque me da limpieza.
+Tenía toda la información de la marca mezclada en un mismo lugar, y me parecía un error. Cuando lo dije en voz alta, la razón era simple: me gusta tenerla separada porque me da limpieza.
 
-Partimos la memoria en dos. De un lado, una base de flujo rápido donde conviven las tareas del día, las propuestas en curso y el ruido normal de operar. Del otro, un espacio estable y protegido que solo guarda [las reglas profundas de la marca](https://www.ideasaumentadas.com.ar/conceptos/contexto-de-marca) y lo que ya validé.
+La partimos en dos. De un lado, lo de todos los días: las tareas, las propuestas, el ruido normal de trabajar. Del otro, un lugar tranquilo donde solo están [las reglas de fondo de la marca](https://www.ideasaumentadas.com.ar/conceptos/contexto-de-marca) y lo que ya aprobé.
 
-Así la fricción del día queda lejos de los cimientos, y yo pienso con la mesa despejada, que era el motivo original.
+Así el ruido del día no toca lo importante, y yo pienso con la mesa despejada.

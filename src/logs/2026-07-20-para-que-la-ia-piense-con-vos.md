@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0032"
 ---
 
-Estuve semanas buscando la frase que pusiera el valor de todo esto en el nivel correcto, y lo que tenía sonaba a explicación que nadie pidió. Sentía que había una manera de decirlo súper sencilla y al punto, que la teníamos cerca, y yo no sabía decir cuál era.
+Estuve semanas buscando una frase que explicara para qué sirve todo esto, y las que tenía sonaban a explicación que nadie pidió. Sentía que había una forma súper sencilla de decirlo y no la encontraba.
 
-Apareció en una conversación de trabajo, cinco palabras: para que la IA piense con vos. La adopté en el momento, porque dice para qué existe todo lo que sigue sin anunciar nada.
+Apareció en una conversación de trabajo, en cinco palabras: para que la IA piense con vos. La adopté en el momento.
 
-Lo que a mí me interesa de trabajar así es potenciar el razonamiento, contrastar hipótesis, encontrar los puntos ciegos propios y encarar proyectos cuyo tamaño antes ni se consideraba. Ese es el nivel donde vale la pena jugarla.
+Es lo que a mí me interesa de trabajar así: razonar mejor, poner a prueba una idea, ver lo que solo no veía, y animarme a proyectos que antes ni consideraba.

@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0003"
 ---
 
-Hoy un sitio también lo leen [los agentes](https://www.ideasaumentadas.com.ar/conceptos/capa-agentica) y los modelos que lo recorren para contestarle a alguien, y cada vez más. Entonces lo preparé para que les hable bien a los dos públicos, a la gente y a las máquinas.
+Hoy un sitio lo lee la gente y también lo leen [los agentes](https://www.ideasaumentadas.com.ar/conceptos/capa-agentica) y los modelos de IA, que lo recorren para contestarle a alguien. Así que lo preparé para los dos.
 
-Sumé un `llms.txt` en la raíz, que es una especie de carta de presentación para que un agente entienda de entrada qué es esto y cómo está ordenado, marqué la autoría y la estructura con JSON-LD, y dejé el contenido en jerarquías de texto plano que un crawler procesa sin esfuerzo.
+Le sumé un archivo que funciona como carta de presentación para las IA, donde dice qué es este sitio y cómo está ordenado, y marqué en cada página quién la escribe.
 
-La idea de fondo es simple: si mañana alguien le pregunta por mí a una IA y la IA viene a leer esto, prefiero que lea exactamente quién soy, con el menor procesamiento en el medio.
+Si mañana alguien le pregunta por mí a una IA y la IA viene a leer esto, quiero que lea bien quién soy.

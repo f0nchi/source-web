@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0008"
 ---
 
-Documentar mis decisiones dependía de un paso manual: al final de cada jornada había que separar lo decidido y anotarlo. Yo trabajo de corrido, me voy a dormir con la sesión de Claude abierta y al otro día sigo, así que lo que quedaba escrito era el qué, prolijo, y el debate que había originado cada idea se evaporaba.
+Para que quedaran anotadas mis decisiones, al final de cada día había que separarlas y escribirlas. Yo trabajo de corrido, me voy a dormir con la sesión de Claude abierta y al otro día sigo. Quedaba anotado qué se había decidido, y la discusión de donde había salido cada idea se perdía.
 
-Ahora hay una capa de registro que corre sola. Cada vez que una sesión termina, una rutina junta la conversación completa de la jornada, sin resumir ni filtrar, con las dudas abiertas y el recorrido tal cual pasó, y la guarda en [la arquitectura de conocimiento](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento), donde queda disponible para las sesiones que vienen.
+Ahora se guarda sola. Cada vez que termina una sesión, la conversación del día queda guardada entera en [la memoria del sistema](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento), con las dudas y las idas y vueltas, y las sesiones que vienen la pueden leer.
 
-Las próximas sesiones heredan el pensamiento completo, con su origen y con mis divagues incluidos.
+Así heredan todo lo que pensé, con mis divagues incluidos.

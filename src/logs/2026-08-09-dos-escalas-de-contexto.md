@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0042"
 ---
 
-Codificar contexto tiene dos escalas, según quién va a trabajar con la IA, y decidí separarlas en dos productos.
+Lo que hago sirve para dos situaciones distintas, y decidí separarlas en dos productos.
 
-[Trama de Marca](https://www.ideasaumentadas.com.ar/trama) es para empresas y equipos que necesitan que todos, personas y procesos, trabajen sobre la misma verdad: estrategia, tono, límites, oferta. [Trama Personal](https://www.ideasaumentadas.com.ar/trama-personal) es para profesionales que trabajan solos y quieren su mirada, sus reglas y sus proyectos en una estructura liviana, sin armar de más.
+[Trama de Marca](https://www.ideasaumentadas.com.ar/trama) es para empresas y equipos que necesitan que todos trabajen con la misma información: la estrategia, el tono, los límites, la oferta. [Trama Personal](https://www.ideasaumentadas.com.ar/trama-personal) es para profesionales que trabajan solos y quieren tener escrito cómo piensan, sus reglas y sus proyectos, sin armar de más.
 
-Así cada quien recibe la profundidad que necesita, y yo dejo de ofrecer una sola carpeta para dos situaciones tan distintas.
+Así cada uno recibe lo que necesita.

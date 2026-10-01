@@ -5,8 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0004"
 ---
 
-Leyendo lo que salía cuando le encargaba un texto a Claude encontré un patrón: definía por oposición. "No es un simple prompt", "mientras otros fallan". Tiene su lógica, porque negar es el camino corto para diferenciarse, pero publicado con mi nombre hace que la marca suene reactiva, como si viviera contestándole a alguien.
+Leyendo los textos que me escribía Claude encontré una costumbre: definía todo por lo que no era. "No es un simple prompt", "mientras otros fallan". Se entiende, porque negar es la forma más rápida de diferenciarse, pero con mi nombre abajo suena a alguien que vive contestándole a otro.
 
-Entonces escribí una regla para todo lo que sale: se escribe desde lo que las cosas son, y hacia adelante. La llevé a cada documento de la marca y a cada lugar donde se produce contenido, con una distinción que me importa: [las reglas internas](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) pueden prohibir, porque adentro la prohibición sirve como herramienta, y esa forma se queda adentro.
+Entonces le puse una regla para todo lo que se publica: se dice lo que las cosas son. La regla está en cada documento de mi marca. [Las instrucciones internas](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) sí pueden prohibir cosas, porque adentro sirve, pero eso no sale.
 
 Desde ese día, cuando leo algo mío que arranca negando, ya sé qué pedir.

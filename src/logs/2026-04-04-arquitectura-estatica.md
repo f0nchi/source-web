@@ -5,6 +5,6 @@ status: "STATUS_OK"
 id: "SRC-0002"
 ---
 
-Terminé la mudanza. Lo anterior era un servidor tradicional con PHP y MySQL, una maquinaria pesada para un sitio cuyo único laburo es mostrar texto.
+Terminé la mudanza. El sitio anterior corría en un servidor con PHP y MySQL, que es un montón de maquinaria para algo que solo muestra texto.
 
-Ahora el contenido vive en Notion, el sitio se genera estático con Astro, y Vercel mira el repositorio: escribo, empujo, y en segundos está en el aire. Publicar quedó reducido a casi nada, y eso era lo que buscaba, porque cuando publicar cuesta cero terminás publicando lo que pensás, con la frecuencia con la que lo pensás.
+Ahora lo arma Astro y lo publica Vercel: escribo, guardo, y en unos segundos está en el aire. Publicar no me cuesta nada, y eso era lo que buscaba, porque cuando publicar cuesta cero terminás publicando lo que pensás, cuando lo pensás.

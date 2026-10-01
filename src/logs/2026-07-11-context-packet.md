@@ -9,4 +9,4 @@ Tengo varios agentes de IA trabajando, cada uno en lo suyo, y me pasaba lo mismo
 
 Ahora, antes de empezar, todos reciben el mismo resumen: qué está vigente, cómo viene el negocio, qué no se puede hacer y cuánta plata hay. Si algo cambia, el resumen se arma de nuevo y todos trabajan con lo último.
 
-Es la reunión para ponerse de acuerdo, pero en un archivo. Con la gente todavía no sé cómo se hace.
+Es la reunión para ponerse de acuerdo, pero en un archivo. Con la gente todavía no sé cómo se hace ;)
