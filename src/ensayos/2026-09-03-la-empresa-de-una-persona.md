@@ -2,6 +2,7 @@
 title: "La próxima gran empresa"
 date: "2026-09-03"
 status: "FIRMA"
+id: "SRC-0049"
 ---
 
 A ver, te cuento algo que estoy viviendo en carne propia.

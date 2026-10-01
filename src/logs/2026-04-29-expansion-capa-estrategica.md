@@ -1,11 +1,12 @@
 ---
-title: "La arquitectura de sistemas entra al territorio"
+title: "Sumé la arquitectura de sistemas a lo que hago"
 date: "2026-04-29"
 status: "STATUS_OK"
+id: "SRC-0010"
 ---
 
-Estos meses me mostraron un patrón: el cuello de botella de las marcas dejó de ser la inteligencia artificial. Lo que falta rara vez es un mejor modelo, falta la infraestructura humana y documental capaz de orquestarlos con coherencia. Y mi modelo operativo, enfocado casi solo en [la codificación de identidad](https://www.ideasaumentadas.com.ar/conceptos/codificacion-de-marca), dejaba ese frente sin cubrir. Lo veía y no lo nombraba.
+Estos meses me mostraron un patrón: a las marcas ya no las frena la inteligencia artificial. Rara vez falta un modelo mejor, lo que falta es la estructura de documentos y de personas capaz de dirigirlos con coherencia. Mi trabajo venía enfocado casi solo en [la codificación de identidad](https://www.ideasaumentadas.com.ar/conceptos/codificacion-de-marca), y ese otro frente quedaba sin nombrar.
 
-Me lo plantearon como dos caminos y elegí el segundo: asumir la arquitectura de sistemas como dominio propio, un cuarto pilar en la matriz de identidad que lleva el discurso de lo conceptual a lo estructural. Recalibré los perfiles de entrada para hablarles a operadores y ejecutivos que ya entienden de IA y necesitan ordenar la arquitectura interna de su negocio.
+Me lo plantearon como dos caminos y elegí el segundo: tomar la arquitectura de sistemas como terreno propio, un cuarto pilar de lo que hago, que lleva la conversación de lo conceptual a lo estructural. Ajusté a quién le hablo, y ahora también le hablo a quienes ya entienden de IA y necesitan ordenar su negocio por dentro.
 
-Y como muestra del propio pilar, la infraestructura de la marca ahora reparte el trabajo entre motores según su peso, los rápidos para la carga operativa y los profundos para la estructural, que es algo que hasta hace un mes ni sabía que se podía decidir.
+Y como primera muestra, el trabajo de mi propia marca ahora se reparte entre modelos según su peso, los rápidos para lo operativo y los profundos para lo estructural, algo que hace un mes ni sabía que se podía decidir.

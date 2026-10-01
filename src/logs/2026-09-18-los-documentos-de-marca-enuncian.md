@@ -2,6 +2,7 @@
 title: "Los documentos de marca enuncian"
 date: "2026-09-18"
 status: "STATUS_OK"
+id: "SRC-0056"
 ---
 
 Una IA que abre hoy la carpeta de cualquiera de mis tres marcas lee la marca: quién es, de qué habla, cómo suena. Hace dos semanas leía además la historia de cómo la fuimos corrigiendo.

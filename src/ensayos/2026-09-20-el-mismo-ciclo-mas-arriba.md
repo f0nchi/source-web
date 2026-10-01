@@ -1,6 +1,7 @@
 ---
 title: "El mismo ciclo, más arriba"
 date: "2026-09-20"
+id: "SRC-0057"
 ---
 
 A ver, te cuento algo que me pasa desde abril y que todavía no resolví.

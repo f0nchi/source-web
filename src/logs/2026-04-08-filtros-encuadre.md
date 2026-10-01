@@ -1,11 +1,12 @@
 ---
-title: "El encuadre positivo entra como regla"
+title: "Le pedí a la IA que escriba desde lo que las cosas son"
 date: "2026-04-08"
 status: "STATUS_OK"
+id: "SRC-0004"
 ---
 
-Detecté un patrón en lo que el sistema generaba cuando le delegaba una narrativa: definía por oposición. "No es un simple prompt", "mientras otros fallan". Tiene su lógica, porque la negación es el camino corto hacia la diferenciación, pero cuando eso llega a lo publicado la marca suena reactiva, y la marca es la mía.
+Leyendo lo que salía cuando le encargaba un texto a Claude encontré un patrón: definía por oposición. "No es un simple prompt", "mientras otros fallan". Tiene su lógica, porque negar es el camino corto para diferenciarse, pero publicado con mi nombre hace que la marca suene reactiva, como si viviera contestándole a alguien.
 
-Codifiqué una regla global: todo lo que sale se escribe desde lo que las cosas son, y hacia adelante. La propagué por toda la matriz de identidad y por los nodos que producen contenido, con una distinción que me importa: [las reglas internas](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) pueden usar la prohibición como herramienta técnica, porque adentro sirve, pero esa forma no sale al mundo.
+Entonces escribí una regla para todo lo que sale: se escribe desde lo que las cosas son, y hacia adelante. La llevé a cada documento de la marca y a cada lugar donde se produce contenido, con una distinción que me importa: [las reglas internas](https://www.ideasaumentadas.com.ar/conceptos/prompt-y-sistema) pueden prohibir, porque adentro la prohibición sirve como herramienta, y esa forma se queda adentro.
 
-Ya sé que una regla así se va a colar igual de vez en cuando. Por eso es regla y no deseo.
+Desde ese día, cuando leo algo mío que arranca negando, ya sé qué pedir.

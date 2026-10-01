@@ -1,7 +1,8 @@
 ---
-title: "Aprobar la idea, no la frase"
+title: "Cuando apruebo, apruebo la idea"
 date: "2026-09-04"
 status: "STATUS_OK"
+id: "SRC-0051"
 ---
 
 Me di cuenta de algo sobre cómo apruebo. Muchas veces, la mayoría, apruebo cosas en las que detecto algo que me gusta, y la aprobación no es literal: me gusta la idea, o lo que está contando, y no doy más devolución justamente porque sé que cuanto más específica es mi devolución, peor sale lo siguiente. Más profundo es el callejón donde se mete el que escribe.

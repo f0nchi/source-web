@@ -16,6 +16,12 @@ const rangoInicio = TAMANO_PAGINA + 1;
 const rangoFin = Math.min(TAMANO_PAGINA * 2, logs.length);
 import VolverArriba from '../components/VolverArriba.astro';
 import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
+// La home muestra solo el último ensayo; el listado completo vive en /ensayos/
+const ensayos = Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
+    .map(([path, e]: [string, any]) => ({ ...e, slug: path.split('/').pop()?.replace(/\.md$/, '') || '' }))
+    .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
+const ultimoEnsayo: any = ensayos[0];
+const totalEnsayos = ensayos.length;
 ---
 
 <!DOCTYPE html>
@@ -148,20 +154,19 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
                 </svg>
                 <span class="brand-wordmark">fonchi</span>
             </a>
-            <p class="subtitle">SYS_LOG // LO_QUE_HICE</p>
+            <p class="subtitle">Sistemas que trabajan a través de la IA</p>
         </header>
 
-        <!-- Ensayos: la capa con firma -->
-        <div class="ensayos-block">
-            <span class="node-id">&gt;&gt; {SECCION_FIRMADA} // LO_QUE_PIENSO</span>
-            {Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
-                .map(([path, e]: [string, any]) => ({ ...e, slug: path.split('/').pop()?.replace(/\.md$/, '') || '' }))
-                .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf())
-                .map((e: any) => (
-                <p class="ensayo-item"><a href={`/ensayos/${e.slug}/`}>{e.frontmatter?.title}</a> <span class="ensayo-fecha">{e.frontmatter?.date}</span></p>
-            ))}
-            <p class="ensayo-item"><a href="/ensayos/" class="ver-todos">VER_TODOS &rarr;</a></p>
-        </div>
+        <!-- Ensayos: una sola línea con el último, para que el registro arranque enseguida -->
+        <a class="ensayos-block" href={`/ensayos/${ultimoEnsayo.slug}/`}>
+            <span class="ensayos-rotulo">&gt;&gt; {SECCION_FIRMADA} // LO_QUE_PIENSO</span>
+            <span class="ensayo-titulo">{ultimoEnsayo.frontmatter?.title}</span>
+            <span class="ensayo-fecha">{ultimoEnsayo.frontmatter?.date}</span>
+        </a>
+        <p class="ensayos-todos"><a href="/ensayos/">VER_LOS_{totalEnsayos}_ENSAYOS &rarr;</a></p>
+
+        <!-- El rótulo del registro va pegado a su primera entrada -->
+        <p class="seccion-registro" id="registro">&gt;&gt; SYS_LOG // LO_QUE_HICE // {logs.length}_ENTRADAS</p>
 
         <!-- El Log de operaciones Dinámico: últimas 10 entradas, numeración global -->
         <div class="log-grid">
@@ -658,32 +663,66 @@ import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
     }
 
     .ensayos-block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 16px;
         background: var(--negro-registro);
-        border: 1px solid var(--senal);
-        padding: 22px 26px;
-        margin-bottom: 34px;
-    }
-
-    .ensayo-item { margin: 10px 0 0; font-size: 19px; }
-
-    .ensayo-item a {
-        color: var(--blanco-titular);
+        border: 1px solid var(--filete);
+        border-left: 3px solid var(--senal);
+        padding: 16px 22px;
         text-decoration: none;
     }
 
-    .ensayo-item a:hover { color: var(--senal); }
-
-    .ensayo-fecha {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        color: var(--gris-tenue);
-        margin-left: 10px;
+    .ensayos-rotulo {
+        flex-basis: 100%;
+        font-family: var(--font-registro);
+        font-size: 11px;
+        letter-spacing: var(--tr-sello);
+        text-transform: uppercase;
+        color: var(--senal);
     }
 
-    .ensayo-item .ver-todos {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
+    .ensayo-titulo {
+        font-size: 21px;
+        line-height: 1.25;
+        color: var(--blanco-titular);
+    }
+
+    .ensayos-block:hover .ensayo-titulo,
+    .ensayos-block:focus-visible .ensayo-titulo {
         color: var(--senal);
+    }
+
+    .ensayo-fecha {
+        font-family: var(--font-registro);
+        font-size: 12px;
+        color: var(--gris-tenue);
+    }
+
+    .ensayos-todos {
+        margin: 12px 0 0;
+    }
+
+    .ensayos-todos a,
+    .seccion-registro {
+        font-family: var(--font-registro);
+        font-size: 12px;
+        letter-spacing: var(--tr-sello);
+        text-transform: uppercase;
+        color: var(--senal);
+        text-decoration: none;
+    }
+
+    .ensayos-todos a:hover,
+    .ensayos-todos a:focus-visible {
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+
+    .seccion-registro {
+        margin: 64px 0 14px;
+        scroll-margin-top: 60px;
     }
 
     .paginacion-link {

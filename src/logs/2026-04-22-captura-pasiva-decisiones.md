@@ -1,11 +1,12 @@
 ---
-title: "El diario operativo se escribe solo"
+title: "El diario de trabajo se escribe solo"
 date: "2026-04-22"
 status: "STATUS_OK"
+id: "SRC-0008"
 ---
 
-La documentación dependía de un paso manual: al final de cada jornada alguien tenía que aislar y registrar las decisiones. Ese alguien era yo, y yo no cierro la app; me voy a dormir con la sesión abierta y al otro día sigo. Entonces los documentos quedaban limpios y en la limpieza se perdía lo mejor, el debate que originó cada idea. Quedaba el qué, se evaporaba el porqué.
+Documentar mis decisiones dependía de un paso manual: al final de cada jornada había que separar lo decidido y anotarlo. Yo trabajo de corrido, me voy a dormir con la sesión de Claude abierta y al otro día sigo, así que lo que quedaba escrito era el qué, prolijo, y el debate que había originado cada idea se evaporaba.
 
-Ahora hay una capa de registro pasiva. Cada vez que una sesión termina, una rutina recolecta la conversación completa de la jornada, sin resumir ni filtrar, con las dudas abiertas y el arco tal cual pasó, y la manda a [la arquitectura de conocimiento](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento), donde queda recuperable para las sesiones que vienen.
+Ahora hay una capa de registro que corre sola. Cada vez que una sesión termina, una rutina junta la conversación completa de la jornada, sin resumir ni filtrar, con las dudas abiertas y el recorrido tal cual pasó, y la guarda en [la arquitectura de conocimiento](https://www.ideasaumentadas.com.ar/conceptos/arquitectura-del-conocimiento), donde queda disponible para las sesiones que vienen.
 
-Me saqué de encima acordarme de documentar, que era algo que igual no hacía. El sistema hereda el pensamiento completo, con su génesis y con sus divagues.
+Las próximas sesiones heredan el pensamiento completo, con su origen y con mis divagues incluidos.

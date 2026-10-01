@@ -1,6 +1,7 @@
 ---
 title: "Quiero ser esa persona"
 date: "2026-09-09"
+id: "SRC-0054"
 ---
 
 Mirá, te voy a contar la ambición completa, con la desmesura a la vista, porque diluida no sirve para nada.

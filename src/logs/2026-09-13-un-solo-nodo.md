@@ -2,6 +2,7 @@
 title: "Un solo nodo para quien pregunta quién soy"
 date: "2026-09-13"
 status: "STATUS_OK"
+id: "SRC-0055"
 ---
 
 Si hoy le preguntás a una IA quién soy, la respuesta sale igual desde tres lugares: este sitio, mi página en Ideas Aumentadas y mi perfil de LinkedIn. Eso no pasaba. El perfil era de 2024 y parecía una lista de responsabilidades, y cada sitio contaba una versión un poco distinta de lo mismo.

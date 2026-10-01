@@ -2,10 +2,11 @@
 title: "Para arriba nivelás vos"
 date: "2026-08-21"
 status: "STATUS_OK"
+id: "SRC-0045"
 ---
 
-La IA nivela el piso. Hoy cualquiera saca un borrador decente, una imagen correcta, un texto que zafa, y el promedio subió para todos al mismo tiempo, o sea que dejó de ser una ventaja.
+Esta semana estuve armando los primeros anuncios de Ideas Aumentadas, y uno de los titulares me gusta tanto que lo traigo acá: la IA nivela para abajo, para arriba nivelás vos.
 
-Lo que veo trabajando así todos los días es que para arriba no nivela nadie más que vos. Lo que te separa del promedio es tu juicio: el gusto, la pregunta que nadie hizo, la decisión de no aceptar lo obvio cuando lo obvio ya viene servido.
+Me gusta porque dice algo que veo todos los días. Hoy cualquiera saca un borrador decente, una imagen correcta, un texto que zafa, y como eso le pasa a todo el mundo al mismo tiempo, dejó de ser una ventaja. Lo que te separa del promedio sigue siendo tuyo: el gusto, la pregunta que nadie hizo, la decisión de pedir más cuando lo obvio ya viene servido.
 
-La tecnología pone el piso de ejecución y la altura la ponés vos. Lo escribo porque me lo tengo que recordar yo también, cada vez que me tienta aprobar lo que zafa.
+Lo escribo acá porque también me lo digo a mí, cada vez que me tienta aprobar lo que zafa.

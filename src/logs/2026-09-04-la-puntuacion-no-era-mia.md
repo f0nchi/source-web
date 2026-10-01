@@ -2,6 +2,7 @@
 title: "La puntuación no era mía"
 date: "2026-09-04"
 status: "STATUS_OK"
+id: "SRC-0050"
 ---
 
 Dicto casi todo lo que escribo. Hace meses que uso una app de voz porque es la que menos palabras me deja mal, y ya es costumbre. Hoy, mientras auditábamos cómo escribe el sistema, caí en algo que tenía delante de la cara: la puntuación de todo lo que dicto la pone la app, no la pongo yo. Los puntos, las comas, los dos puntos, las listas que yo nunca pensé como listas. Y encima me traduce el voseo a tú, y yo corrijo a mano solo donde me importa.

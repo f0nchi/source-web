@@ -1,6 +1,7 @@
 ---
 title: "Me animo a cosas"
 date: "2026-09-23"
+id: "SRC-0058"
 ---
 
 Mirá, te voy a responder una pregunta que me hicieron esta semana, porque nunca la había contestado en serio: ¿en qué momento me di cuenta de que trabajar así era otra cosa?

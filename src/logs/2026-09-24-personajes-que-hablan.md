@@ -2,6 +2,7 @@
 title: "Personajes que hablan"
 date: "2026-09-24"
 status: "STATUS_OK"
+id: "SRC-0059"
 ---
 
 Esta semana los personajes de Ideas Aumentadas hablan. Cada uno parte de una ilustración, y la IA le da movimiento: respira, mira a cámara, levanta las cejas, se encoge de hombros, habla con la boca sincronizada con lo que dice y se ríe cuando el guion lo pide. Es un cartoon con los personajes de la marca, hecho entero conversando.

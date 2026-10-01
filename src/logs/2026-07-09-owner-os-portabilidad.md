@@ -1,11 +1,12 @@
 ---
-title: "Owner OS y la portabilidad entre modelos"
+title: "Cambiar de modelo sin perder mi historia"
 date: "2026-07-09"
 status: "STATUS_OK"
+id: "SRC-0027"
 ---
 
-Atarse a un proveedor de inteligencia artificial es una vulnerabilidad que ya sentí: cambia una API, cambian los costos, cambia el comportamiento de un modelo, y la operación entera acusa el golpe, y yo no quiero reconstruir mi historia cada vez que cambio de motor.
+Atarse a un solo proveedor de inteligencia artificial tiene un costo que ya sentí: cambia una API, cambian los precios, cambia el comportamiento de un modelo, y toda la operación acusa el golpe. Y yo quiero conservar mi historia cada vez que cambio de motor.
 
-Desarrollamos Owner OS como un contrato de gobierno portable: el conocimiento y las reglas del negocio viven separados del motor de razonamiento de turno. Claude, GPT o DeepSeek funcionan como procesadores intercambiables; la inteligencia acumulada, los permisos, la memoria y el canon son del sistema propio.
+Entonces separamos las dos cosas. Lo que sé y las reglas de mi negocio viven en documentos propios, aparte del modelo que razona en cada momento, con un contrato que dice quién puede hacer qué. Adentro le decimos Owner OS. Claude, GPT o DeepSeek entran como procesadores intercambiables, y la memoria, los permisos y lo aprendido se quedan conmigo.
 
-Cambiar de modelo se volvió una decisión liviana. El sistema conserva el centro y su historia, y el procesador aporta el cálculo que ese momento necesita. La casa es mía; los motores se alquilan.
+Cambiar de modelo se volvió una decisión liviana: elijo el que conviene para lo que hay que hacer esa semana.
