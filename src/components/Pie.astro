@@ -1,0 +1,36 @@
+---
+// Pie común: las dos partes del sitio, el contacto y la página de privacidad.
+---
+
+<nav class="site-pie" aria-label="Pie del sitio">
+    <a href="/">LO_QUE_HICE</a>
+    <a href="/ensayos/">LO_QUE_PIENSO</a>
+    <a href="/#contacto">CONTACTO</a>
+    <a href="/privacidad/">PRIVACIDAD</a>
+</nav>
+
+<style>
+    .site-pie {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 28px;
+        margin-top: 56px;
+        padding-top: 22px;
+        border-top: 1px solid var(--filete, #1d2320);
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .site-pie a {
+        color: var(--gris-tenue, #5a645d);
+        text-decoration: none;
+        border: 0;
+    }
+
+    .site-pie a:hover,
+    .site-pie a:focus-visible {
+        color: var(--senal, #e5ac3a);
+    }
+</style>

@@ -2,6 +2,7 @@
 import Medicion from '../../components/Medicion.astro';
 import VolverArriba from '../../components/VolverArriba.astro';
 import Nav from '../../components/Nav.astro';
+import Pie from '../../components/Pie.astro';
 export function getStaticPaths() {
     // Texto crudo por slug: la meta description de cada entrada sale de su primer párrafo real.
     const raws = Object.fromEntries(
@@ -96,7 +97,7 @@ const description = primerParrafo.length >= 50
     </div>
 
     <main class="container">
-        <Nav />
+        <Nav actual="hice" />
 
         <article class="node">
             <p class="node-id">&gt;&gt; {log.frontmatter?.date} // {log.frontmatter?.status || 'STATUS_OK'}</p>
@@ -111,6 +112,7 @@ const description = primerParrafo.length >= 50
             {newer ? <a href={`/log/${newer.slug}/`}>&larr; MÁS_NUEVO</a> : <span></span>}
             {older ? <a href={`/log/${older.slug}/`}>MÁS_ANTERIOR &rarr;</a> : <span></span>}
         </nav>
+        <Pie />
     </main>
 
     <VolverArriba />

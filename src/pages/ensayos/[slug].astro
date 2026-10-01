@@ -2,6 +2,8 @@
 import Medicion from '../../components/Medicion.astro';
 import VolverArriba from '../../components/VolverArriba.astro';
 import Nav, { SECCION_FIRMADA } from '../../components/Nav.astro';
+import Pie from '../../components/Pie.astro';
+
 export function getStaticPaths() {
     const raws = Object.fromEntries(
         Object.entries(import.meta.glob('../../ensayos/*.md', { query: '?raw', import: 'default', eager: true }))
@@ -100,7 +102,7 @@ const description = acumulado.length >= 50
     </div>
 
     <main class="container">
-        <Nav />
+        <Nav actual="pienso" />
 
         <article class="node">
             <p class="node-id">&gt;&gt; {ensayo.frontmatter?.date} // ENSAYO</p>
@@ -116,6 +118,7 @@ const description = acumulado.length >= 50
             <a href="/ensayos/" class="ver-listado">{SECCION_FIRMADA}</a>
             {newer ? <a href={`/ensayos/${newer.slug}/`}>ENSAYO_SIGUIENTE &rarr;</a> : <span></span>}
         </nav>
+        <Pie />
     </main>
 
     <VolverArriba />

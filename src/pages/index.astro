@@ -16,12 +16,7 @@ const rangoInicio = TAMANO_PAGINA + 1;
 const rangoFin = Math.min(TAMANO_PAGINA * 2, logs.length);
 import VolverArriba from '../components/VolverArriba.astro';
 import Nav, { SECCION_FIRMADA } from '../components/Nav.astro';
-// La home muestra solo el último ensayo; el listado completo vive en /ensayos/
-const ensayos = Object.entries(import.meta.glob('../ensayos/*.md', { eager: true }))
-    .map(([path, e]: [string, any]) => ({ ...e, slug: path.split('/').pop()?.replace(/\.md$/, '') || '' }))
-    .sort((a, b) => new Date(b.frontmatter?.date).valueOf() - new Date(a.frontmatter?.date).valueOf());
-const ultimoEnsayo: any = ensayos[0];
-const totalEnsayos = ensayos.length;
+import Pie from '../components/Pie.astro';
 ---
 
 <!DOCTYPE html>
@@ -134,7 +129,7 @@ const totalEnsayos = ensayos.length;
     </script>
 
     <div class="container">
-        <Nav />
+        <Nav actual="hice" />
         <header>
             <h1 class="visually-hidden">Fonchi Fontecoba</h1>
             <a href="/" class="brand-conjunto" aria-label="Ir al inicio">
@@ -156,17 +151,6 @@ const totalEnsayos = ensayos.length;
             </a>
             <p class="subtitle">Sistemas que trabajan a través de la IA</p>
         </header>
-
-        <!-- Ensayos: una sola línea con el último, para que el registro arranque enseguida -->
-        <a class="ensayos-block" href={`/ensayos/${ultimoEnsayo.slug}/`}>
-            <span class="ensayos-rotulo">&gt;&gt; {SECCION_FIRMADA} // LO_QUE_PIENSO</span>
-            <span class="ensayo-titulo">{ultimoEnsayo.frontmatter?.title}</span>
-            <span class="ensayo-fecha">{ultimoEnsayo.frontmatter?.date}</span>
-        </a>
-        <p class="ensayos-todos"><a href="/ensayos/">VER_LOS_{totalEnsayos}_ENSAYOS &rarr;</a></p>
-
-        <!-- El rótulo del registro va pegado a su primera entrada -->
-        <p class="seccion-registro" id="registro">&gt;&gt; SYS_LOG // LO_QUE_HICE // {logs.length}_ENTRADAS</p>
 
         <!-- El Log de operaciones Dinámico: últimas 10 entradas, numeración global -->
         <div class="log-grid">
@@ -203,7 +187,7 @@ const totalEnsayos = ensayos.length;
                 <div class="action-menu">
                     <span class="dim-text">STATUS: EOF // Awaiting user input...</span>
                     <a href="#contacto" id="init-comm-link" class="comm-link" aria-expanded="false" aria-controls="contacto-form"><span class="menu-key">[Y]</span> INITIATE_MAIL_PROTOCOL <span class="cursor">_</span></a>
-                    <p class="contacto-copy">Escribime. Llega a mi correo y respondo yo. <a href="/privacidad/">Qué pasa con tus datos</a>.</p>
+                    <p class="contacto-copy">Escribime. Llega a mi correo y respondo yo.</p>
                     <form id="contacto-form" class="contacto-form" novalidate hidden aria-label="Formulario de contacto">
                         <div class="contacto-campo">
                             <label for="contacto-nombre">NOMBRE</label>
@@ -226,6 +210,7 @@ const totalEnsayos = ensayos.length;
                     </form>
                 </div>
             </div>
+            <Pie />
         </footer>
     </div>
 
@@ -662,69 +647,6 @@ const totalEnsayos = ensayos.length;
         color: var(--senal);
     }
 
-    .ensayos-block {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: 6px 16px;
-        background: var(--negro-registro);
-        border: 1px solid var(--filete);
-        border-left: 3px solid var(--senal);
-        padding: 16px 22px;
-        text-decoration: none;
-    }
-
-    .ensayos-rotulo {
-        flex-basis: 100%;
-        font-family: var(--font-registro);
-        font-size: 11px;
-        letter-spacing: var(--tr-sello);
-        text-transform: uppercase;
-        color: var(--senal);
-    }
-
-    .ensayo-titulo {
-        font-size: 21px;
-        line-height: 1.25;
-        color: var(--blanco-titular);
-    }
-
-    .ensayos-block:hover .ensayo-titulo,
-    .ensayos-block:focus-visible .ensayo-titulo {
-        color: var(--senal);
-    }
-
-    .ensayo-fecha {
-        font-family: var(--font-registro);
-        font-size: 12px;
-        color: var(--gris-tenue);
-    }
-
-    .ensayos-todos {
-        margin: 12px 0 0;
-    }
-
-    .ensayos-todos a,
-    .seccion-registro {
-        font-family: var(--font-registro);
-        font-size: 12px;
-        letter-spacing: var(--tr-sello);
-        text-transform: uppercase;
-        color: var(--senal);
-        text-decoration: none;
-    }
-
-    .ensayos-todos a:hover,
-    .ensayos-todos a:focus-visible {
-        text-decoration: underline;
-        text-underline-offset: 0.25em;
-    }
-
-    .seccion-registro {
-        margin: 64px 0 14px;
-        scroll-margin-top: 60px;
-    }
-
     .paginacion-link {
         margin: 0;
         padding-top: 30px;
@@ -816,9 +738,28 @@ const totalEnsayos = ensayos.length;
 
     .contacto-submit {
         align-self: flex-start;
+        margin-left: 0;
+        padding: 10px 18px;
+        background: var(--senal);
+        color: var(--negro-profundo);
         border: 1px solid var(--senal);
         cursor: pointer;
-        font: inherit;
+        font-family: var(--font-registro);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+    }
+
+    .contacto-submit:hover,
+    .contacto-submit:focus-visible {
+        background: var(--blanco-titular);
+        border-color: var(--blanco-titular);
+        color: var(--negro-profundo);
+    }
+
+    .contacto-submit:disabled {
+        opacity: 0.6;
+        cursor: default;
     }
 
     .contacto-status {

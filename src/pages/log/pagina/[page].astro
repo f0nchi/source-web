@@ -1,6 +1,7 @@
 ---
 import Medicion from '../../../components/Medicion.astro';
 import Nav from '../../../components/Nav.astro';
+import Pie from '../../../components/Pie.astro';
 
 export function getStaticPaths({ paginate }: { paginate: any }) {
     const rawLogs = Object.entries(import.meta.glob('../../../logs/*.md', { eager: true }))
@@ -64,7 +65,7 @@ const hrefMasNuevas = page.currentPage === 2 ? '/' : page.url.prev;
     </div>
 
     <main class="container">
-        <Nav />
+        <Nav actual="hice" />
 
         <p class="node-id">&gt;&gt; REGISTRO // ENTRADAS_ANTERIORES // PAGINA {page.currentPage}/{page.lastPage}</p>
 
@@ -94,6 +95,7 @@ const hrefMasNuevas = page.currentPage === 2 ? '/' : page.url.prev;
         <footer class="system-footer">
             <span class="eof-log">[ END_OF_PAGE ]</span>
             <p class="volver-home"><a href="/">&larr; VOLVER_A_SOURCE</a></p>
+            <Pie />
         </footer>
     </main>
 </body>

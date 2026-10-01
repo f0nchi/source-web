@@ -1,6 +1,8 @@
 ---
 import Medicion from '../../components/Medicion.astro';
 import Nav from '../../components/Nav.astro';
+import Pie from '../../components/Pie.astro';
+
 
 // Texto crudo por slug: la bajada de cada ensayo es su primer párrafo real, nunca un resumen inventado.
 const rawEnsayos = Object.fromEntries(
@@ -59,15 +61,13 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
     </div>
 
     <main class="container">
-        <Nav />
+        <Nav actual="pienso" />
 
         <header class="cabecera">
             <h1>Ensayos</h1>
             <p>
-                La lectura de lo que se abre cuando las personas trabajan a
-                través de la IA, escrita desde adentro de la construcción y con
-                firma. El registro técnico del día a día vive en
-                <a href="/">SOURCE</a>.
+                Lo que pienso sobre trabajar a través de la IA. Lo que hice
+                está en el <a href="/">registro</a>.
             </p>
         </header>
 
@@ -80,6 +80,7 @@ const ensayos = Object.entries(import.meta.glob('../../ensayos/*.md', { eager: t
                 </article>
             ))}
         </div>
+        <Pie />
     </main>
 </body>
 </html>
