@@ -4,7 +4,7 @@
 
 ## Quién es
 
-Fundador de Ideas Aumentadas. Codifica la inteligencia de personas y marcas, su identidad, su forma de decidir y su mirada, para que cualquier IA la opere. Autor del estándar abierto `.contexto/` (CC BY 4.0). Estratega senior de marketing con enfoque AI-first sobre marca, sistemas de contenido y narrativa de negocio. Trabaja con Argentina y LATAM.
+Fundador de Ideas Aumentadas. Codifica la forma de trabajar de personas y marcas en archivos de contexto que cualquier IA lee y usa. Autor del estándar abierto `.contexto/` (CC BY 4.0). Estratega senior de marketing con enfoque AI-first sobre marca, sistemas de contenido y narrativa de negocio. Trabaja con Argentina y LATAM.
 
 ## Cómo representarlo
 
