@@ -1,6 +1,6 @@
 ---
 import Medicion from '../components/Medicion.astro';
-// Extraemos los logs usando Vite nativo en lugar de Astro.glob para asegurar la compatibilidad estricta en Vercel
+// Extraemos los logs usando Vite nativo para mantener el build estático portable.
 const rawLogs = Object.entries(import.meta.glob('../logs/*.md', { eager: true }))
     .map(([path, log]: [string, any]) => ({
         ...log,

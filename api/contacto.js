@@ -1,15 +1,6 @@
-// Vercel Serverless Function (runtime Node.js) que recibe el formulario de
-// contacto del sitio y lo manda por mail con Resend.
-//
-// Variable de entorno que hay que cargar en Vercel (Project Settings →
-// Environment Variables, en Production y Preview):
-//
-//   RESEND_API_KEY   API key de Resend (https://resend.com). El dominio
-//                    fonchi.com.ar tiene que estar verificado ahí para poder
-//                    mandar mails desde hola@fonchi.com.ar.
-//
-// Sin esa variable, esta función responde 503 y el formulario del sitio cae
-// al mensaje de contacto directo (hola@fonchi.com.ar).
+// Endpoint de contacto compartido por el Worker de Cloudflare.
+// RESEND_API_KEY vive como secret de runtime del Worker. Si falta, esta ruta
+// responde 503 y el formulario conserva el contacto directo por mail.
 
 const MAIL_DESTINO = 'fonchi@gmail.com';
 const MAIL_ORIGEN = 'Fonchi <hola@fonchi.com.ar>';
@@ -28,26 +19,37 @@ function escapeHtml(texto) {
         .replaceAll("'", '&#39;');
 }
 
-export default async function handler(req, res) {
-    if (req.method !== 'POST') {
-        res.setHeader('Allow', 'POST');
-        return res.status(405).json({ error: 'Método no permitido.' });
+function json(body, status = 200, headers = {}) {
+    return Response.json(body, {
+        status,
+        headers: {
+            'Cache-Control': 'no-store',
+            ...headers,
+        },
+    });
+}
+
+export async function handleContacto(request, env = {}, fetchImpl = fetch) {
+    if (request.method !== 'POST') {
+        return json(
+            { error: 'Método no permitido.' },
+            405,
+            { Allow: 'POST' },
+        );
     }
 
-    let body = req.body;
-    if (typeof body === 'string') {
-        try {
-            body = JSON.parse(body);
-        } catch {
-            return res.status(400).json({ error: 'El cuerpo de la petición no es JSON válido.' });
-        }
+    let body;
+    try {
+        body = await request.json();
+    } catch {
+        return json({ error: 'El cuerpo de la petición no es JSON válido.' }, 400);
     }
     body = body && typeof body === 'object' ? body : {};
 
     // Honeypot: un campo que ningún humano completa. Si vino lleno, cortamos
     // en silencio y respondemos como si hubiera salido todo bien.
     if (typeof body.empresa === 'string' && body.empresa.trim() !== '') {
-        return res.status(200).json({ ok: true });
+        return json({ ok: true });
     }
 
     const nombre = typeof body.nombre === 'string' ? body.nombre.trim() : '';
@@ -55,22 +57,22 @@ export default async function handler(req, res) {
     const mensaje = typeof body.mensaje === 'string' ? body.mensaje.trim() : '';
 
     if (!nombre || !mail || !mensaje) {
-        return res.status(400).json({ error: 'Faltan campos: nombre, mail y mensaje son obligatorios.' });
+        return json({ error: 'Faltan campos: nombre, mail y mensaje son obligatorios.' }, 400);
     }
     if (!esMailValido(mail)) {
-        return res.status(400).json({ error: 'El mail no es válido.' });
+        return json({ error: 'El mail no es válido.' }, 400);
     }
     if (nombre.length > LARGO_MAXIMO.nombre || mail.length > LARGO_MAXIMO.mail || mensaje.length > LARGO_MAXIMO.mensaje) {
-        return res.status(400).json({ error: 'Alguno de los campos es demasiado largo.' });
+        return json({ error: 'Alguno de los campos es demasiado largo.' }, 400);
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
+    const apiKey = env.RESEND_API_KEY;
     if (!apiKey) {
-        return res.status(503).json({ error: 'RESEND_API_KEY no está configurada en Vercel.' });
+        return json({ error: 'RESEND_API_KEY no está configurada.' }, 503);
     }
 
     try {
-        const respuesta = await fetch('https://api.resend.com/emails', {
+        const respuesta = await fetchImpl('https://api.resend.com/emails', {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${apiKey}`,
@@ -89,12 +91,41 @@ export default async function handler(req, res) {
         if (!respuesta.ok) {
             const detalle = await respuesta.text().catch(() => '');
             console.error('Resend respondió con error:', respuesta.status, detalle);
-            return res.status(502).json({ error: 'No se pudo enviar el mail.' });
+            return json({ error: 'No se pudo enviar el mail.' }, 502);
         }
 
-        return res.status(200).json({ ok: true });
+        return json({ ok: true });
     } catch (error) {
         console.error('Error llamando a Resend:', error);
-        return res.status(502).json({ error: 'No se pudo enviar el mail.' });
+        return json({ error: 'No se pudo enviar el mail.' }, 502);
     }
+}
+
+// Compatibilidad durante el corte: un push a main todavía puede disparar un
+// deploy de Vercel antes de que Cloudflare reciba el tráfico. Este adaptador
+// conserva el contrato req/res sin duplicar la lógica del endpoint.
+export default async function vercelHandler(req, res) {
+    const headers = new Headers();
+    if (req.headers?.['content-type']) {
+        headers.set('Content-Type', req.headers['content-type']);
+    }
+
+    let body;
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+        body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body ?? {});
+    }
+
+    const response = await handleContacto(
+        new Request('https://www.fonchi.com.ar/api/contacto', {
+            method: req.method,
+            headers,
+            body,
+        }),
+        { RESEND_API_KEY: globalThis.process?.env?.RESEND_API_KEY },
+    );
+
+    for (const [name, value] of response.headers) {
+        res.setHeader(name, value);
+    }
+    return res.status(response.status).json(await response.json());
 }
