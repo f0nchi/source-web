@@ -19,7 +19,7 @@ npm run cf:dry-run
 
 La identidad del Worker es `fonchi-source`. La conexión productiva conserva el repositorio `f0nchi/source-web` y la rama `main`, por lo que el circuito Notion → Make → GitHub sigue escribiendo en el mismo destino.
 
-Configurar Workers Builds así:
+Workers Builds está configurado así:
 
 - Production branch: `main`
 - Build command: `npm test && npm run build`
@@ -31,13 +31,12 @@ Configurar Workers Builds así:
 
 El workflow de GitHub sólo ejecuta tests, build y el dry run de Wrangler; no guarda credenciales ni despliega. Cloudflare Workers Builds administra su token dentro de la cuenta conectada.
 
-## Puesta en producción
+## Producción
 
-La configuración no declara rutas ni dominios para que el alta y el corte de DNS sigan siendo una operación explícita. Antes del cambio de tráfico hay que:
+El sitio está en producción en Cloudflare Workers. Workers Builds publicó correctamente el commit `51574fd` y quedaron asociados los custom domains `www.fonchi.com.ar` y `fonchi.com.ar`; el apex redirige al host `www` conservando ruta y query. `RESEND_API_KEY` está configurada como secret de runtime, sin guardar su valor en el repositorio.
 
-1. crear o conectar `fonchi-source` a `f0nchi/source-web` en la cuenta personal;
-2. cargar `RESEND_API_KEY` como secret de runtime;
-3. asociar `www.fonchi.com.ar` y `fonchi.com.ar` al Worker, o mantener un redirect equivalente del apex a `www`;
-4. comprobar home, sitemap, 404, redirección y el fallback del formulario antes de probar un envío real.
+El corte se verificó sobre el dominio público: home, recursos estáticos, las 67 URLs del sitemap, `robots.txt`, 404 y redirecciones respondieron según contrato. Las validaciones y el honeypot de `/api/contacto` se probaron sin ejecutar un envío real.
+
+La publicación sigue entrando por `f0nchi/source-web` en `main`, así que la automatización Notion → Make → GitHub conserva repositorio, rama e IDs existentes. El subdominio `workers.dev` queda como preview técnico del mismo Worker.
 
 Una operación local excepcional usa `npm run deploy`, que compila, despliega con el perfil obligatorio `fonchi-pilot` y avisa a IndexNow sólo después de que Wrangler confirma el deploy.
