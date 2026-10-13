@@ -6,7 +6,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "predev": "node scripts/fechas-del-sitio.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/fechas-del-sitio.mjs",
     "build": "astro build",
     "preview": "npm run build && wrangler dev --profile fonchi-pilot",
     "test": "node --test",

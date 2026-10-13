@@ -29,6 +29,8 @@ Workers Builds está configurado así:
 
 `deploy:builds` tiene un guard que exige `WORKERS_CI=1`. Primero espera que `wrangler deploy` termine correctamente y recién entonces envía a IndexNow todas las URLs del sitemap. Esto reemplaza el workflow que dependía del `deployment_status` de Vercel y evita avisar antes de un deploy real.
 
+El `<lastmod>` del sitemap dice cuándo cambió cada página de verdad. `scripts/fechas-del-sitio.mjs` corre antes del build y toma el último commit de cada entrada, cada ensayo y las dos portadas; el sitemap usa la más reciente entre esa fecha y la de publicación, así una entrada corregida avisa que cambió. Si el clon viene recortado, el script completa el historial; si no puede, quedan solo las fechas de publicación.
+
 El workflow de GitHub sólo ejecuta tests, build y el dry run de Wrangler; no guarda credenciales ni despliega. Cloudflare Workers Builds administra su token dentro de la cuenta conectada.
 
 ## Producción
