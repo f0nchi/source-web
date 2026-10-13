@@ -9,7 +9,7 @@ test('el día del commit se toma en la zona de quien lo hizo', () => {
 });
 
 test('cada entrada del registro y cada ensayo reciben la fecha de su último commit', () => {
-    const fechas = calcularFechas();
+    const fechas = calcularFechas({ completar: false }); // los tests no salen a la red
     if (!fechas.completa) return;
     const entradas = Object.keys(fechas.archivos).filter((r) => r.startsWith('src/logs/'));
     assert.ok(entradas.length > 0);

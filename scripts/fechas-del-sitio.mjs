@@ -17,15 +17,15 @@ const SALIDA = join(RAIZ, 'src/generated/fechas-del-sitio.json');
 const CARPETAS = ['src/logs', 'src/ensayos'];
 const PAGINAS = ['src/pages/index.astro', 'src/pages/ensayos/index.astro'];
 
-function git(args) {
-    return execFileSync('git', args, { cwd: RAIZ, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+function git(args, timeout = 30_000) {
+    return execFileSync('git', args, { cwd: RAIZ, encoding: 'utf8', timeout, env: { ...process.env, GIT_TERMINAL_PROMPT: '0' }, stdio: ['ignore', 'pipe', 'pipe'] }).trim();
 }
 
-export function historiaCompleta() {
+export function historiaCompleta({ completar = true } = {}) {
     try {
-        if (git(['rev-parse', '--is-shallow-repository']) === 'true') {
+        if (completar && git(['rev-parse', '--is-shallow-repository']) === 'true') {
             console.log('fechas del sitio: el clon viene recortado, se completa el historial.');
-            git(['fetch', '--unshallow', '--quiet']);
+            git(['fetch', '--unshallow', '--quiet'], 90_000);
         }
         return git(['rev-parse', '--is-shallow-repository']) === 'false';
     } catch (error) {
@@ -39,8 +39,8 @@ export function diaDelCommit(iso) {
     return /^\d{4}-\d{2}-\d{2}/.test(iso) ? iso.slice(0, 10) : null;
 }
 
-export function calcularFechas() {
-    if (!historiaCompleta()) return { completa: false, archivos: {} };
+export function calcularFechas({ completar = true } = {}) {
+    if (!historiaCompleta({ completar })) return { completa: false, archivos: {} };
     const archivos = {};
     const rutas = [
         ...CARPETAS.flatMap((carpeta) =>
