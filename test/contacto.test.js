@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import vercelHandler, { handleContacto } from '../api/contacto.js';
+import { handleContacto } from '../worker/contacto.js';
 import worker from '../worker/index.js';
 
 function request(body, method = 'POST', url = 'https://www.fonchi.com.ar/api/contacto') {
@@ -138,29 +138,4 @@ test('convierte un error de Resend en 502', async () => {
     } finally {
         console.error = originalError;
     }
-});
-
-test('mantiene el contrato req/res de Vercel durante el corte', async () => {
-    const headers = new Map();
-    let status;
-    let payload;
-    const res = {
-        setHeader(name, value) {
-            headers.set(name.toLowerCase(), value);
-        },
-        status(value) {
-            status = value;
-            return this;
-        },
-        json(value) {
-            payload = value;
-            return value;
-        },
-    };
-
-    await vercelHandler({ method: 'GET', headers: {} }, res);
-
-    assert.equal(status, 405);
-    assert.equal(headers.get('allow'), 'POST');
-    assert.deepEqual(payload, { error: 'Método no permitido.' });
 });

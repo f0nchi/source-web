@@ -1,4 +1,4 @@
-import { handleContacto } from '../api/contacto.js';
+import { handleContacto } from './contacto.js';
 
 const HOST_CANONICO = 'www.fonchi.com.ar';
 const HOST_APEX = 'fonchi.com.ar';

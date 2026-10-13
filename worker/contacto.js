@@ -100,32 +100,3 @@ export async function handleContacto(request, env = {}, fetchImpl = fetch) {
         return json({ error: 'No se pudo enviar el mail.' }, 502);
     }
 }
-
-// Compatibilidad durante el corte: un push a main todavía puede disparar un
-// deploy de Vercel antes de que Cloudflare reciba el tráfico. Este adaptador
-// conserva el contrato req/res sin duplicar la lógica del endpoint.
-export default async function vercelHandler(req, res) {
-    const headers = new Headers();
-    if (req.headers?.['content-type']) {
-        headers.set('Content-Type', req.headers['content-type']);
-    }
-
-    let body;
-    if (req.method !== 'GET' && req.method !== 'HEAD') {
-        body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body ?? {});
-    }
-
-    const response = await handleContacto(
-        new Request('https://www.fonchi.com.ar/api/contacto', {
-            method: req.method,
-            headers,
-            body,
-        }),
-        { RESEND_API_KEY: globalThis.process?.env?.RESEND_API_KEY },
-    );
-
-    for (const [name, value] of response.headers) {
-        res.setHeader(name, value);
-    }
-    return res.status(response.status).json(await response.json());
-}
