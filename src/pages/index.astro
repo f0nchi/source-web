@@ -225,14 +225,35 @@ import Pie from '../components/Pie.astro';
             // Los dos momentos del contacto van a Analytics y a Clarity, para
             // filtrar las grabaciones de quien abrió el formulario y de quien
             // escribió. Fuera del dominio publicado no cargan y no pasa nada.
-            function medir(evento) {
-                try { if (typeof window.gtag === 'function') window.gtag('event', evento); } catch (e) {}
-                try { if (typeof window.clarity === 'function') window.clarity('event', evento); } catch (e) {}
+            // El origen (boton, menu, pie, hash) viaja como parámetro en
+            // Analytics y como etiqueta de la sesión en Clarity.
+            function medir(evento, origen) {
+                try {
+                    if (typeof window.gtag === 'function') {
+                        if (origen) window.gtag('event', evento, { origen: origen });
+                        else window.gtag('event', evento);
+                    }
+                } catch (e) {}
+                try {
+                    if (typeof window.clarity === 'function') {
+                        if (origen) window.clarity('set', 'contacto_origen', origen);
+                        window.clarity('event', evento);
+                    }
+                } catch (e) {}
             }
 
             function abrirForm() {
                 form.hidden = false;
                 commLink.setAttribute('aria-expanded', 'true');
+            }
+
+            // Toda apertura pasa por acá y se mide una sola vez: si el
+            // formulario ya está abierto, no vuelve a contar.
+            function abrirYMedir(origen) {
+                if (!form.hidden) return false;
+                abrirForm();
+                medir('contacto_abierto', origen);
+                return true;
             }
 
             function cerrarForm() {
@@ -242,9 +263,7 @@ import Pie from '../components/Pie.astro';
 
             commLink.addEventListener('click', function (e) {
                 e.preventDefault();
-                if (form.hidden) {
-                    abrirForm();
-                    medir('contacto_abierto');
+                if (abrirYMedir('boton')) {
                     var primerCampo = document.getElementById('contacto-nombre');
                     if (primerCampo) primerCampo.focus();
                 } else {
@@ -252,9 +271,35 @@ import Pie from '../components/Pie.astro';
                 }
             });
 
+            // Llegar a #contacto abre el formulario: al cargar la home con ese
+            // hash y cuando el hash cambia estando en ella.
             if (window.location.hash === '#contacto') {
-                abrirForm();
+                abrirYMedir('hash');
             }
+            window.addEventListener('hashchange', function () {
+                if (window.location.hash === '#contacto') abrirYMedir('hash');
+            });
+
+            // CONTACTO del menú y del pie: en la home el clic abre el formulario
+            // aunque el hash ya sea #contacto (ahí el navegador no avisa del
+            // cambio) y se queda en la misma página aunque la URL traiga query.
+            // Abrir en otra pestaña sigue igual y cuenta como hash al cargar.
+            var anclaContacto = document.getElementById('contacto');
+            var enlacesContacto = document.querySelectorAll('a[href="/#contacto"], a[href="#contacto"]');
+            Array.prototype.forEach.call(enlacesContacto, function (enlace) {
+                if (enlace === commLink) return;
+                enlace.addEventListener('click', function (e) {
+                    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                    e.preventDefault();
+                    var origen = enlace.closest('.site-nav') ? 'menu' : enlace.closest('.site-pie') ? 'pie' : 'hash';
+                    abrirYMedir(origen);
+                    if (window.location.hash !== '#contacto') {
+                        window.location.hash = 'contacto';
+                    } else if (anclaContacto) {
+                        anclaContacto.scrollIntoView();
+                    }
+                });
+            });
 
             var status = document.getElementById('contacto-status');
             var boton = form.querySelector('.contacto-submit');
