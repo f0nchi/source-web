@@ -9,6 +9,6 @@ Hoy me senté a revisar todas las reglas que le fui escribiendo a mi sistema en 
 
 Las aflojé. Quedaron muchas menos, y en un solo lugar para todas las IA con las que laburo.
 
-Pero lo que me puso a pensar es otra cosa. Cuando lo armé, lo apoyé en quién soy: cómo hablo, qué pienso. Hoy quizás lo apoyaría más en lo que hago. Que esté al día, que aprenda de lo que le corrijo, que mire afuera por mí.
+Pero lo que me puso a pensar es otra cosa. Cuando lo armé, lo apoyé en quién soy: cómo hablo, qué pienso. Hoy quizás lo apoyaría más en lo que hago. Que esté al día, que aprenda de lo que le corrijo, que me tenga al tanto de lo que pasa.
 
 No sé si vale para todos. A mí me ordenó.

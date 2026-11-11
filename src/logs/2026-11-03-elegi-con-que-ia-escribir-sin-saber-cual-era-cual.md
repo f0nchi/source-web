@@ -1,6 +1,6 @@
 ---
 title: "Elegí con qué IA escribir sin saber cuál era cuál"
-date: "2026-10-30"
+date: "2026-11-03"
 status: "STATUS_OK"
 id: "SRC-0079"
 ---

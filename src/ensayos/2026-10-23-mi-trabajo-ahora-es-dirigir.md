@@ -1,6 +1,6 @@
 ---
 title: "Mi trabajo ahora es dirigir"
-date: "2026-11-10"
+date: "2026-10-23"
 id: "SRC-0080"
 ---
 

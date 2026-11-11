@@ -1,4 +1,5 @@
 import { handleContacto } from './contacto.js';
+import { mudanza } from './mudanzas.js';
 
 const HOST_CANONICO = 'www.fonchi.com.ar';
 const HOST_APEX = 'fonchi.com.ar';
@@ -10,6 +11,12 @@ export default {
         if (url.hostname === HOST_APEX) {
             url.hostname = HOST_CANONICO;
             return Response.redirect(url.toString(), 308);
+        }
+
+        const nueva = mudanza(url.pathname);
+        if (nueva) {
+            url.pathname = nueva;
+            return Response.redirect(url.toString(), 301);
         }
 
         if (url.pathname === '/api/contacto') {

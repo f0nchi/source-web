@@ -9,6 +9,6 @@ Yo siempre me manejé en el mundo de las palabras. Después empecé con el dise�
 
 Bajé un modelo abierto, de los que corren en la computadora de uno, y me puse a probar. Salió una canción en castellano, con voz y todo.
 
-No soy músico, y no me volví músico. Lo que cambió es que una idea que antes se quedaba en «estaría bueno que esto tuviera música» ahora la puedo escuchar esa misma tarde.
+No soy músico, y no me volví músico. Pero una idea que antes se quedaba en «estaría bueno que esto tuviera música» ahora la puedo escuchar.
 
-Quiero seguir probando, para ver qué tanto puedo hacer.
+Quiero seguir probando, a ver hasta dónde llego.
