@@ -4,7 +4,7 @@ date: "2026-09-20"
 id: "SRC-0057"
 ---
 
-A ver, te cuento algo que me pasa desde abril y que todavía no resolví.
+Desde abril me pasa algo que todavía no resolví.
 
 Cada vez que llego a un lugar en el que más o menos me siento cómodo con lo que estoy construyendo, al toque vuelvo a preocuparme. Me agarra la sospecha de que estoy tratando de construir algo totalmente fantasioso, que no tengo ni en pedo construido lo que creo. Entonces hablo con la IA, que es mi partner de pensamiento hace más de tres años, y me empuja a poner ejemplos: tu sistema hace esto, hace lo otro, mirá lo que publicaste ayer. Yo leo y digo bueno, sí, es verdad, tiene razón. Y después vuelvo. Es todo un ciclo, todo el tiempo, y lo único que cambia es que cada vez pasa en cuestiones más elevadas. El ciclo es el mismo.
 

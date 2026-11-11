@@ -4,7 +4,7 @@ date: "2026-09-28"
 id: "SRC-0062"
 ---
 
-A ver, te cuento una cosa que vengo pensando sobre cómo cuento lo que hago.
+Vengo pensando en cómo cuento lo que hago.
 
 Hace más de tres años que laburo todos los días con la IA, y cuando me siento a contar algo de eso, lo primero que sale es el sistema: qué armé y cómo lo configuré. Leído de corrido es un change log. A veces un poco más creativo, otras veces casi literal, pero es lo mismo.
 
