@@ -9,4 +9,4 @@ Esta semana armé una tanda de posteos para Ideas Aumentadas, y volví a notar a
 
 Estoy usando todo lo que sé, más que nunca. La publicidad, el marketing, la comunicación, la estrategia: todo lo que aprendí en más de veinticinco años de laburo lo uso hoy, todos los días.
 
-Y creo que nos pasa a todos los que laburamos así: la experiencia y el conocimiento de cada uno están al palo.
+Y creo que nos pasa a todos los que laburamos así: la experiencia y el conocimiento de cada uno se usan a fondo.

@@ -16,4 +16,4 @@ Ya sé que el conocimiento va a ser igual para todos. Todos tenemos la misma IA,
 
 Por eso no comparto el miedo. La persona no desaparece del proceso: hace falta su dirección, su visión y su toque en el producto final.
 
-Yo estoy usando todo lo que sé, más que nunca. La experiencia y el conocimiento de cada uno están al palo, y eso es lo que nos va a hacer distintos.
+Yo estoy usando todo lo que sé, más que nunca. La experiencia y el conocimiento de cada uno se usan a fondo, y eso es lo que nos va a hacer distintos.
