@@ -5,10 +5,8 @@ status: "STATUS_OK"
 id: "SRC-0086"
 ---
 
-Los videos que vengo haciendo con IA tenían mis colores y mi tipografía, y se movían igual que todos los videos hechos con IA. La palabra importante que se pinta de color, el texto que se escribe solo, las cosas que entran rebotando.
+Los videos que vengo haciendo con IA tienen mis colores y mi tipografía, pero se movían igual que todos los videos hechos con IA. La palabra importante que se pinta de color, el texto que se escribe solo, las cosas que entran rebotando, los números que suben hasta llegar a la cifra. Es la manera de animar que la IA tiene por defecto.
 
-Es la manera de animar que le sale a la IA cuando no le das otra. Con los textos le pasa lo mismo.
+Así que ahora a cada video le doy una referencia. Puede ser un corto, un afiche o los títulos de una película, lo que a uno le guste. Cuando tiene una referencia, la IA lo hace como vos se lo proponés.
 
-Así que ahora cada video arranca de una referencia que existe, con nombre y año. Hoy terminé dos. En uno las cosas llegan desde el fondo y se van transformando sin cortes, como en las pantallas que Muriel Cooper diseñaba en el MIT en los ochenta. El otro es un solo movimiento de cámara que se aleja, como en «Powers of Ten», el corto de Charles y Ray Eames.
-
-En diseño esto es lo más viejo que hay: nadie arranca una pieza sin mirar referencias. Con la IA me lo había salteado, porque te entrega algo terminado tan rápido que parece que no hace falta. Ya tengo una lista con las que usé, para que el próximo video vaya por otro lado.
+En diseño esto es lo más viejo que hay: nadie arranca una pieza sin mirar referencias. Con la IA se sigue el mismo proceso, aunque te entregue algo terminado tan rápido que parece que no hace falta. Y la referencia la elige una persona.

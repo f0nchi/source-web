@@ -5,10 +5,10 @@ status: "STATUS_OK"
 id: "SRC-0085"
 ---
 
-Estoy haciendo un video animado para Ideas Aumentadas. Una chica que lleva las redes de una marca le pide a su IA el informe del mes. La IA se lo arma, con conclusiones y próximos pasos, y ella aprieta un botón que dice «Aprobado y enviado».
+Estoy haciendo un video animado para Ideas Aumentadas. Una chica que lleva las redes de una marca le pide a su IA el informe del mes. La IA se lo arma y ella lo aprueba con un botón que dice «Aprobado y enviado».
 
-Cuando lo vi terminado me hizo ruido. Estaba mostrando justo lo que se critica de los que usamos IA: que no pensamos, que le hacemos caso sin analizar nada.
+El video estaba bien hecho. La animación, los colores, la música: no había nada para corregirle.
 
-Hoy lo rehice. El informe ahora trae los datos del mes, y las conclusiones quedan para ella. Le corrige una cosa, le anota que ese mes hubo un sorteo, que es algo que la IA no sabía, y sigue. El botón no está más.
+Igual le saqué el botón. Con ese final, el video decía que el informe se hace solo y que ella no piensa. Es lo contrario de lo que quiero decir con mi marca, y se entendía sin que nadie lo dijera.
 
-Creo que los que laburamos con IA tenemos que cuidar cómo lo mostramos. Un informe que se resuelve en diez segundos y se aprueba con un botón le dice al que mira que ese laburo no vale nada. Y no es lo que pasa. A mí el informe me llega antes, y pensarlo sigue siendo cosa mía.
+La IA está laburando a un nivel altísimo, y aun así hay cosas que siguen siendo mías. Qué mensaje deja una pieza, qué da a entender, cómo queda la marca frente al que la mira. Ese cuidado es de las personas.
