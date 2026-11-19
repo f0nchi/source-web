@@ -14,4 +14,4 @@ Tiene su lógica. Es lo que tiene más a mano: su propio trabajo. Y contarlo es 
 
 La IA tiene costumbres, y son las mismas para todos. Repite lo que ya hizo. Resuelve todo de la manera más esperable. Prefiere agregar antes que sacar. Y si le preguntás por tu idea, le parece buenísima.
 
-Sola no las nota. Alguien tiene que verlas por ella.
+Por eso mi sistema lo sigo dirigiendo yo.
