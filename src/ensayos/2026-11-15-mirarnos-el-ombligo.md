@@ -4,14 +4,14 @@ date: "2026-11-15"
 id: "SRC-0089"
 ---
 
-Los que laburamos con IA tenemos una tentación: contar el sistema. Cómo lo armamos, con qué herramientas, cuánto tardó en hacer tal cosa.
+Mi sistema tiene una costumbre: se mira el ombligo.
 
-Yo lo hice mucho tiempo. Casi todo lo que publicaba terminaba siendo, en mayor o menor medida, la lista de lo que le había hecho a mi sistema.
+Le pido un contenido y me devuelve lo que hizo. Qué armó, qué ajustó, qué le corregí la última vez. Si lo dejo, todo termina siendo, en mayor o menor medida, un registro de cambios publicado.
 
-Hace unos días lo corté. Estaba haciendo un video para Ideas Aumentadas y lo primero que apareció fue una lista de todo lo que el sistema ya había hecho. Eso es mirarnos el ombligo. Lo que hay que mostrar es qué se puede hacer con lo que el sistema ya sabe hacer. Una pieza de contenido es creatividad.
+Me pasó hace unos días con un video. Le pedí creatividad y volvió con la lista de todo lo que ya habíamos hecho.
 
-En publicidad esto lo supimos siempre. A una marca nadie le pregunta con qué cámara filmó el comercial. Con la IA nos lo olvidamos porque el sistema es nuevo, nos entusiasma, y contarlo es fácil: ya está hecho.
+Tiene su lógica. Es lo que tiene más a mano: su propio trabajo. Y contarlo es fácil, porque ya está hecho. No creo que le pase solo al mío.
 
-Contar lo que hago no lo dejé del todo. Quedó en una décima parte de lo que publico, en mi cuenta personal y en el registro de este sitio.
+Pero un contenido no es para hablar del sistema. Lo que hay que mostrar es qué se puede hacer con lo que el sistema ya sabe hacer. Una pieza de contenido es creatividad: se inventa algo para esa pieza.
 
-El resto del tiempo, el sistema está para hacer cosas.
+Le pasaba, y le sigue pasando. Cada vez que aparece, se lo corrijo.
