@@ -12,6 +12,6 @@ Me pasó hace unos días con un video. Le pedí creatividad y volvió con la lis
 
 Tiene su lógica. Es lo que tiene más a mano: su propio trabajo. Y contarlo es fácil, porque ya está hecho. No creo que le pase solo al mío.
 
-La IA tiene costumbres, y son las mismas para todos. En un video, la palabra importante aparece pintada de otro color. En un texto, te da tres ideas en fila y cierra con una frase redonda. En un sitio, pone un degradé violeta. Y si le preguntás qué le parece tu idea, le parece buenísima.
+La IA tiene costumbres, y son las mismas para todos. Repite lo que ya hizo. Resuelve todo de la manera más esperable. Prefiere agregar antes que sacar. Y si le preguntás por tu idea, le parece buenísima.
 
-Ninguna es grave. Pero sola no se da cuenta. Por eso alguien tiene que estar pendiente.
+Sola no las nota. Alguien tiene que verlas por ella.
