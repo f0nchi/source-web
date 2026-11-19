@@ -12,6 +12,6 @@ Me pasó hace unos días con un video. Le pedí creatividad y volvió con la lis
 
 Tiene su lógica. Es lo que tiene más a mano: su propio trabajo. Y contarlo es fácil, porque ya está hecho. No creo que le pase solo al mío.
 
-Pero un contenido no es para hablar del sistema. Lo que hay que mostrar es qué se puede hacer con lo que el sistema ya sabe hacer. Una pieza de contenido es creatividad: se inventa algo para esa pieza.
+La IA tiene costumbres, y son las mismas para todos. En un video, la palabra importante aparece pintada de otro color. En un texto, te da tres ideas en fila y cierra con una frase redonda. En un sitio, pone un degradé violeta. Y si le preguntás qué le parece tu idea, le parece buenísima.
 
-Le pasaba, y le sigue pasando. Cada vez que aparece, se lo corrijo.
+Ninguna es grave. Pero sola no se da cuenta. Por eso alguien tiene que estar pendiente.
