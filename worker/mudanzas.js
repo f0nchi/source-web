@@ -7,7 +7,8 @@ export const MUDANZAS = {
     '/log/2026-10-27-corrijo-una-sola-vez': '/log/2026-10-22-le-pedi-el-mismo-video-a-dos-ia',
     '/log/2026-10-22-junte-de-donde-saco-imagenes-y-videos': '/log/2026-10-22-le-pedi-el-mismo-video-a-dos-ia',
     '/log/2026-11-14-le-saque-el-boton-de-aprobado-a-un-video': '/log/2026-11-14-rehice-un-video-que-estaba-bien-hecho',
-    '/log/2026-11-19-ordene-los-posteos-por-lo-que-el-lector-ya-sabe': '/log/2026-11-19-use-algo-que-aprendi-de-publicidad',
+    '/log/2026-11-19-ordene-los-posteos-por-lo-que-el-lector-ya-sabe': '/log/2026-11-19-estoy-usando-todo-lo-que-soy-mas-que-nunca',
+    '/log/2026-11-19-use-algo-que-aprendi-de-publicidad': '/log/2026-11-19-estoy-usando-todo-lo-que-soy-mas-que-nunca',
 };
 
 export function mudanza(pathname) {

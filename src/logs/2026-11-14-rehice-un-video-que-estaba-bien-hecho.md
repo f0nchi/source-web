@@ -9,6 +9,6 @@ Estoy haciendo un video animado para Ideas Aumentadas. Una chica que lleva las r
 
 El video estaba bien hecho. La animación, los colores, la música: no había nada para corregirle.
 
-Igual lo rehice, y el botón salió. Con ese final, el video decía que el informe se hace solo y que ella no piensa. Es lo contrario de lo que quiero decir con mi marca.
+Igual lo hice de nuevo y le saqué el botón. Con ese final parecía que el informe se hacía solo y que ella no pensaba. Es el miedo que tiene mucha gente con la IA.
 
-La IA está laburando a un nivel altísimo. Igual, el mensaje y el cuidado de la marca siguen siendo míos.
+Yo creo que ese miedo no tiene fundamento. La IA labura a un nivel altísimo, pero la persona está siempre: dirige, tiene la visión y le pone su toque a lo que sale. Si la dejás sola, medio que hace lo que quiere.
