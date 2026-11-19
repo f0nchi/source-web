@@ -11,4 +11,4 @@ El video estaba bien hecho. La animación, los colores, la música: no había na
 
 Igual lo hice de nuevo y le saqué el botón. Con ese final parecía que el informe se hacía solo y que ella no pensaba. Es el miedo que tiene mucha gente con la IA.
 
-Yo creo que ese miedo no tiene fundamento. La IA labura a un nivel altísimo, pero la persona está siempre: dirige, tiene la visión y la última palabra. El mensaje lo decide la persona. Y por eso tampoco sale todo igual, que es lo otro que se dice de la IA.
+Yo creo que ese miedo no tiene fundamento. La IA labura a un nivel altísimo, pero la persona está siempre: dirige, tiene la visión y la última palabra. El mensaje lo decide la persona.
