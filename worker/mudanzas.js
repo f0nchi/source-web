@@ -1,4 +1,4 @@
-// Entradas y ensayos que cambiaron de fecha: la dirección anterior lleva a la vigente.
+// Entradas y ensayos que cambiaron de fecha o de título: la dirección anterior lleva a la vigente.
 // Las claves y los destinos van sin la barra final.
 export const MUDANZAS = {
     '/ensayos/2026-11-10-mi-trabajo-ahora-es-dirigir': '/ensayos/2026-10-23-mi-trabajo-ahora-es-dirigir',
@@ -6,6 +6,8 @@ export const MUDANZAS = {
     '/log/2026-10-30-elegi-con-que-ia-escribir-sin-saber-cual-era-cual': '/log/2026-11-03-elegi-con-que-ia-escribir-sin-saber-cual-era-cual',
     '/log/2026-10-27-corrijo-una-sola-vez': '/log/2026-10-22-le-pedi-el-mismo-video-a-dos-ia',
     '/log/2026-10-22-junte-de-donde-saco-imagenes-y-videos': '/log/2026-10-22-le-pedi-el-mismo-video-a-dos-ia',
+    '/log/2026-11-14-le-saque-el-boton-de-aprobado-a-un-video': '/log/2026-11-14-rehice-un-video-que-estaba-bien-hecho',
+    '/log/2026-11-19-ordene-los-posteos-por-lo-que-el-lector-ya-sabe': '/log/2026-11-19-use-algo-que-aprendi-de-publicidad',
 };
 
 export function mudanza(pathname) {
